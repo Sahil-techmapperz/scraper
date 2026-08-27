@@ -147,18 +147,20 @@ class NaukriSearchExtractor:
             logger.info(f"Triggering stealth browser fallback for Naukri URL: {url}")
             browser_html = await browser_manager.fetch_page_content(
                 url,
-                wait_selector="div.srp-jobtuple-wrapper, div.cust-job-tuple, article.jobTuple, div[data-job-id]",
+                wait_selector="div.srp-jobtuple-wrapper, div.cust-job-tuple, article.jobTuple, div[data-job-id], script#__NEXT_DATA__",
                 wait_ms=4500
             )
             if browser_html:
                 logger.info(f"Browser HTML length: {len(browser_html)} chars | Title snippet: {browser_html[browser_html.find('<title'):browser_html.find('<title')+200] if '<title' in browser_html else 'NO TITLE TAG'}")
-                items = self._extract_items_from_dom(browser_html)
+                # Try __NEXT_DATA__ + __INITIAL_STATE__ first (fastest)
+                items = self._extract_items_from_initial_state(browser_html)
                 if not items:
-                    items = self._extract_items_from_initial_state(browser_html)
+                    items = self._extract_items_from_json_ld(browser_html)
+                if not items:
+                    items = self._extract_items_from_dom(browser_html)
                 if not items:
                     # Debug dump - save raw HTML so we can inspect what Naukri returned
                     try:
-                        import os
                         debug_path = "/tmp/naukri_debug.html"
                         with open(debug_path, "w", encoding="utf-8") as f:
                             f.write(browser_html)
@@ -206,12 +208,39 @@ class NaukriSearchExtractor:
 
     def _extract_items_from_initial_state(self, html_content: str) -> List[ListingItem]:
         items: List[ListingItem] = []
+
+        # 1. Try Next.js __NEXT_DATA__ (injected as JSON in a <script id="__NEXT_DATA__"> tag)
+        next_data_match = re.search(r'<script[^>]+id=["\']__NEXT_DATA__["\'][^>]*>(.+?)</script>', html_content, re.DOTALL)
+        if next_data_match:
+            try:
+                next_data = json.loads(next_data_match.group(1))
+                props = next_data.get("props", {}).get("pageProps", {})
+                # Naukri stores jobs in pageProps.jobDetails or pageProps.jobs
+                job_details = (
+                    props.get("jobDetails") or
+                    props.get("jobs") or
+                    props.get("data", {}).get("jobDetails") if isinstance(props.get("data"), dict) else None or
+                    []
+                )
+                if isinstance(job_details, list) and job_details:
+                    logger.info(f"__NEXT_DATA__ found {len(job_details)} jobs")
+                    for row in job_details:
+                        if isinstance(row, dict):
+                            item = self.normalize_raw_job(row)
+                            if item:
+                                items.append(item)
+                    if items:
+                        return items
+            except Exception as e:
+                logger.warning(f"Failed parsing __NEXT_DATA__: {str(e)}")
+
+        # 2. Try window.__INITIAL_STATE__ / window.initialState
         match = re.search(r"window\.(?:__INITIAL_STATE__|initialState)\s*=\s*(\{.+?\});\s*(?:window\.|\n|<)", html_content, re.DOTALL)
         if not match:
             match = re.search(r"window\.(?:__INITIAL_STATE__|initialState)\s*=\s*(\{.+?\});", html_content, re.DOTALL)
 
         if not match:
-            return []
+            return items
 
         try:
             state = json.loads(match.group(1))

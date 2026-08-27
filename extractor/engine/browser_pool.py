@@ -69,7 +69,12 @@ def _fetch_page_sync(url: str, wait_selector: Optional[str] = None, wait_ms: int
             page = context.new_page()
             stealth.apply_stealth_sync(page)
 
-            page.goto(url, wait_until="domcontentloaded", timeout=settings.DEFAULT_TIMEOUT * 1000)
+            page.goto(url, wait_until="load", timeout=settings.DEFAULT_TIMEOUT * 1000)
+            # Give JS frameworks (Next.js/React) time to hydrate and render content
+            try:
+                page.wait_for_load_state("networkidle", timeout=8000)
+            except Exception:
+                pass  # networkidle timeout is OK, page still usable
 
             if wait_selector:
                 try:
