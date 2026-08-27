@@ -148,12 +148,25 @@ class NaukriSearchExtractor:
             browser_html = await browser_manager.fetch_page_content(
                 url,
                 wait_selector="div.srp-jobtuple-wrapper, div.cust-job-tuple, article.jobTuple, div[data-job-id]",
-                wait_ms=3500
+                wait_ms=4500
             )
             if browser_html:
+                logger.info(f"Browser HTML length: {len(browser_html)} chars | Title snippet: {browser_html[browser_html.find('<title'):browser_html.find('<title')+200] if '<title' in browser_html else 'NO TITLE TAG'}")
                 items = self._extract_items_from_dom(browser_html)
                 if not items:
                     items = self._extract_items_from_initial_state(browser_html)
+                if not items:
+                    # Debug dump - save raw HTML so we can inspect what Naukri returned
+                    try:
+                        import os
+                        debug_path = "/tmp/naukri_debug.html"
+                        with open(debug_path, "w", encoding="utf-8") as f:
+                            f.write(browser_html)
+                        logger.warning(f"Browser fallback returned no items. Raw HTML saved to {debug_path} for inspection.")
+                    except Exception as dump_err:
+                        logger.warning(f"Could not save debug HTML: {dump_err}")
+            else:
+                logger.error("Browser fallback returned None - browser may have failed to launch or timed out.")
 
         return items
 
