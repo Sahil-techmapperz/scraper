@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": "olx-car-1001",
+      "url": "https://www.olx.in/item/olx-car-1001",
+      "title": "2022 Honda City VX petrol manual",
+      "description": "Owner listed sedan in New Town with service history. Insurance valid through 2027.",
+      "category": "cars",
+      "subcategory": "cars",
+      "price": {
+        "amount": 850000,
+        "currency": "INR",
+        "negotiable": null
+      },
+      "seller": {
+        "name": "Sample Owner",
+        "type": "owner",
+        "contact_available": false
+      },
+      "location": {
+        "state": "West Bengal",
+        "city": "Kolkata",
+        "locality": "New Town",
+        "pincode": "700156"
+      },
+      "attributes": {
+        "brand": "Honda",
+        "model": "City",
+        "variant": "VX",
+        "year": 2022,
+        "kilometres_driven": 25000,
+        "fuel_type": "petrol",
+        "transmission": "manual",
+        "owner_count": 1,
+        "registration_location": "Kolkata",
+        "colour": "white"
+      },
+      "images": [
+        {"url": "https://www.olx.in/images/car-1001-1.jpg"},
+        {"url": "https://www.olx.in/images/car-1001-2.jpg"}
+      ],
+      "posted_at": "2026-08-20",
+      "updated_at": "2026-08-21T09:30:00+05:30"
+    },
+    {
+      "id": "olx-phone-2001",
+      "url": "https://www.olx.in/item/olx-phone-2001",
+      "title": "Apple iPhone 15 128 GB",
+      "description": "Used iPhone in excellent condition.",
+      "category": "mobile-phones",
+      "subcategory": "mobile-phones",
+      "price": "Rs 58000",
+      "seller": {
+        "name": "Phone Seller",
+        "type": "owner",
+        "contact_available": false
+      },
+      "location": {
+        "state": "West Bengal",
+        "city": "Kolkata",
+        "locality": "Salt Lake",
+        "pincode": "700091"
+      },
+      "attributes": {
+        "brand": "Apple",
+        "model": "iPhone 15",
+        "condition": "used",
+        "storage": "128 GB",
+        "ram": "6 GB",
+        "warranty": "no"
+      },
+      "posted_at": "2026-08-19"
+    }
+  ]
+}

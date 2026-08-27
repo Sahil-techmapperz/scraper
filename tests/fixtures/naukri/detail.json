@@ -1,0 +1,74 @@
+{
+  "success": true,
+  "data": {
+    "id": "1001",
+    "title": "Senior Python Backend Developer",
+    "description": "Looking for an experienced Python developer proficient in FastAPI, Django, PostgreSQL, Redis, and microservices architecture.",
+    "url": "https://www.naukri.com/job-listings-senior-python-backend-developer-1001",
+    "price": {
+      "value": 1800000,
+      "currency": "INR",
+      "negotiable": false
+    },
+    "category": {
+      "id": "jobs",
+      "slug": "jobs",
+      "name": "Jobs"
+    },
+    "subcategory": {
+      "id": "tech",
+      "slug": "tech-jobs",
+      "name": "Technology Jobs"
+    },
+    "location": {
+      "city": "Bengaluru",
+      "locality": "Whitefield, Bengaluru",
+      "state": "Karnataka",
+      "pincode": "560066"
+    },
+    "seller": {
+      "name": "TechCorp Solutions",
+      "type": "employer",
+      "contact_available": true
+    },
+    "images": [],
+    "parameters": [
+      {
+        "key": "company",
+        "value": "TechCorp Solutions"
+      },
+      {
+        "key": "experience",
+        "value": "4-8 Yrs"
+      },
+      {
+        "key": "salary_text",
+        "value": "₹ 18-24 Lacs P.A."
+      },
+      {
+        "key": "skills",
+        "value": "Python, FastAPI, Django, Docker, PostgreSQL, Redis"
+      }
+    ],
+    "raw_data": {
+      "source": "naukri",
+      "job_id": "1001",
+      "title": "Senior Python Backend Developer",
+      "company": "TechCorp Solutions",
+      "experience": "4-8 Yrs",
+      "salary": "₹ 18-24 Lacs P.A.",
+      "location": "Bengaluru, Karnataka",
+      "skills": ["Python", "FastAPI", "Django", "Docker", "PostgreSQL", "Redis"],
+      "job": {
+        "company_name": "TechCorp Solutions",
+        "experience_required": "4-8 Yrs",
+        "salary_text": "₹ 18-24 Lacs P.A.",
+        "skills": ["Python", "FastAPI", "Django", "Docker", "PostgreSQL", "Redis"],
+        "company_rating": 4.2,
+        "review_count": "1.5k Reviews",
+        "posted_age": "1 day ago",
+        "apply_url": "https://www.naukri.com/job-listings-senior-python-backend-developer-1001"
+      }
+    }
+  }
+}

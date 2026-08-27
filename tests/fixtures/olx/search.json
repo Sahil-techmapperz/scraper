@@ -1,0 +1,107 @@
+{
+  "data": [
+    {
+      "id": "olx-car-1001",
+      "url": "https://www.olx.in/item/olx-car-1001",
+      "title": "2022 Honda City VX petrol manual",
+      "description": "Owner listed sedan in New Town with service history.",
+      "category": "cars",
+      "subcategory": "cars",
+      "price": "Rs 850000",
+      "seller": {
+        "name": "Sample Owner",
+        "type": "owner",
+        "contact_available": false
+      },
+      "location": {
+        "state": "West Bengal",
+        "city": "Kolkata",
+        "locality": "New Town",
+        "pincode": "700156"
+      },
+      "parameters": [
+        {"key": "brand", "value": "Honda"},
+        {"key": "model", "value": "City"},
+        {"key": "variant", "value": "VX"},
+        {"key": "year", "value": "2022"},
+        {"key": "kilometres driven", "value": "25000 km"},
+        {"key": "fuel type", "value": "petrol"},
+        {"key": "transmission", "value": "manual"}
+      ],
+      "images": [
+        {"url": "https://www.olx.in/images/car-1001-1.jpg"}
+      ],
+      "posted_at": "2026-08-20"
+    },
+    {
+      "id": "olx-phone-2001",
+      "url": "https://www.olx.in/item/olx-phone-2001",
+      "title": "Apple iPhone 15 128 GB",
+      "description": "Used iPhone in excellent condition.",
+      "category": "mobile-phones",
+      "subcategory": "mobile-phones",
+      "price": "Rs 58000",
+      "seller": {
+        "name": "Phone Seller",
+        "type": "owner",
+        "contact_available": false
+      },
+      "location": {
+        "state": "West Bengal",
+        "city": "Kolkata",
+        "locality": "Salt Lake",
+        "pincode": "700091"
+      },
+      "attributes": {
+        "brand": "Apple",
+        "model": "iPhone 15",
+        "condition": "used",
+        "storage": "128 GB",
+        "ram": "6 GB",
+        "warranty": "no"
+      },
+      "images": [
+        {"url": "https://www.olx.in/images/phone-2001-1.jpg"}
+      ],
+      "posted_at": "2026-08-19"
+    },
+    {
+      "id": "olx-home-3001",
+      "url": "https://www.olx.in/item/olx-home-3001",
+      "title": "2 BHK apartment for sale",
+      "description": "Apartment near metro with parking.",
+      "category": "real-estate",
+      "subcategory": "apartments",
+      "price": "Rs 6500000",
+      "seller": {
+        "name": "Builder Desk",
+        "type": "builder",
+        "contact_available": false
+      },
+      "location": {
+        "state": "West Bengal",
+        "city": "Kolkata",
+        "locality": "Rajarhat",
+        "pincode": "700135"
+      },
+      "attributes": {
+        "listing_type": "sale",
+        "property_type": "apartment",
+        "property_category": "residential",
+        "bhk": "2",
+        "area": "980 sq ft",
+        "furnishing": "semi-furnished",
+        "posted_by": "builder"
+      },
+      "images": [
+        {"url": "https://www.olx.in/images/home-3001-1.jpg"}
+      ],
+      "posted_at": "2026-08-18"
+    }
+  ],
+  "pagination": {
+    "page": 1,
+    "limit": 50,
+    "has_next": false
+  }
+}

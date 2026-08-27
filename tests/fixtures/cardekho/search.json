@@ -1,0 +1,379 @@
+{
+  "data": [
+    {
+      "id": "cardekho-5525529",
+      "title": "2025 Maruti Suzuki Wagon R VXI",
+      "description": "2025 Maruti Suzuki Wagon R VXI available in Faridabad. Driven 10,000 km, Petrol (Manual), 1.",
+      "url": "https://www.cardekho.com/used-car-details/used-Maruti-wagon-r-vxi-cars-Faridabad_02bf1a86-4a4c-4fb7-9a26-b5c79ef08c0a.htm?adId=33252&adType=41",
+      "price": {
+        "value": 540000,
+        "currency": "INR",
+        "negotiable": false
+      },
+      "category": {
+        "id": "automobile",
+        "slug": "cars",
+        "name": "Cars"
+      },
+      "subcategory": {
+        "id": "cars",
+        "slug": "used-cars",
+        "name": "Used Cars"
+      },
+      "location": {
+        "state": null,
+        "city": "Faridabad",
+        "locality": "Faridabad Sector 9",
+        "pincode": null
+      },
+      "seller": {
+        "name": "Car Owner",
+        "type": "individual",
+        "contact_available": true
+      },
+      "images": [
+        {
+          "url": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/22b4d284-0081-4e01-8be3-073a8a12fe95.jpeg?imwidth=420",
+          "position": 0
+        }
+      ],
+      "created_at": null,
+      "updated_at": null,
+      "parameters": [
+        {
+          "key": "brand",
+          "value": "Maruti Suzuki"
+        },
+        {
+          "key": "model",
+          "value": "Wagon R"
+        },
+        {
+          "key": "variant",
+          "value": "VXI"
+        },
+        {
+          "key": "year",
+          "value": "2025"
+        },
+        {
+          "key": "km",
+          "value": "10000"
+        },
+        {
+          "key": "fuel_type",
+          "value": "Petrol"
+        },
+        {
+          "key": "transmission",
+          "value": "Manual"
+        },
+        {
+          "key": "owner",
+          "value": "1"
+        },
+        {
+          "key": "formatted_price",
+          "value": "\u20b95.40 Lakh"
+        },
+        {
+          "key": "body_type",
+          "value": "Hatchback"
+        }
+      ],
+      "raw_data": {
+        "ucid": 0,
+        "usedCarId": 5525529,
+        "price": 540000,
+        "formattedPrice": "\u20b95.40 Lakh",
+        "pi": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/22b4d284-0081-4e01-8be3-073a8a12fe95.jpeg?imwidth=420",
+        "imageCount": 15,
+        "myear": 2025,
+        "model": "Maruti Suzuki Wagon R",
+        "modelName": "Wagon R",
+        "variantName": "VXI",
+        "threesixty": false,
+        "km": "10,000",
+        "ft": "Petrol",
+        "tt": "Manual",
+        "msp": 540000,
+        "priceSaving": "",
+        "isHeart": false,
+        "ip": 1,
+        "usedCarSkuId": "02bf1a86-4a4c-4fb7-9a26-b5c79ef08c0a",
+        "leadForm": 1,
+        "leadFormCta": "View Seller Details",
+        "vlink": "/used-car-details/used-Maruti-wagon-r-vxi-cars-Faridabad_02bf1a86-4a4c-4fb7-9a26-b5c79ef08c0a.htm?adId=33252&adType=41",
+        "position": 1,
+        "buttonDto": {},
+        "centralVariantId": 10364,
+        "active": true,
+        "inventoryStatus": 1,
+        "activeText": "Active",
+        "isBookingAllowed": false,
+        "sid": "",
+        "oem": "Maruti Suzuki",
+        "vid": "Maruti Suzuki Wagon R VXI",
+        "city": "Faridabad",
+        "cityId": 72,
+        "bt": "Hatchback",
+        "loc": "Faridabad Sector 9",
+        "utype": "Individual",
+        "tmGaadiStore": false,
+        "compare": true,
+        "brandingIcon": "",
+        "pageType": "cls",
+        "carType": "partner",
+        "corporateId": 7,
+        "storeId": "",
+        "inventoryTypeLabel": "direct-owner",
+        "locality": "Sector 9",
+        "premiumSellerIcons": {
+          "icon": "",
+          "fullIcon": ""
+        },
+        "emiwidget": {
+          "title": "EMI starts",
+          "cost": "13,403",
+          "duration": "/mo",
+          "caption": "Interest calculated at 14.5% for 48 months",
+          "btntext": "Check Your Loan",
+          "btnUrl": "https://loan.cardekho.com/used-car?utm_source=cardekho&utm_medium=internal&utm_campaign=UsedCarsSRP_EMIstarts",
+          "interestRate": 14.5,
+          "loanMonth": 48
+        },
+        "similarCarsBrandingIcon": "",
+        "owner": 1,
+        "ownerSlug": "first-owner",
+        "invAndUserCityMismatch": false,
+        "dealerId": 0,
+        "whatsAppEnabled": 0,
+        "trustTag": {
+          "icon": "https://stimg.cardekho.com/usedcar/icons/less_driven.svg",
+          "text": "Less Driven",
+          "description": "Barely used \u2014 only 10,000 km"
+        },
+        "trustTags": [
+          {
+            "icon": "https://stimg.cardekho.com/usedcar/icons/less-driven-w.svg",
+            "text": "Less Driven",
+            "subText": "Barely used \u2014 only 10000 km"
+          }
+        ],
+        "cdCertified": false,
+        "placeholderImage": "https://stimg.cardekho.com/images/car-images/large/Maruti/Wagon-R/10363/1755843629741/front-left-side-47.jpg",
+        "gMapLink": "https://maps.google.com/?q=28.376612,77.331985",
+        "aiTags": [
+          "<u>1st owner</u>, 10k km \u2014 papers are clean on this Wagon R.<br>",
+          "1 year old, only 10k km \u2014 near-new in every sense."
+        ],
+        "aiPriceBadge": "Great Price",
+        "adId": 33252,
+        "adType": 41,
+        "sort": [
+          2,
+          409.982724015263
+        ],
+        "nearByCityInventory": false,
+        "source": "cardekho",
+        "automobile": {
+          "brand": "Maruti Suzuki",
+          "model": "Wagon R",
+          "variant": "VXI",
+          "year": 2025,
+          "kilometers": 10000,
+          "fuel_type": "Petrol",
+          "transmission": "Manual",
+          "body_type": "Hatchback",
+          "number_of_owners": 1,
+          "rto": null,
+          "formatted_price": "\u20b95.40 Lakh"
+        }
+      }
+    },
+    {
+      "id": "cardekho-5504970",
+      "title": "2015 Maruti Suzuki Ciaz 2014-2017 ZXi",
+      "description": "2015 Maruti Suzuki Ciaz 2014-2017 ZXi available in Ghaziabad. Driven 95,772 km, Petrol (Manual), 2.",
+      "url": "https://www.cardekho.com/used-car-details/used-Maruti-ciaz-zxi-cars-Ghaziabad_748f98c1-f0ca-45ae-97bd-5f0e38df6e2a.htm",
+      "price": {
+        "value": 360000,
+        "currency": "INR",
+        "negotiable": false
+      },
+      "category": {
+        "id": "automobile",
+        "slug": "cars",
+        "name": "Cars"
+      },
+      "subcategory": {
+        "id": "cars",
+        "slug": "used-cars",
+        "name": "Used Cars"
+      },
+      "location": {
+        "state": null,
+        "city": "Ghaziabad",
+        "locality": "raj nagar extension s.o",
+        "pincode": null
+      },
+      "seller": {
+        "name": "CarDekho Verified Seller",
+        "type": "dealer",
+        "contact_available": true
+      },
+      "images": [
+        {
+          "url": "https://images10.gaadi.com/usedcar_image/5504970/original/40c47f62e2cb88f37128c15a4ca1df52.JPG?imwidth=420",
+          "position": 0
+        }
+      ],
+      "created_at": null,
+      "updated_at": null,
+      "parameters": [
+        {
+          "key": "brand",
+          "value": "Maruti Suzuki"
+        },
+        {
+          "key": "model",
+          "value": "Ciaz 2014-2017"
+        },
+        {
+          "key": "variant",
+          "value": "ZXi"
+        },
+        {
+          "key": "year",
+          "value": "2015"
+        },
+        {
+          "key": "km",
+          "value": "95772"
+        },
+        {
+          "key": "fuel_type",
+          "value": "Petrol"
+        },
+        {
+          "key": "transmission",
+          "value": "Manual"
+        },
+        {
+          "key": "owner",
+          "value": "2"
+        },
+        {
+          "key": "formatted_price",
+          "value": "\u20b93.60 Lakh"
+        },
+        {
+          "key": "body_type",
+          "value": "Sedan"
+        }
+      ],
+      "raw_data": {
+        "ucid": 4104396,
+        "usedCarId": 5504970,
+        "price": 360000,
+        "formattedPrice": "\u20b93.60 Lakh",
+        "pi": "https://images10.gaadi.com/usedcar_image/5504970/original/40c47f62e2cb88f37128c15a4ca1df52.JPG?imwidth=420",
+        "imageCount": 40,
+        "myear": 2015,
+        "model": "Maruti Suzuki Ciaz",
+        "modelName": "Ciaz 2014-2017",
+        "variantName": "ZXi",
+        "threesixty": false,
+        "km": "95,772",
+        "ft": "Petrol",
+        "tt": "Manual",
+        "msp": 360000,
+        "priceSaving": "",
+        "isHeart": false,
+        "ip": 0,
+        "usedCarSkuId": "748f98c1-f0ca-45ae-97bd-5f0e38df6e2a",
+        "leadForm": 1,
+        "leadFormCta": "View Seller Details",
+        "vlink": "/used-car-details/used-Maruti-ciaz-zxi-cars-Ghaziabad_748f98c1-f0ca-45ae-97bd-5f0e38df6e2a.htm",
+        "position": 2,
+        "buttonDto": {},
+        "centralVariantId": 4006,
+        "active": true,
+        "inventoryStatus": 1,
+        "activeText": "Active",
+        "isBookingAllowed": false,
+        "sid": "2CAD0EC0174CAF6620A3539E6484A04C",
+        "oem": "Maruti Suzuki",
+        "vid": "Maruti Suzuki Ciaz ZXi",
+        "city": "Ghaziabad",
+        "cityId": 349,
+        "bt": "Sedan",
+        "loc": "raj nagar extension s.o",
+        "utype": "Dealer",
+        "tmGaadiStore": false,
+        "compare": true,
+        "brandingIcon": "https://stimg.cardekho.com/usedcar/images/icon/certified.svg",
+        "pageType": "ucr",
+        "carType": "corporate",
+        "corporateId": 13,
+        "storeId": "C623BC73A574AEF9DA76A13027AAD1FF",
+        "inventoryTypeLabel": "enterprise",
+        "locality": "Raj Nagar Extension S.o",
+        "premiumSellerIcons": {
+          "icon": "https://stimg.cardekho.com/usedcar/images/uc/spinnyNlogo.svg",
+          "fullIcon": "https://stimg.cardekho.com/images/ucr/spinnY.svg"
+        },
+        "emiwidget": {
+          "title": "EMI starts",
+          "cost": "29,168",
+          "duration": "/mo",
+          "caption": "Interest calculated at 14.5% for 12 months",
+          "btntext": "Check Your Loan",
+          "btnUrl": "https://loan.cardekho.com/used-car?utm_source=cardekho&utm_medium=internal&utm_campaign=UsedCarsSRP_EMIstarts",
+          "interestRate": 14.5,
+          "loanMonth": 12
+        },
+        "similarCarsBrandingIcon": "https://stimg.cardekho.com/usedcar/Banner/certifiedMOBILE.svg",
+        "owner": 2,
+        "ownerSlug": "second-owner",
+        "invAndUserCityMismatch": false,
+        "dealerId": 78452,
+        "whatsAppEnabled": 1,
+        "trustTags": [],
+        "cdCertified": false,
+        "placeholderImage": "https://stimg.cardekho.com/images/car-images/large/Maruti/Maruti-Ciaz-2014-2017/3197/front-left-side-47.jpg",
+        "gMapLink": "https://maps.google.com/?q=28.7041473388671,77.4147109985351",
+        "aiTags": [
+          "2nd owner, <span>96k km</span> \u2014 history is traceable on this Ciaz.<br>",
+          "Comprehensive insurance \u2014 <b>valid till July 2027</b>."
+        ],
+        "aiPriceBadge": "Great Price",
+        "sort": [
+          2,
+          468.9673202614379
+        ],
+        "nearByCityInventory": false,
+        "source": "cardekho",
+        "automobile": {
+          "brand": "Maruti Suzuki",
+          "model": "Ciaz 2014-2017",
+          "variant": "ZXi",
+          "year": 2015,
+          "kilometers": 95772,
+          "fuel_type": "Petrol",
+          "transmission": "Manual",
+          "body_type": "Sedan",
+          "number_of_owners": 2,
+          "rto": null,
+          "formatted_price": "\u20b93.60 Lakh"
+        }
+      }
+    }
+  ],
+  "pagination": {
+    "page": 1,
+    "limit": 2,
+    "has_next": true,
+    "total_records": 20
+  }
+}

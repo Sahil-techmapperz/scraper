@@ -1,0 +1,176 @@
+{
+  "success": true,
+  "data": [
+    {
+      "id": "1001",
+      "title": "Senior Python Backend Developer",
+      "description": "Looking for an experienced Python developer proficient in FastAPI, Django, PostgreSQL, Redis, and microservices architecture.",
+      "url": "https://www.naukri.com/job-listings-senior-python-backend-developer-1001",
+      "price": {
+        "value": 1800000,
+        "currency": "INR",
+        "negotiable": false
+      },
+      "category": {
+        "id": "jobs",
+        "slug": "jobs",
+        "name": "Jobs"
+      },
+      "subcategory": {
+        "id": "tech",
+        "slug": "tech-jobs",
+        "name": "Technology Jobs"
+      },
+      "location": {
+        "city": "Bengaluru",
+        "locality": "Whitefield, Bengaluru",
+        "state": "Karnataka",
+        "pincode": "560066"
+      },
+      "seller": {
+        "name": "TechCorp Solutions",
+        "type": "employer",
+        "contact_available": true
+      },
+      "images": [],
+      "parameters": [
+        {
+          "key": "company",
+          "value": "TechCorp Solutions"
+        },
+        {
+          "key": "experience",
+          "value": "4-8 Yrs"
+        },
+        {
+          "key": "salary_text",
+          "value": "₹ 18-24 Lacs P.A."
+        },
+        {
+          "key": "location",
+          "value": "Bengaluru, Karnataka"
+        },
+        {
+          "key": "skills",
+          "value": "Python, FastAPI, Django, Docker, PostgreSQL, Redis"
+        },
+        {
+          "key": "rating",
+          "value": "4.2"
+        },
+        {
+          "key": "reviews",
+          "value": "1.5k Reviews"
+        },
+        {
+          "key": "posted_age",
+          "value": "1 day ago"
+        }
+      ],
+      "raw_data": {
+        "source": "naukri",
+        "job_id": "1001",
+        "title": "Senior Python Backend Developer",
+        "company": "TechCorp Solutions",
+        "experience": "4-8 Yrs",
+        "salary": "₹ 18-24 Lacs P.A.",
+        "location": "Bengaluru, Karnataka",
+        "skills": ["Python", "FastAPI", "Django", "Docker", "PostgreSQL", "Redis"],
+        "rating": "4.2",
+        "reviews": "1.5k Reviews",
+        "posted_date": "1 day ago",
+        "job": {
+          "company_name": "TechCorp Solutions",
+          "experience_required": "4-8 Yrs",
+          "salary_text": "₹ 18-24 Lacs P.A.",
+          "skills": ["Python", "FastAPI", "Django", "Docker", "PostgreSQL", "Redis"],
+          "company_rating": 4.2,
+          "review_count": "1.5k Reviews",
+          "posted_age": "1 day ago",
+          "apply_url": "https://www.naukri.com/job-listings-senior-python-backend-developer-1001"
+        }
+      }
+    },
+    {
+      "id": "1002",
+      "title": "Full Stack Engineer (React + Node.js / Python)",
+      "description": "Seeking versatile full stack engineer to build scalable SaaS dashboards and high-throughput microservices.",
+      "url": "https://www.naukri.com/job-listings-full-stack-engineer-1002",
+      "price": {
+        "value": 1500000,
+        "currency": "INR",
+        "negotiable": false
+      },
+      "category": {
+        "id": "jobs",
+        "slug": "jobs",
+        "name": "Jobs"
+      },
+      "subcategory": {
+        "id": "tech",
+        "slug": "tech-jobs",
+        "name": "Technology Jobs"
+      },
+      "location": {
+        "city": "Hyderabad",
+        "locality": "Hitec City, Hyderabad",
+        "state": "Telangana",
+        "pincode": "500081"
+      },
+      "seller": {
+        "name": "CloudScale Innovations",
+        "type": "employer",
+        "contact_available": true
+      },
+      "images": [],
+      "parameters": [
+        {
+          "key": "company",
+          "value": "CloudScale Innovations"
+        },
+        {
+          "key": "experience",
+          "value": "3-6 Yrs"
+        },
+        {
+          "key": "salary_text",
+          "value": "₹ 15-20 Lacs P.A."
+        },
+        {
+          "key": "skills",
+          "value": "React, Node.js, Python, AWS, TypeScript"
+        },
+        {
+          "key": "rating",
+          "value": "4.0"
+        }
+      ],
+      "raw_data": {
+        "source": "naukri",
+        "job_id": "1002",
+        "title": "Full Stack Engineer (React + Node.js / Python)",
+        "company": "CloudScale Innovations",
+        "experience": "3-6 Yrs",
+        "salary": "₹ 15-20 Lacs P.A.",
+        "location": "Hyderabad, Telangana",
+        "skills": ["React", "Node.js", "Python", "AWS", "TypeScript"],
+        "rating": "4.0",
+        "job": {
+          "company_name": "CloudScale Innovations",
+          "experience_required": "3-6 Yrs",
+          "salary_text": "₹ 15-20 Lacs P.A.",
+          "skills": ["React", "Node.js", "Python", "AWS", "TypeScript"],
+          "company_rating": 4.0,
+          "posted_age": "2 days ago",
+          "apply_url": "https://www.naukri.com/job-listings-full-stack-engineer-1002"
+        }
+      }
+    }
+  ],
+  "pagination": {
+    "page": 1,
+    "limit": 50,
+    "has_next": false,
+    "total_records": 2
+  }
+}

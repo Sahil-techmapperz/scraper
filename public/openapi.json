@@ -1,0 +1,623 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Marketplace & Job Live Data Extraction API",
+    "version": "1.2.0",
+    "description": "Authenticated multi-platform API for normalized real-time listing search and detail data extraction across OLX India (Classifieds), CarDekho (Automotive), and Naukri.com (Jobs & Careers)."
+  },
+  "servers": [
+    {
+      "url": "/"
+    }
+  ],
+  "security": [
+    {
+      "ApiKeyAuth": []
+    },
+    {
+      "BearerAuth": []
+    }
+  ],
+  "paths": {
+    "/api/v1/health": {
+      "get": {
+        "security": [],
+        "summary": "Service health and source adapter status",
+        "responses": {
+          "200": {
+            "description": "Health status"
+          }
+        }
+      }
+    },
+    "/api/v1/olx/listings": {
+      "get": {
+        "summary": "Search OLX India listings",
+        "parameters": [
+          {"$ref": "#/components/parameters/category"},
+          {"$ref": "#/components/parameters/subcategory"},
+          {"$ref": "#/components/parameters/keyword"},
+          {"$ref": "#/components/parameters/state"},
+          {"$ref": "#/components/parameters/city"},
+          {"$ref": "#/components/parameters/locality"},
+          {"$ref": "#/components/parameters/pincode"},
+          {"$ref": "#/components/parameters/min_price"},
+          {"$ref": "#/components/parameters/max_price"},
+          {"$ref": "#/components/parameters/sort"},
+          {"$ref": "#/components/parameters/page"},
+          {"$ref": "#/components/parameters/limit"},
+          {"$ref": "#/components/parameters/posted_from"},
+          {"$ref": "#/components/parameters/posted_to"},
+          {"$ref": "#/components/parameters/fresh"},
+          {"$ref": "#/components/parameters/vehicle_type"},
+          {"$ref": "#/components/parameters/brand"},
+          {"$ref": "#/components/parameters/model"},
+          {"$ref": "#/components/parameters/variant"},
+          {"$ref": "#/components/parameters/min_year"},
+          {"$ref": "#/components/parameters/max_year"},
+          {"$ref": "#/components/parameters/fuel_type"},
+          {"$ref": "#/components/parameters/transmission"},
+          {"$ref": "#/components/parameters/min_km"},
+          {"$ref": "#/components/parameters/max_km"},
+          {"$ref": "#/components/parameters/owner_count"},
+          {"$ref": "#/components/parameters/condition"},
+          {"$ref": "#/components/parameters/min_ram"},
+          {"$ref": "#/components/parameters/max_ram"},
+          {"$ref": "#/components/parameters/min_storage"},
+          {"$ref": "#/components/parameters/max_storage"},
+          {"$ref": "#/components/parameters/warranty"},
+          {"$ref": "#/components/parameters/listing_type"},
+          {"$ref": "#/components/parameters/property_type"},
+          {"$ref": "#/components/parameters/property_category"},
+          {"$ref": "#/components/parameters/bhk"},
+          {"$ref": "#/components/parameters/min_area"},
+          {"$ref": "#/components/parameters/max_area"},
+          {"$ref": "#/components/parameters/furnishing"},
+          {"$ref": "#/components/parameters/posted_by"}
+        ],
+        "responses": {
+          "200": {
+            "description": "Normalized listing collection",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SearchResponse"
+                }
+              }
+            }
+          },
+          "400": {"$ref": "#/components/responses/BadRequest"},
+          "401": {"$ref": "#/components/responses/Unauthorized"},
+          "403": {"$ref": "#/components/responses/Forbidden"},
+          "429": {"$ref": "#/components/responses/RateLimited"},
+          "502": {"$ref": "#/components/responses/SourceUnavailable"},
+          "504": {"$ref": "#/components/responses/SourceTimeout"}
+        }
+      }
+    },
+    "/api/v1/olx/listings/{listing_id}": {
+      "get": {
+        "summary": "Fetch current listing detail by source listing ID",
+        "parameters": [
+          {
+            "name": "listing_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {"$ref": "#/components/parameters/fresh"}
+        ],
+        "responses": {
+          "200": {
+            "description": "Normalized listing detail",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DetailResponse"
+                }
+              }
+            }
+          },
+          "400": {"$ref": "#/components/responses/BadRequest"},
+          "401": {"$ref": "#/components/responses/Unauthorized"},
+          "404": {"$ref": "#/components/responses/NotFound"},
+          "429": {"$ref": "#/components/responses/RateLimited"},
+          "502": {"$ref": "#/components/responses/SourceUnavailable"}
+        }
+      }
+    },
+    "/api/v1/olx/listing": {
+      "get": {
+        "summary": "Fetch listing detail by URL when the configured source connector supports it",
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          {"$ref": "#/components/parameters/fresh"}
+        ],
+        "responses": {
+          "200": {
+            "description": "Normalized listing detail",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DetailResponse"
+                }
+              }
+            }
+          },
+          "400": {"$ref": "#/components/responses/BadRequest"},
+          "401": {"$ref": "#/components/responses/Unauthorized"},
+          "404": {"$ref": "#/components/responses/NotFound"},
+          "429": {"$ref": "#/components/responses/RateLimited"},
+          "502": {"$ref": "#/components/responses/SourceUnavailable"}
+        }
+      }
+    },
+    "/api/v1/cardekho/listings": {
+      "get": {
+        "summary": "Search CarDekho car listings",
+        "parameters": [
+          {"$ref": "#/components/parameters/keyword"},
+          {"$ref": "#/components/parameters/city"},
+          {"$ref": "#/components/parameters/brand"},
+          {"$ref": "#/components/parameters/model"},
+          {"$ref": "#/components/parameters/min_price"},
+          {"$ref": "#/components/parameters/max_price"},
+          {"$ref": "#/components/parameters/min_year"},
+          {"$ref": "#/components/parameters/max_year"},
+          {"$ref": "#/components/parameters/min_km"},
+          {"$ref": "#/components/parameters/max_km"},
+          {"$ref": "#/components/parameters/fuel_type"},
+          {"$ref": "#/components/parameters/transmission"},
+          {"$ref": "#/components/parameters/sort"},
+          {"$ref": "#/components/parameters/page"},
+          {"$ref": "#/components/parameters/limit"},
+          {"$ref": "#/components/parameters/fresh"}
+        ],
+        "responses": {
+          "200": {
+            "description": "Normalized listing collection",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SearchResponse"
+                }
+              }
+            }
+          },
+          "400": {"$ref": "#/components/responses/BadRequest"},
+          "401": {"$ref": "#/components/responses/Unauthorized"},
+          "403": {"$ref": "#/components/responses/Forbidden"},
+          "429": {"$ref": "#/components/responses/RateLimited"},
+          "502": {"$ref": "#/components/responses/SourceUnavailable"},
+          "504": {"$ref": "#/components/responses/SourceTimeout"}
+        }
+      }
+    },
+    "/api/v1/cardekho/listings/{listing_id}": {
+      "get": {
+        "summary": "Fetch CarDekho listing detail by ID",
+        "parameters": [
+          {
+            "name": "listing_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {"$ref": "#/components/parameters/fresh"}
+        ],
+        "responses": {
+          "200": {
+            "description": "Normalized listing detail",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DetailResponse"
+                }
+              }
+            }
+          },
+          "400": {"$ref": "#/components/responses/BadRequest"},
+          "401": {"$ref": "#/components/responses/Unauthorized"},
+          "404": {"$ref": "#/components/responses/NotFound"},
+          "429": {"$ref": "#/components/responses/RateLimited"},
+          "502": {"$ref": "#/components/responses/SourceUnavailable"}
+        }
+      }
+    },
+    "/api/v1/cardekho/listing": {
+      "get": {
+        "summary": "Fetch CarDekho listing detail by direct URL",
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          {"$ref": "#/components/parameters/fresh"}
+        ],
+        "responses": {
+          "200": {
+            "description": "Normalized listing detail",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DetailResponse"
+                }
+              }
+            }
+          },
+          "400": {"$ref": "#/components/responses/BadRequest"},
+          "401": {"$ref": "#/components/responses/Unauthorized"},
+          "404": {"$ref": "#/components/responses/NotFound"},
+          "429": {"$ref": "#/components/responses/RateLimited"},
+          "502": {"$ref": "#/components/responses/SourceUnavailable"}
+        }
+      }
+    },
+    "/api/v1/naukri/listings": {
+      "get": {
+        "summary": "Search Naukri.com live job listings",
+        "parameters": [
+          {"$ref": "#/components/parameters/keyword"},
+          {"$ref": "#/components/parameters/city"},
+          {"$ref": "#/components/parameters/category"},
+          {"$ref": "#/components/parameters/experience"},
+          {"$ref": "#/components/parameters/min_experience"},
+          {"$ref": "#/components/parameters/max_experience"},
+          {"$ref": "#/components/parameters/min_price"},
+          {"$ref": "#/components/parameters/max_price"},
+          {"$ref": "#/components/parameters/skills"},
+          {"$ref": "#/components/parameters/company"},
+          {"$ref": "#/components/parameters/salary_range"},
+          {"$ref": "#/components/parameters/sort"},
+          {"$ref": "#/components/parameters/page"},
+          {"$ref": "#/components/parameters/limit"},
+          {"$ref": "#/components/parameters/fresh"}
+        ],
+        "responses": {
+          "200": {
+            "description": "Normalized Naukri job search results",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SearchResponse"
+                }
+              }
+            }
+          },
+          "400": {"$ref": "#/components/responses/BadRequest"},
+          "401": {"$ref": "#/components/responses/Unauthorized"},
+          "429": {"$ref": "#/components/responses/RateLimited"},
+          "502": {"$ref": "#/components/responses/SourceUnavailable"}
+        }
+      }
+    },
+    "/api/v1/naukri/listings/{listing_id}": {
+      "get": {
+        "summary": "Fetch Naukri job detail by listing ID",
+        "parameters": [
+          {
+            "name": "listing_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {"$ref": "#/components/parameters/fresh"}
+        ],
+        "responses": {
+          "200": {
+            "description": "Normalized job detail",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DetailResponse"
+                }
+              }
+            }
+          },
+          "400": {"$ref": "#/components/responses/BadRequest"},
+          "401": {"$ref": "#/components/responses/Unauthorized"},
+          "404": {"$ref": "#/components/responses/NotFound"},
+          "429": {"$ref": "#/components/responses/RateLimited"},
+          "502": {"$ref": "#/components/responses/SourceUnavailable"}
+        }
+      }
+    },
+    "/api/v1/naukri/listing": {
+      "get": {
+        "summary": "Fetch Naukri job detail by direct URL",
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          {"$ref": "#/components/parameters/fresh"}
+        ],
+        "responses": {
+          "200": {
+            "description": "Normalized job detail",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DetailResponse"
+                }
+              }
+            }
+          },
+          "400": {"$ref": "#/components/responses/BadRequest"},
+          "401": {"$ref": "#/components/responses/Unauthorized"},
+          "404": {"$ref": "#/components/responses/NotFound"},
+          "429": {"$ref": "#/components/responses/RateLimited"},
+          "502": {"$ref": "#/components/responses/SourceUnavailable"}
+        }
+      }
+    },
+    "/api/v1/admin/usage": {
+      "get": {
+        "summary": "Admin API usage report",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 50,
+              "maximum": 100
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Recent usage logs and monthly summary"
+          },
+          "401": {"$ref": "#/components/responses/Unauthorized"},
+          "403": {"$ref": "#/components/responses/Forbidden"}
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "ApiKeyAuth": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-API-Key"
+      },
+      "BearerAuth": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    },
+    "parameters": {
+      "category": {"name": "category", "in": "query", "schema": {"type": "string", "enum": ["cars", "bikes", "mobile-phones", "real-estate", "jobs", "software-engineer", "data-scientist", "devops-engineer", "product-manager", "frontend-developer", "backend-developer", "full-stack-developer", "qa-engineer", "marketing", "sales", "hr", "finance"]}},
+      "subcategory": {"name": "subcategory", "in": "query", "schema": {"type": "string"}},
+      "keyword": {"name": "keyword", "in": "query", "schema": {"type": "string", "maxLength": 120}},
+      "state": {"name": "state", "in": "query", "schema": {"type": "string"}},
+      "city": {"name": "city", "in": "query", "schema": {"type": "string"}},
+      "locality": {"name": "locality", "in": "query", "schema": {"type": "string"}},
+      "pincode": {"name": "pincode", "in": "query", "schema": {"type": "string", "pattern": "^\\d{6}$"}},
+      "min_price": {"name": "min_price", "in": "query", "schema": {"type": "integer", "minimum": 0}},
+      "max_price": {"name": "max_price", "in": "query", "schema": {"type": "integer", "minimum": 0}},
+      "sort": {"name": "sort", "in": "query", "schema": {"type": "string", "enum": ["newest", "oldest", "price_low_to_high", "price_high_to_low"]}},
+      "page": {"name": "page", "in": "query", "schema": {"type": "integer", "default": 1, "minimum": 1}},
+      "limit": {"name": "limit", "in": "query", "schema": {"type": "integer", "default": 50, "minimum": 1, "maximum": 100}},
+      "posted_from": {"name": "posted_from", "in": "query", "schema": {"type": "string", "format": "date"}},
+      "posted_to": {"name": "posted_to", "in": "query", "schema": {"type": "string", "format": "date"}},
+      "fresh": {"name": "fresh", "in": "query", "schema": {"type": "boolean", "default": false}},
+      "vehicle_type": {"name": "vehicle_type", "in": "query", "schema": {"type": "string"}},
+      "brand": {"name": "brand", "in": "query", "schema": {"type": "string"}},
+      "model": {"name": "model", "in": "query", "schema": {"type": "string"}},
+      "variant": {"name": "variant", "in": "query", "schema": {"type": "string"}},
+      "min_year": {"name": "min_year", "in": "query", "schema": {"type": "integer"}},
+      "max_year": {"name": "max_year", "in": "query", "schema": {"type": "integer"}},
+      "fuel_type": {"name": "fuel_type", "in": "query", "schema": {"type": "string", "enum": ["petrol", "diesel", "cng", "electric", "hybrid", "lpg"]}},
+      "transmission": {"name": "transmission", "in": "query", "schema": {"type": "string", "enum": ["manual", "automatic"]}},
+      "min_km": {"name": "min_km", "in": "query", "schema": {"type": "integer", "minimum": 0}},
+      "max_km": {"name": "max_km", "in": "query", "schema": {"type": "integer", "minimum": 0}},
+      "owner_count": {"name": "owner_count", "in": "query", "schema": {"type": "integer", "minimum": 0}},
+      "condition": {"name": "condition", "in": "query", "schema": {"type": "string", "enum": ["new", "used", "refurbished"]}},
+      "min_ram": {"name": "min_ram", "in": "query", "schema": {"type": "integer", "minimum": 0}},
+      "max_ram": {"name": "max_ram", "in": "query", "schema": {"type": "integer", "minimum": 0}},
+      "min_storage": {"name": "min_storage", "in": "query", "schema": {"type": "integer", "minimum": 0}},
+      "max_storage": {"name": "max_storage", "in": "query", "schema": {"type": "integer", "minimum": 0}},
+      "warranty": {"name": "warranty", "in": "query", "schema": {"type": "string", "enum": ["yes", "no"]}},
+      "listing_type": {"name": "listing_type", "in": "query", "schema": {"type": "string", "enum": ["sale", "rent"]}},
+      "property_type": {"name": "property_type", "in": "query", "schema": {"type": "string"}},
+      "property_category": {"name": "property_category", "in": "query", "schema": {"type": "string"}},
+      "bhk": {"name": "bhk", "in": "query", "schema": {"type": "integer", "minimum": 0}},
+      "min_area": {"name": "min_area", "in": "query", "schema": {"type": "integer", "minimum": 0}},
+      "max_area": {"name": "max_area", "in": "query", "schema": {"type": "integer", "minimum": 0}},
+      "furnishing": {"name": "furnishing", "in": "query", "schema": {"type": "string", "enum": ["furnished", "semi-furnished", "unfurnished"]}},
+      "posted_by": {"name": "posted_by", "in": "query", "schema": {"type": "string", "enum": ["owner", "dealer", "builder", "agent"]}},
+      "experience": {"name": "experience", "in": "query", "schema": {"type": "integer", "minimum": 0}},
+      "min_experience": {"name": "min_experience", "in": "query", "schema": {"type": "integer", "minimum": 0}},
+      "max_experience": {"name": "max_experience", "in": "query", "schema": {"type": "integer", "minimum": 0}},
+      "skills": {"name": "skills", "in": "query", "schema": {"type": "string"}},
+      "company": {"name": "company", "in": "query", "schema": {"type": "string"}},
+      "salary_range": {"name": "salary_range", "in": "query", "schema": {"type": "string"}}
+    },
+    "schemas": {
+      "SearchResponse": {
+        "type": "object",
+        "required": ["success", "source", "request", "pagination", "data"],
+        "properties": {
+          "success": {"type": "boolean", "const": true},
+          "source": {"$ref": "#/components/schemas/Source"},
+          "request": {"type": "object", "additionalProperties": true},
+          "pagination": {"$ref": "#/components/schemas/Pagination"},
+          "data": {"type": "array", "items": {"$ref": "#/components/schemas/Listing"}}
+        }
+      },
+      "DetailResponse": {
+        "type": "object",
+        "required": ["success", "source", "data"],
+        "properties": {
+          "success": {"type": "boolean", "const": true},
+          "source": {"$ref": "#/components/schemas/Source"},
+          "data": {"$ref": "#/components/schemas/Listing"}
+        }
+      },
+      "Source": {
+        "type": "object",
+        "properties": {
+          "platform": {"type": "string", "example": "olx"},
+          "country": {"type": "string", "example": "IN"}
+        }
+      },
+      "Pagination": {
+        "type": "object",
+        "properties": {
+          "page": {"type": "integer"},
+          "limit": {"type": "integer"},
+          "has_next": {"type": "boolean"}
+        }
+      },
+      "Listing": {
+        "type": "object",
+        "properties": {
+          "listing_id": {"type": "string"},
+          "listing_url": {"type": ["string", "null"], "format": "uri"},
+          "title": {"type": ["string", "null"]},
+          "description": {"type": ["string", "null"]},
+          "category": {"type": ["string", "null"]},
+          "subcategory": {"type": ["string", "null"]},
+          "price": {"$ref": "#/components/schemas/Price"},
+          "seller": {"$ref": "#/components/schemas/Seller"},
+          "location": {"$ref": "#/components/schemas/Location"},
+          "automobile": {"$ref": "#/components/schemas/Automobile"},
+          "mobile_phone": {"$ref": "#/components/schemas/MobilePhone"},
+          "real_estate": {"$ref": "#/components/schemas/RealEstate"},
+          "job": {"$ref": "#/components/schemas/Job"},
+          "images": {"type": "array", "items": {"type": "string", "format": "uri"}},
+          "listing_date": {"type": ["string", "null"], "format": "date"},
+          "last_updated": {"type": ["string", "null"], "format": "date-time"},
+          "availability": {"type": "string"},
+          "collected_at": {"type": "string", "format": "date-time"}
+        }
+      },
+      "Job": {
+        "type": "object",
+        "properties": {
+          "company_name": {"type": ["string", "null"]},
+          "experience_required": {"type": ["string", "null"]},
+          "salary_text": {"type": ["string", "null"]},
+          "skills": {"type": "array", "items": {"type": "string"}},
+          "company_rating": {"type": ["number", "null"]},
+          "review_count": {"type": ["string", "null"]},
+          "posted_age": {"type": ["string", "null"]},
+          "apply_url": {"type": ["string", "null"], "format": "uri"}
+        }
+      },
+      "Price": {
+        "type": "object",
+        "properties": {
+          "amount": {"type": ["integer", "null"]},
+          "currency": {"type": "string", "example": "INR"},
+          "negotiable": {"type": ["boolean", "null"]}
+        }
+      },
+      "Seller": {
+        "type": "object",
+        "properties": {
+          "name": {"type": ["string", "null"]},
+          "type": {"type": ["string", "null"]},
+          "contact_available": {"type": "boolean"}
+        }
+      },
+      "Location": {
+        "type": "object",
+        "properties": {
+          "state": {"type": ["string", "null"]},
+          "city": {"type": ["string", "null"]},
+          "locality": {"type": ["string", "null"]},
+          "pincode": {"type": ["string", "null"]}
+        }
+      },
+      "Automobile": {
+        "type": "object",
+        "properties": {
+          "vehicle_type": {"type": ["string", "null"]},
+          "brand": {"type": ["string", "null"]},
+          "model": {"type": ["string", "null"]},
+          "variant": {"type": ["string", "null"]},
+          "manufacturing_year": {"type": ["integer", "null"]},
+          "kilometres_driven": {"type": ["integer", "null"]},
+          "fuel_type": {"type": ["string", "null"]},
+          "transmission": {"type": ["string", "null"]},
+          "number_of_owners": {"type": ["integer", "null"]},
+          "registration_location": {"type": ["string", "null"]},
+          "colour": {"type": ["string", "null"]}
+        }
+      },
+      "MobilePhone": {
+        "type": "object",
+        "properties": {
+          "brand": {"type": ["string", "null"]},
+          "model": {"type": ["string", "null"]},
+          "condition": {"type": ["string", "null"]},
+          "ram_gb": {"type": ["integer", "null"]},
+          "storage_gb": {"type": ["integer", "null"]},
+          "warranty": {"type": ["boolean", "null"]}
+        }
+      },
+      "RealEstate": {
+        "type": "object",
+        "properties": {
+          "listing_type": {"type": ["string", "null"]},
+          "property_type": {"type": ["string", "null"]},
+          "property_category": {"type": ["string", "null"]},
+          "bhk": {"type": ["integer", "null"]},
+          "area": {"type": ["integer", "null"]},
+          "furnishing": {"type": ["string", "null"]},
+          "posted_by": {"type": ["string", "null"]}
+        }
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "properties": {
+          "success": {"type": "boolean", "const": false},
+          "error": {
+            "type": "object",
+            "properties": {
+              "code": {"type": "string"},
+              "message": {"type": "string"},
+              "details": {"type": "object", "additionalProperties": true}
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "BadRequest": {"description": "Invalid request", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/ErrorResponse"}}}},
+      "Unauthorized": {"description": "Missing or invalid API key", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/ErrorResponse"}}}},
+      "Forbidden": {"description": "Quota exceeded or insufficient privileges", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/ErrorResponse"}}}},
+      "NotFound": {"description": "Listing not found", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/ErrorResponse"}}}},
+      "RateLimited": {"description": "Rate limit exceeded", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/ErrorResponse"}}}},
+      "SourceUnavailable": {"description": "Configured source connector unavailable", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/ErrorResponse"}}}},
+      "SourceTimeout": {"description": "Source connector timeout", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/ErrorResponse"}}}}
+    }
+  }
+}

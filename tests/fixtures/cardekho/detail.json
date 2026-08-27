@@ -1,0 +1,1192 @@
+{
+  "data": {
+    "id": "cardekho-5525529",
+    "title": "2025 Maruti Suzuki Wagon R VXI",
+    "description": "2025 Maruti Suzuki Wagon R VXI in Faridabad.\nPrice: \u20b96.09 Lakh\nDriven: 10,000 km | Fuel: Petrol | Transmission: Manual | Ownership: 1st Owner\nLocation: Sector 9, Faridabad\nRTO: HR51",
+    "url": "https://www.cardekho.com/used-car-details/used-Maruti-wagon-r-vxi-cars-Faridabad_02bf1a86-4a4c-4fb7-9a26-b5c79ef08c0a.htm?adId=33252&adType=41",
+    "price": {
+      "value": 540000,
+      "currency": "INR",
+      "negotiable": false
+    },
+    "category": {
+      "id": "automobile",
+      "slug": "cars",
+      "name": "Cars"
+    },
+    "subcategory": {
+      "id": "cars",
+      "slug": "used-cars",
+      "name": "Used Cars"
+    },
+    "location": {
+      "state": null,
+      "city": "Faridabad",
+      "locality": "Sector 9",
+      "pincode": null
+    },
+    "seller": {
+      "name": "Verified Car Owner",
+      "type": "individual",
+      "contact_available": false
+    },
+    "images": [
+      {
+        "url": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/22b4d284-0081-4e01-8be3-073a8a12fe95.jpeg",
+        "position": 0
+      },
+      {
+        "url": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/22b4d284-0081-4e01-8be3-073a8a12fe95.jpeg?imwidth=640",
+        "position": 1
+      },
+      {
+        "url": "https://images10.gaadi.com/usedcar_image/5525529/original/137119a9-c49e-42f3-b5f1-30660aa61db6.png?imwidth=640",
+        "position": 2
+      },
+      {
+        "url": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/e0a16b32-7623-4b8b-8538-59bfee7c4604.jpeg?imwidth=640",
+        "position": 3
+      },
+      {
+        "url": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/c95c9e02-0164-43a6-b54d-27e431b26604.jpeg?imwidth=640",
+        "position": 4
+      },
+      {
+        "url": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/18ee88fc-a74f-4ba7-a5b3-8dcf4ce40b78.jpeg?imwidth=640",
+        "position": 5
+      },
+      {
+        "url": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/2fc2a32f-2496-4f50-a86f-8993a7b1d458.jpeg?imwidth=640",
+        "position": 6
+      },
+      {
+        "url": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/d00f4650-e862-4355-8894-d5ece97f8c60.jpeg?imwidth=640",
+        "position": 7
+      },
+      {
+        "url": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/52119d03-bd73-4808-b94c-644b43e1c67f.jpeg?imwidth=640",
+        "position": 8
+      },
+      {
+        "url": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/23a34e70-6166-42c0-9a53-8f1e6885757f.jpeg?imwidth=640",
+        "position": 9
+      },
+      {
+        "url": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/c1f5bc46-9dc8-45c7-b6be-4e557ab5a15d.jpeg?imwidth=640",
+        "position": 10
+      },
+      {
+        "url": "https://images10.gaadi.com/usedcar_image/5525529/original/8e51957e-5059-404d-ac37-29039e2ce41b.png?imwidth=640",
+        "position": 11
+      },
+      {
+        "url": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/fc39e2fd-2fd2-4e5f-8314-1c1e170f446c.jpeg?imwidth=640",
+        "position": 12
+      },
+      {
+        "url": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/49fec706-5a33-4799-b855-1890e42341c0.jpeg?imwidth=640",
+        "position": 13
+      },
+      {
+        "url": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/7acee812-77ec-41d6-9dd9-413bed6f399e.jpeg?imwidth=640",
+        "position": 14
+      },
+      {
+        "url": "https://images10.gaadi.com/usedcar_image/5525529/original/processed_processed_processed_8654e1db-d3b1-4792-bdf7-ed28cb4826c6.jpeg?imwidth=640",
+        "position": 15
+      }
+    ],
+    "created_at": null,
+    "updated_at": null,
+    "parameters": [
+      {
+        "key": "brand",
+        "value": "Maruti Suzuki"
+      },
+      {
+        "key": "model",
+        "value": "Wagon R"
+      },
+      {
+        "key": "year",
+        "value": "2025"
+      },
+      {
+        "key": "km",
+        "value": "10000"
+      },
+      {
+        "key": "fuel_type",
+        "value": "Petrol"
+      },
+      {
+        "key": "transmission",
+        "value": "Manual"
+      },
+      {
+        "key": "owner",
+        "value": "1st Owner"
+      },
+      {
+        "key": "body_type",
+        "value": "Hatchback"
+      },
+      {
+        "key": "rto",
+        "value": "HR51"
+      },
+      {
+        "key": "formatted_price",
+        "value": "\u20b96.09 Lakh"
+      },
+      {
+        "key": "Registration Year",
+        "value": "2025"
+      },
+      {
+        "key": "Insurance",
+        "value": "-"
+      },
+      {
+        "key": "Fuel Type",
+        "value": "Petrol"
+      },
+      {
+        "key": "Seats",
+        "value": "5 Seats"
+      },
+      {
+        "key": "Kms Driven",
+        "value": "10,000 Kms"
+      },
+      {
+        "key": "RTO",
+        "value": "Faridabad"
+      },
+      {
+        "key": "Ownership",
+        "value": "First Owner"
+      },
+      {
+        "key": "Engine Displacement",
+        "value": "998 cc"
+      },
+      {
+        "key": "Transmission",
+        "value": "Manual"
+      },
+      {
+        "key": "Year of Manufacture",
+        "value": "2025"
+      }
+    ],
+    "raw_data": {
+      "sid": "02bf1a86-4a4c-4fb7-9a26-b5c79ef08c0a",
+      "ucid": 0,
+      "usedCarId": 5525529,
+      "usedCarSkuId": "02bf1a86-4a4c-4fb7-9a26-b5c79ef08c0a",
+      "active": "0",
+      "isBooked": false,
+      "overAllScore": 0,
+      "vlink": "/used-car-details/used-Maruti-wagon-r-vxi-cars-Faridabad_02bf1a86-4a4c-4fb7-9a26-b5c79ef08c0a.htm",
+      "callInspectionApi": false,
+      "callServicesApi": true,
+      "views": 0,
+      "shortListCnt": 0,
+      "isPremium": true,
+      "pFilter": "5 Lakh - 8 Lakh",
+      "tmGaadiStore": false,
+      "pi": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/22b4d284-0081-4e01-8be3-073a8a12fe95.jpeg",
+      "pu": 540000,
+      "pn": "\u20b96.09 Lakh",
+      "pn_numeric": 609267,
+      "puAvg": 567000,
+      "puMsp": 0,
+      "orp": 609267,
+      "loc": "",
+      "dlId": 0,
+      "storeId": "",
+      "storeSrpLink": "/used-cars+in+faridabad?dealerId=",
+      "storeCoOrdinates": {
+        "lat": 28.376612,
+        "lng": 77.331985
+      },
+      "isHomeDeliver": false,
+      "franchiseName": "",
+      "carOverview": {
+        "heading": "Car Overview",
+        "top": [
+          {
+            "key": "Registration Year",
+            "value": "2025",
+            "icon": "https://images10.gaadicdn.com/listing/vdp/co/v1/registrationYear.svg"
+          },
+          {
+            "key": "Insurance",
+            "value": "-",
+            "icon": "https://images10.gaadicdn.com/listing/vdp/co/v1/insuranceValidity.svg"
+          },
+          {
+            "key": "Fuel Type",
+            "value": "Petrol",
+            "icon": "https://images10.gaadicdn.com/listing/vdp/co/v1/fuel.svg"
+          },
+          {
+            "key": "Seats",
+            "value": "5 Seats",
+            "icon": "https://images10.gaadicdn.com/listing/vdp/co/v1/seats.svg"
+          },
+          {
+            "key": "Kms Driven",
+            "value": "10,000 Kms",
+            "icon": "https://images10.gaadicdn.com/listing/vdp/co/v1/kmsDriven.svg"
+          },
+          {
+            "key": "RTO",
+            "value": "Faridabad",
+            "icon": "https://images10.gaadicdn.com/listing/vdp/co/v1/rto.svg"
+          },
+          {
+            "key": "Ownership",
+            "value": "First Owner",
+            "icon": "https://images10.gaadicdn.com/listing/vdp/co/v1/ownership.svg"
+          },
+          {
+            "key": "Engine Displacement",
+            "value": "998 cc",
+            "icon": "https://images10.gaadicdn.com/listing/vdp/co/v1/engineDisplacement.svg"
+          },
+          {
+            "key": "Transmission",
+            "value": "Manual",
+            "icon": "https://images10.gaadicdn.com/listing/vdp/co/v1/transmission.svg"
+          },
+          {
+            "key": "Year of Manufacture",
+            "value": 2025,
+            "icon": "https://images10.gaadicdn.com/listing/vdp/co/v1/yearManufacture.svg"
+          }
+        ],
+        "bottomData": null
+      },
+      "assuredBenefits": null,
+      "banner": {},
+      "ourSupports": {
+        "status": true,
+        "expert": true,
+        "chatCta": false,
+        "callCta": false,
+        "whatsApp": {
+          "link": "https://api.whatsapp.com/send?phone=911416666666&text=",
+          "text": "Hi,%0a%0aI'm interested in the Maruti Suzuki Wagon R VXI Petrol listed at \u20b95.40 Lakh in Faridabad on CarDekho. Can you tell me more about it?%0a%0aCarDekho Link: https://cd.cardk.in/chfUp21"
+        },
+        "profilePic": "https://stimg.cardekho.com/used-cars/common/icons/Avatar.svg",
+        "heading": "CarDekho Executive",
+        "call": "18002003000"
+      },
+      "galleryDto": {
+        "source": "NORMAL",
+        "tabs": [
+          {
+            "tabTitle": "Images",
+            "type": "all_image",
+            "listType": "image",
+            "list": [
+              "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/22b4d284-0081-4e01-8be3-073a8a12fe95.jpeg?imwidth=640",
+              "https://images10.gaadi.com/usedcar_image/5525529/original/137119a9-c49e-42f3-b5f1-30660aa61db6.png?imwidth=640",
+              "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/e0a16b32-7623-4b8b-8538-59bfee7c4604.jpeg?imwidth=640",
+              "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/c95c9e02-0164-43a6-b54d-27e431b26604.jpeg?imwidth=640",
+              "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/18ee88fc-a74f-4ba7-a5b3-8dcf4ce40b78.jpeg?imwidth=640",
+              "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/2fc2a32f-2496-4f50-a86f-8993a7b1d458.jpeg?imwidth=640",
+              "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/d00f4650-e862-4355-8894-d5ece97f8c60.jpeg?imwidth=640",
+              "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/52119d03-bd73-4808-b94c-644b43e1c67f.jpeg?imwidth=640",
+              "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/23a34e70-6166-42c0-9a53-8f1e6885757f.jpeg?imwidth=640",
+              "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/c1f5bc46-9dc8-45c7-b6be-4e557ab5a15d.jpeg?imwidth=640",
+              "https://images10.gaadi.com/usedcar_image/5525529/original/8e51957e-5059-404d-ac37-29039e2ce41b.png?imwidth=640",
+              "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/fc39e2fd-2fd2-4e5f-8314-1c1e170f446c.jpeg?imwidth=640",
+              "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/49fec706-5a33-4799-b855-1890e42341c0.jpeg?imwidth=640",
+              "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/7acee812-77ec-41d6-9dd9-413bed6f399e.jpeg?imwidth=640",
+              "https://images10.gaadi.com/usedcar_image/5525529/original/processed_processed_processed_8654e1db-d3b1-4792-bdf7-ed28cb4826c6.jpeg?imwidth=640"
+            ]
+          }
+        ],
+        "multiple": true
+      },
+      "threesixty": 0,
+      "emiWidget": {
+        "duration": "/mo",
+        "btntext": "",
+        "cost": "\u20b913,403",
+        "btnUrl": "",
+        "caption": "Interest calculated at 14.5% for 48 months",
+        "termNdCondition": "*Interest rate and loan amount offered may vary subject to customer risk profile",
+        "subHeading": "Interested in Finance?",
+        "description": "Avail upto 100% of the car value in finance at attractive interest rates",
+        "interestedctaText": "Interested in Loan",
+        "interestedctaTextAfterSubmit": "Thank you for showing interest",
+        "facilityText": "550+ customers availed the facility",
+        "title": "EMI starts",
+        "interestRate": 14.5,
+        "maxEmiDuration": 48,
+        "minTenure": 1,
+        "maxTenure": 5,
+        "principal_amount": 486000,
+        "loan_month": 48
+      },
+      "priceGuaranteeGraph": null,
+      "researchLink": {
+        "heading": "For Your Further Research",
+        "items": [
+          {
+            "slug": "/used-cars+5-lakh-to-7-lakh+in+faridabad",
+            "text": "Used cars in Faridabad in 5 Lakh to 7 Lakh",
+            "title": "Used cars in Faridabad in 5 Lakh to 7 Lakh",
+            "icon": "https://stimg.cardekho.com/used-cars/common/icons/tick_green.svg"
+          },
+          {
+            "slug": "/used-petrol+hatchback+cars+in+faridabad",
+            "text": "Used Petrol Hatchback cars in Faridabad",
+            "title": "Used Petrol Hatchback cars in Faridabad",
+            "icon": "https://stimg.cardekho.com/used-cars/common/icons/tick_green.svg"
+          },
+          {
+            "slug": "/used-hatchback+cars+in+faridabad",
+            "text": "Used Hatchback cars in Faridabad",
+            "title": "Used Hatchback cars in Faridabad",
+            "icon": "https://stimg.cardekho.com/used-cars/common/icons/tick_green.svg"
+          },
+          {
+            "slug": "/used-maruti+cars+in+faridabad",
+            "text": "Used Maruti Suzuki cars in Faridabad",
+            "title": "Used Maruti Suzuki cars in Faridabad",
+            "icon": "https://stimg.cardekho.com/used-cars/common/icons/tick_green.svg"
+          }
+        ]
+      },
+      "breadCrumb": [
+        {
+          "text": "Used Cars",
+          "title": "Used Cars",
+          "defaultKey": true,
+          "slug": "/usedCars"
+        },
+        {
+          "text": "Used Cars in Faridabad",
+          "title": "Used Cars in Faridabad",
+          "defaultKey": true,
+          "slug": "/used-cars+in+faridabad"
+        },
+        {
+          "text": "Used Maruti Suzuki Wagon R Cars in Faridabad",
+          "title": "Used Maruti Suzuki Wagon R Cars in Faridabad",
+          "defaultKey": true,
+          "slug": "/used-maruti-wagon-r+cars+in+faridabad"
+        },
+        {
+          "text": "Used Maruti Suzuki Wagon R VXI Cars in Faridabad",
+          "title": "Used Maruti Suzuki Wagon R VXI Cars in Faridabad",
+          "defaultKey": true,
+          "slug": ""
+        }
+      ],
+      "carDetails": {
+        "it": 0,
+        "ft": "Petrol",
+        "bt": "Hatchback",
+        "km": "10,000",
+        "transmission": "Manual",
+        "ownerNo": 1,
+        "owner": "1st Owner",
+        "oem": "Maruti Suzuki",
+        "model": "Maruti Suzuki Wagon R",
+        "modelName": "Wagon R",
+        "modelId": 3311,
+        "modelYear": 2025,
+        "centralVariantId": 10364,
+        "variantName": "VXI",
+        "price": "\u20b95.40 Lakh",
+        "priceActual": "",
+        "priceSaving": "",
+        "priceFixedText": null,
+        "rtoCode": "HR51",
+        "kmBadge": "low"
+      },
+      "inspectionDetails": null,
+      "priceComponent": null,
+      "dataLayer": {
+        "model_type_new": "used",
+        "originalLocation": "",
+        "page_title": "used maruti wagon r vxi car in faridabad, 2025 model (id- 02bf1a86-4a4c-4fb7-9a26-b5c79ef08c0a) - find best deals! | cardekho.com",
+        "compare_car_details": "",
+        "seller_type_new": "individual",
+        "seating_capacity_new": 5,
+        "transmission_type": "manual",
+        "model_year_new": "2025",
+        "car_type_new": "used",
+        "model_name": "maruti wagon r",
+        "model_id_new": 344,
+        "oem_name": "maruti",
+        "price_range_segment": "5lakh-8lakh",
+        "dealer_id_new": 0,
+        "dealer_id": 0,
+        "state": "haryana",
+        "city_id_new": "72",
+        "fuel_type": "petrol",
+        "max_engine_capacity_new": 998,
+        "transmission_type_new": "manual",
+        "km_driven": "10000",
+        "model_new": "maruti wagon r",
+        "vehicle_type_new": "usedcar",
+        "vehicleType": "usedcar",
+        "brand_name": "maruti",
+        "engine_cc": "500cc-1000cc",
+        "fuel_type_new": "petrol",
+        "car_segment": "hatchback",
+        "used_carid": 5525529,
+        "city_name_new": "faridabad",
+        "page_type": "used-car.detail",
+        "city": "faridabad",
+        "engine_capacity_new": "500cc-1000cc",
+        "body_type_new": "hatchback cars",
+        "owner_type_new": "first",
+        "mileage_new": "24.35 kmpl",
+        "model_year": "2025",
+        "variant_name": "maruti wagon r vxi",
+        "price_segment": "5lakh-8lakh",
+        "dynx_event": "dynRmktparamsready",
+        "dynx_pagetype": "offerdetail",
+        "dynx_itemid": 5525529,
+        "dynx_itemid2": 10364,
+        "dynx_totalvalue": 540000,
+        "brand_new": "maruti",
+        "variant_new": "maruti wagon r vxi",
+        "exterior_color": "white",
+        "min_engine_capacity_new": 998,
+        "owner_type": "first",
+        "price_segment_new": "5lakh-8lakh",
+        "template_name_new": "used cardetail v2/individual:featured#vdp_b",
+        "page_template": "used car > detail page",
+        "template_Type_new": "used",
+        "experiment": "control"
+      },
+      "wowDeal": false,
+      "wowDealExpiry": 0,
+      "classifiedModelName": "Maruti Suzuki Wagon R",
+      "srpRedirectUrl": "/used-cars+in+faridabad",
+      "callReviewApi": false,
+      "sendCarDetailsToWA": false,
+      "sendAdReport": true,
+      "pageType": "cls",
+      "carType": "partner",
+      "corporateId": 7,
+      "whatsAppLink": null,
+      "inventoryTypeLabel": "direct-owner",
+      "showInterestedInLoanButton": false,
+      "locality": "Sector 9",
+      "cityName": "Faridabad",
+      "premiumSellerIcons": {
+        "icon": "",
+        "fullIcon": ""
+      },
+      "distanceInKm": 0,
+      "testDriveFlow": false,
+      "bookingFlow": false,
+      "enquiryFlow": true,
+      "testDriveHome": false,
+      "userCitySrpLink": "/used-cars+in+india",
+      "invAndUserCityMismatch": false,
+      "bookTestDriveContent": null,
+      "howToBuyContent": null,
+      "showRcTransfer": false,
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.cardekho.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Used Cars",
+                "item": "https://www.cardekho.com/usedCars"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Used Cars in Faridabad",
+                "item": "https://www.cardekho.com/used-cars+in+faridabad"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Used Maruti Wagon R Cars in Faridabad",
+                "item": "https://www.cardekho.com/used-maruti-wagon-r+cars+in+faridabad"
+              },
+              {
+                "@type": "ListItem",
+                "position": 5,
+                "name": "Used Maruti Wagon R VXI Cars in Faridabad",
+                "item": ""
+              }
+            ]
+          },
+          {
+            "@type": "Car",
+            "name": "2025 Maruti Wagon R",
+            "alternatename": "2025 Second Hand Maruti Wagon R in Faridabad",
+            "model": "Wagon R",
+            "vehicleModelDate": 2025,
+            "itemCondition": "https://schema.org/UsedCondition",
+            "vehicleIdentificationNumber": "02bf1a86-4a4_1036",
+            "url": "https://www.cardekho.com/used-car-details/used-Maruti-wagon-r-vxi-cars-Faridabad_02bf1a86-4a4c-4fb7-9a26-b5c79ef08c0a.htm",
+            "offers": {
+              "@type": "Offer",
+              "price": 540000,
+              "priceCurrency": "INR",
+              "availability": "https://schema.org/InStock"
+            },
+            "brand": {
+              "@type": "Brand",
+              "name": "Maruti"
+            },
+            "modelDate": 2025,
+            "mileageFromOdometer": {
+              "@type": "QuantitativeValue",
+              "value": 10000,
+              "unitCode": "KMT"
+            },
+            "numberOfPreviousOwners": "First-Owner",
+            "color": "White",
+            "vehicleTransmission": "Manual",
+            "description": "Maruti Wagon R in Faridabad with price of Rs 5.40 Lakh. It is a Hatchback manufactured by Maruti in 2025. It is manual Petrol car.",
+            "disambiguatingDescription": "Maruti Wagon R in Faridabad @ Rs. 5.40 Lakh",
+            "vehicleSeatingCapacity": 5,
+            "vehicleEngine": {
+              "@type": "EngineSpecification",
+              "fuelType": "Petrol"
+            },
+            "image": [
+              {
+                "@context": "https://schema.org",
+                "@type": "ImageObject",
+                "url": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/22b4d284-0081-4e01-8be3-073a8a12fe95.jpeg?imwidth=640",
+                "contentUrl": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/22b4d284-0081-4e01-8be3-073a8a12fe95.jpeg?imwidth=640",
+                "caption": "2025 Second hand Maruti Wagon R White color in Faridabad",
+                "uploadDate": "2026-08-24",
+                "keywords": "Maruti Wagon R, 2025, White color, Used Car, Faridabad"
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "ImageObject",
+                "url": "https://images10.gaadi.com/usedcar_image/5525529/original/137119a9-c49e-42f3-b5f1-30660aa61db6.png?imwidth=640",
+                "contentUrl": "https://images10.gaadi.com/usedcar_image/5525529/original/137119a9-c49e-42f3-b5f1-30660aa61db6.png?imwidth=640",
+                "caption": "2025 Second hand Maruti Wagon R White color in Faridabad",
+                "uploadDate": "2026-08-24",
+                "keywords": "Maruti Wagon R, 2025, White color, Used Car, Faridabad"
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "ImageObject",
+                "url": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/e0a16b32-7623-4b8b-8538-59bfee7c4604.jpeg?imwidth=640",
+                "contentUrl": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/e0a16b32-7623-4b8b-8538-59bfee7c4604.jpeg?imwidth=640",
+                "caption": "2025 Second hand Maruti Wagon R White color in Faridabad",
+                "uploadDate": "2026-08-24",
+                "keywords": "Maruti Wagon R, 2025, White color, Used Car, Faridabad"
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "ImageObject",
+                "url": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/c95c9e02-0164-43a6-b54d-27e431b26604.jpeg?imwidth=640",
+                "contentUrl": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/c95c9e02-0164-43a6-b54d-27e431b26604.jpeg?imwidth=640",
+                "caption": "2025 Second hand Maruti Wagon R White color in Faridabad",
+                "uploadDate": "2026-08-24",
+                "keywords": "Maruti Wagon R, 2025, White color, Used Car, Faridabad"
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "ImageObject",
+                "url": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/18ee88fc-a74f-4ba7-a5b3-8dcf4ce40b78.jpeg?imwidth=640",
+                "contentUrl": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/18ee88fc-a74f-4ba7-a5b3-8dcf4ce40b78.jpeg?imwidth=640",
+                "caption": "2025 Second hand Maruti Wagon R White color in Faridabad",
+                "uploadDate": "2026-08-24",
+                "keywords": "Maruti Wagon R, 2025, White color, Used Car, Faridabad"
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "ImageObject",
+                "url": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/2fc2a32f-2496-4f50-a86f-8993a7b1d458.jpeg?imwidth=640",
+                "contentUrl": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/2fc2a32f-2496-4f50-a86f-8993a7b1d458.jpeg?imwidth=640",
+                "caption": "2025 Second hand Maruti Wagon R White color in Faridabad",
+                "uploadDate": "2026-08-24",
+                "keywords": "Maruti Wagon R, 2025, White color, Used Car, Faridabad"
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "ImageObject",
+                "url": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/d00f4650-e862-4355-8894-d5ece97f8c60.jpeg?imwidth=640",
+                "contentUrl": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/d00f4650-e862-4355-8894-d5ece97f8c60.jpeg?imwidth=640",
+                "caption": "2025 Second hand Maruti Wagon R White color in Faridabad",
+                "uploadDate": "2026-08-24",
+                "keywords": "Maruti Wagon R, 2025, White color, Used Car, Faridabad"
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "ImageObject",
+                "url": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/52119d03-bd73-4808-b94c-644b43e1c67f.jpeg?imwidth=640",
+                "contentUrl": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/52119d03-bd73-4808-b94c-644b43e1c67f.jpeg?imwidth=640",
+                "caption": "2025 Second hand Maruti Wagon R White color in Faridabad",
+                "uploadDate": "2026-08-24",
+                "keywords": "Maruti Wagon R, 2025, White color, Used Car, Faridabad"
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "ImageObject",
+                "url": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/23a34e70-6166-42c0-9a53-8f1e6885757f.jpeg?imwidth=640",
+                "contentUrl": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/23a34e70-6166-42c0-9a53-8f1e6885757f.jpeg?imwidth=640",
+                "caption": "2025 Second hand Maruti Wagon R White color in Faridabad",
+                "uploadDate": "2026-08-24",
+                "keywords": "Maruti Wagon R, 2025, White color, Used Car, Faridabad"
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "ImageObject",
+                "url": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/c1f5bc46-9dc8-45c7-b6be-4e557ab5a15d.jpeg?imwidth=640",
+                "contentUrl": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/c1f5bc46-9dc8-45c7-b6be-4e557ab5a15d.jpeg?imwidth=640",
+                "caption": "2025 Second hand Maruti Wagon R White color in Faridabad",
+                "uploadDate": "2026-08-24",
+                "keywords": "Maruti Wagon R, 2025, White color, Used Car, Faridabad"
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "ImageObject",
+                "url": "https://images10.gaadi.com/usedcar_image/5525529/original/8e51957e-5059-404d-ac37-29039e2ce41b.png?imwidth=640",
+                "contentUrl": "https://images10.gaadi.com/usedcar_image/5525529/original/8e51957e-5059-404d-ac37-29039e2ce41b.png?imwidth=640",
+                "caption": "2025 Second hand Maruti Wagon R White color in Faridabad",
+                "uploadDate": "2026-08-24",
+                "keywords": "Maruti Wagon R, 2025, White color, Used Car, Faridabad"
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "ImageObject",
+                "url": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/fc39e2fd-2fd2-4e5f-8314-1c1e170f446c.jpeg?imwidth=640",
+                "contentUrl": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/fc39e2fd-2fd2-4e5f-8314-1c1e170f446c.jpeg?imwidth=640",
+                "caption": "2025 Second hand Maruti Wagon R White color in Faridabad",
+                "uploadDate": "2026-08-24",
+                "keywords": "Maruti Wagon R, 2025, White color, Used Car, Faridabad"
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "ImageObject",
+                "url": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/49fec706-5a33-4799-b855-1890e42341c0.jpeg?imwidth=640",
+                "contentUrl": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/49fec706-5a33-4799-b855-1890e42341c0.jpeg?imwidth=640",
+                "caption": "2025 Second hand Maruti Wagon R White color in Faridabad",
+                "uploadDate": "2026-08-24",
+                "keywords": "Maruti Wagon R, 2025, White color, Used Car, Faridabad"
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "ImageObject",
+                "url": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/7acee812-77ec-41d6-9dd9-413bed6f399e.jpeg?imwidth=640",
+                "contentUrl": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/7acee812-77ec-41d6-9dd9-413bed6f399e.jpeg?imwidth=640",
+                "caption": "2025 Second hand Maruti Wagon R White color in Faridabad",
+                "uploadDate": "2026-08-24",
+                "keywords": "Maruti Wagon R, 2025, White color, Used Car, Faridabad"
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "ImageObject",
+                "url": "https://images10.gaadi.com/usedcar_image/5525529/original/processed_processed_processed_8654e1db-d3b1-4792-bdf7-ed28cb4826c6.jpeg?imwidth=640",
+                "contentUrl": "https://images10.gaadi.com/usedcar_image/5525529/original/processed_processed_processed_8654e1db-d3b1-4792-bdf7-ed28cb4826c6.jpeg?imwidth=640",
+                "caption": "2025 Second hand Maruti Wagon R White color in Faridabad",
+                "uploadDate": "2026-08-24",
+                "keywords": "Maruti Wagon R, 2025, White color, Used Car, Faridabad"
+              }
+            ],
+            "bodyType": "Hatchback"
+          }
+        ]
+      },
+      "trustTag": {
+        "icon": "https://stimg.cardekho.com/usedcar/icons/less_driven.svg",
+        "text": "Less Driven",
+        "description": "Barely used \u2014 only 10,000 km"
+      },
+      "trustTags": [
+        {
+          "icon": "https://stimg.cardekho.com/usedcar/icons/less-driven-w.svg",
+          "text": "Less Driven",
+          "subText": "Barely used \u2014 only 10000 km"
+        }
+      ],
+      "isInspectionDataAvailable": false,
+      "isRegNoAvailable": true,
+      "cardTopStrip": {
+        "text": "No Major Accident or Flood History",
+        "icon": "https://stimg.cardekho.com/usedcar/images/uc/no-accident.svg"
+      },
+      "reasonsToBuy": [
+        {
+          "name": "No Odometer Tampering",
+          "shortDescription": "As per latest service history records",
+          "backgroundImage": "https://stimg.cardekho.com/usedcar/images/uc/no-odo-tempering.png"
+        },
+        {
+          "name": "Single Owner Vehicle",
+          "shortDescription": "Owned by one individual since purchase",
+          "backgroundImage": "https://stimg.cardekho.com/usedcar/images/uc/single-owner-img.png"
+        },
+        {
+          "name": "Excellent Condition",
+          "shortDescription": "Less than 3 yrs old & under 25,000 km driven",
+          "backgroundImage": "https://stimg.cardekho.com/usedcar/images/uc/excelent-condition.png"
+        }
+      ],
+      "reasonsToBuyHighlights": [
+        "No Major Accident or Flood History",
+        "Less Driven",
+        "No Odometer Tampering",
+        "Single Owner Vehicle",
+        "Excellent Condition"
+      ],
+      "placeholderImage": "https://stimg.cardekho.com/images/car-images/large/Maruti/Wagon-R/10363/1755843629741/front-left-side-47.jpg",
+      "aiPriceBadge": "Great Price",
+      "aiSummary": "A smart second car for short city runs and errands. Compact size keeps parking simple, and the single-owner record makes its past easier to follow.",
+      "vdpVersion": "v1",
+      "aiInsights": {
+        "ValueforMoney": {
+          "title": "Why This Is a Good Buy",
+          "description": "Similar Wagon Rs go for \u20b95.3L\u2013\u20b96.4L. At \u20b95.4L this is right within range \u2014 low age and 10k km keep the buy easy to justify.",
+          "savings": "Save 11% vs new car \u2014 new Wagon R VXI costs \u20b96.1L",
+          "priceRange": {
+            "min": 532739,
+            "max": 639286
+          }
+        },
+        "CarCondition": {
+          "title": "Car Condition",
+          "condition": [
+            {
+              "status": "verified",
+              "headline": "Accident history",
+              "subline_1": "None reported"
+            },
+            {
+              "status": "verified",
+              "headline": "Odometer tampering",
+              "subline_1": "No flag"
+            },
+            {
+              "status": "verified",
+              "headline": "Ownership",
+              "subline_1": "1st owner"
+            },
+            {
+              "status": "verified",
+              "headline": "Insurance",
+              "subline_1": "Till Nov 2028"
+            },
+            {
+              "status": "verified",
+              "headline": "PUCC",
+              "subline_1": "Till Nov 2026"
+            },
+            {
+              "status": "verified",
+              "headline": "Kilometres driven",
+              "subline_1": "Low"
+            }
+          ]
+        },
+        "PaperworkTimeline": {
+          "title": "Paperwork timeline",
+          "timeline": [
+            {
+              "status": "logged",
+              "date": "Nov 2025",
+              "text": "Registered in HR-51 \u00b7 single-owner RC"
+            },
+            {
+              "status": "verified",
+              "date": "Nov 2026",
+              "text": "PUCC expires"
+            },
+            {
+              "status": "verified",
+              "date": "Nov 2028",
+              "text": "Insurance cover ends"
+            },
+            {
+              "status": "verified",
+              "date": "Nov 2040",
+              "text": "Fitness certificate expires"
+            }
+          ]
+        },
+        "FitForYou": {
+          "title": "Fit for You",
+          "description": "A smart second car for short city runs and errands. Compact size keeps parking simple, and the single-owner record makes its past easier to follow.",
+          "features": [
+            "ABS",
+            "Air Conditioner",
+            "Bluetooth Connectivity",
+            "Power Windows",
+            "Central Locking"
+          ]
+        },
+        "WatchOut": {
+          "title": "Things to Check",
+          "description": []
+        }
+      },
+      "afterMarketFitments": [],
+      "isInactive": false,
+      "userBookedCar": false,
+      "testDriveScheduled": false,
+      "photosAlreadyRequested": false,
+      "buttonsDto": {
+        "curr": [
+          {
+            "flow": "leadFlow",
+            "title": "View Seller Details",
+            "subTitle": ""
+          }
+        ]
+      },
+      "seo": {
+        "amp": false,
+        "robots": "INDEX,FOLLOW",
+        "title": "Used 2025 Maruti Wagon R Less Driven Petrol Manual in Faridabad at \u20b95.40 Lakh - CarDekho",
+        "metaDescription": "Buy used 2025 Maruti Wagon R VXI Petrol with 10,000 km. Less Driven Contact & buy directly from the seller in Sector 9, Faridabad, no middleman commission.",
+        "ogImage": "https://images10.gaadi.com/usedgaadi-sellcar/UsedCar/h66c1401a/22b4d284-0081-4e01-8be3-073a8a12fe95.jpeg",
+        "path": "/used-car-details/used-Maruti-wagon-r-vxi-cars-Faridabad_02bf1a86-4a4c-4fb7-9a26-b5c79ef08c0a.htm",
+        "screen": "usedCarDetail",
+        "type": "website"
+      },
+      "adId": "33252",
+      "adType": "41",
+      "carFeatures": {
+        "commonIcon": "https://stimg.cardekho.com/pwa/img/vdpN/tickG.svg",
+        "top": [
+          {
+            "value": "Keyless Entry"
+          },
+          {
+            "value": "Central Locking"
+          },
+          {
+            "value": "Air Conditioner"
+          },
+          {
+            "value": "Bluetooth Connectivity"
+          },
+          {
+            "value": "Power Windows"
+          }
+        ],
+        "data": [
+          {
+            "heading": "Comfort & Convenience",
+            "subHeading": "Comfort",
+            "list": [
+              {
+                "value": "Power Steering"
+              },
+              {
+                "value": "Air Conditioner"
+              },
+              {
+                "value": "Heater"
+              },
+              {
+                "value": "Accessory Power Outlet"
+              },
+              {
+                "value": "KeyLess Entry"
+              },
+              {
+                "value": "Gear Shift Indicator"
+              },
+              {
+                "value": "Idle Start-Stop System"
+              }
+            ]
+          },
+          {
+            "heading": "Interior",
+            "subHeading": "Interior",
+            "list": [
+              {
+                "value": "Glove Box"
+              }
+            ]
+          },
+          {
+            "heading": "Exterior",
+            "subHeading": "Exterior",
+            "list": [
+              {
+                "value": "Adjustable Headlamps"
+              },
+              {
+                "value": "Wheel Covers"
+              },
+              {
+                "value": "Halogen Headlamps"
+              }
+            ]
+          },
+          {
+            "heading": "Safety",
+            "subHeading": "Safety",
+            "list": [
+              {
+                "value": "Anti-lock Braking System (ABS)"
+              },
+              {
+                "value": "Central Locking"
+              },
+              {
+                "value": "Child Safety Locks"
+              },
+              {
+                "value": "Anti-Theft Alarm"
+              },
+              {
+                "value": "Driver Airbag"
+              },
+              {
+                "value": "Passenger Airbag"
+              },
+              {
+                "value": "Side Airbag"
+              },
+              {
+                "value": "Day & Night Rear View Mirror"
+              },
+              {
+                "value": "Electronic Brakeforce Distribution (EBD)"
+              },
+              {
+                "value": "Engine Immobilizer"
+              },
+              {
+                "value": "Electronic Stability Control (ESC)"
+              },
+              {
+                "value": "Anti-Theft Device"
+              }
+            ]
+          },
+          {
+            "heading": "Entertainment & Communication",
+            "subHeading": "Entertainment",
+            "list": [
+              {
+                "value": "Radio"
+              },
+              {
+                "value": "Bluetooth Connectivity"
+              },
+              {
+                "value": "Usb Ports"
+              }
+            ]
+          }
+        ],
+        "heading": "Features"
+      },
+      "carSpecification": {
+        "commonIcon": "",
+        "top": [
+          {
+            "value": "998 cc",
+            "key": "Engine"
+          },
+          {
+            "value": "65.71 bhp",
+            "key": "Power"
+          },
+          {
+            "value": "Manual",
+            "key": "Transmission"
+          },
+          {
+            "value": "24.35 kmpl",
+            "key": "Mileage"
+          },
+          {
+            "value": "Petrol",
+            "key": "Fuel"
+          },
+          {
+            "value": "341  Litres",
+            "key": "Boot Space"
+          },
+          {
+            "value": "1 Star",
+            "key": "Global NCAP Safety Rating"
+          }
+        ],
+        "data": [
+          {
+            "heading": "Engine & Transmission",
+            "subHeading": "Engine",
+            "list": [
+              {
+                "value": "K10C",
+                "key": "Engine Type"
+              },
+              {
+                "value": "998 cc",
+                "key": "Displacement"
+              },
+              {
+                "value": "65.71bhp@5500rpm",
+                "key": "Max Power"
+              },
+              {
+                "value": "89Nm@3500rpm",
+                "key": "Max Torque"
+              },
+              {
+                "value": "3",
+                "key": "No. of Cylinders"
+              },
+              {
+                "value": "4",
+                "key": "Valves Per Cylinder"
+              },
+              {
+                "value": "Manual",
+                "key": "Transmission Type"
+              },
+              {
+                "value": "5-Speed",
+                "key": "Gearbox"
+              },
+              {
+                "value": "FWD",
+                "key": "Drive Type"
+              }
+            ]
+          },
+          {
+            "heading": "Fuel & Performance",
+            "subHeading": "Fuel",
+            "list": [
+              {
+                "value": "Petrol",
+                "key": "Fuel Type"
+              },
+              {
+                "value": "24.35 kmpl",
+                "key": "Petrol Mileage ARAI"
+              },
+              {
+                "value": "32 Litres",
+                "key": "Petrol Fuel Tank Capacity"
+              },
+              {
+                "value": "BS VI 2.0",
+                "key": "Emission Norm Compliance"
+              }
+            ]
+          },
+          {
+            "heading": "Suspension, Steering & Brakes",
+            "subHeading": "Suspension",
+            "list": [
+              {
+                "value": "MacPherson Strut suspension",
+                "key": "Front Suspension"
+              },
+              {
+                "value": "Rear twist beam",
+                "key": "Rear Suspension"
+              },
+              {
+                "value": "Tilt",
+                "key": "Steering Column"
+              },
+              {
+                "value": "Rack & Pinion",
+                "key": "Steering Gear Type"
+              },
+              {
+                "value": "4.7 m",
+                "key": "Turning Radius"
+              },
+              {
+                "value": "Disc",
+                "key": "Front Brake Type"
+              },
+              {
+                "value": "Drum",
+                "key": "Rear Brake Type"
+              }
+            ]
+          },
+          {
+            "heading": "Dimensions & Capacity",
+            "subHeading": "Dimensions",
+            "list": [
+              {
+                "value": "3655 mm",
+                "key": "Length"
+              },
+              {
+                "value": "1620 mm",
+                "key": "Width"
+              },
+              {
+                "value": "1675 mm",
+                "key": "Height"
+              },
+              {
+                "value": "341 Litres",
+                "key": "Boot Space"
+              },
+              {
+                "value": "5",
+                "key": "Seating Capacity"
+              },
+              {
+                "value": "2435 mm",
+                "key": "Wheel Base"
+              },
+              {
+                "value": "825 kg",
+                "key": "Kerb Weight"
+              },
+              {
+                "value": "1340 kg",
+                "key": "Gross Weight"
+              }
+            ]
+          }
+        ],
+        "heading": "Specifications"
+      },
+      "source": "cardekho",
+      "automobile": {
+        "brand": "Maruti Suzuki",
+        "model": "Wagon R",
+        "variant": "VXI",
+        "year": 2025,
+        "kilometers": 10000,
+        "fuel_type": "Petrol",
+        "transmission": "Manual",
+        "body_type": "Hatchback",
+        "number_of_owners": 1,
+        "rto": "HR51",
+        "formatted_price": "\u20b96.09 Lakh"
+      }
+    }
+  }
+}

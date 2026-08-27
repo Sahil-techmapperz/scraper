@@ -1,0 +1,8 @@
+[003416] 26 Aug 13:35:55.781 * RedisWin is starting ......
+[003416] 26 Aug 13:35:55.791 * RedisWin version=8.6.3, bits=64, commit=11/05/2026, modified=0, pid=3416, just started
+[003416] 26 Aug 13:35:55.794 # Warning: no config file specified, using the default config. In order to specify a config file use c:\program files\redis\redis-server.exe /path/to/redis.conf
+[003416] 26 Aug 13:35:55.799 * monotonic clock: X64 clock_gettime
+[003416] 26 Aug 13:35:55.807 * Running mode=standalone, port=6379.
+[003416] 26 Aug 13:35:55.813 * Server initialized
+[003416] 26 Aug 13:35:55.820 * Ready to accept connections tcp
+[003416] 26 Aug 13:35:55.823 # WARNING: Redis does not require authentication. Redis will accept connections from any local client.
