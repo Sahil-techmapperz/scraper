@@ -142,6 +142,7 @@ ExecStart=/var/www/scraper/extractor/.venv/bin/python -m uvicorn extractor.main:
 Restart=always
 RestartSec=3
 Environment=PYTHONUNBUFFERED=1
+Environment=PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
 
 [Install]
 WantedBy=multi-user.target

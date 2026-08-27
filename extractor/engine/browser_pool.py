@@ -8,7 +8,7 @@ from extractor.utils.user_agents import get_random_user_agent
 
 logger = logging.getLogger(__name__)
 
-def _fetch_page_sync(url: str, wait_selector: Optional[str] = None, wait_ms: int = 3500) -> Optional[str]:
+def _fetch_page_sync(url: str, wait_selector: Optional[str] = None, wait_ms: int = 4500) -> Optional[str]:
     stealth = Stealth()
     try:
         with sync_playwright() as p:
@@ -18,6 +18,7 @@ def _fetch_page_sync(url: str, wait_selector: Optional[str] = None, wait_ms: int
                 "--disable-setuid-sandbox",
                 "--disable-dev-shm-usage",
                 "--disable-infobars",
+                "--window-size=1920,1080",
             ]
             
             browser = None
@@ -44,21 +45,29 @@ def _fetch_page_sync(url: str, wait_selector: Optional[str] = None, wait_ms: int
             user_agent = get_random_user_agent()
             proxy = {"server": settings.PROXY_URL} if settings.PROXY_URL else None
             
+            extra_headers = {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+                "Accept-Language": "en-US,en;q=0.9,hi;q=0.8",
+                "Sec-Ch-Ua": '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
+                "Sec-Ch-Ua-Mobile": "?0",
+                "Sec-Ch-Ua-Platform": '"Windows"',
+                "Sec-Fetch-Dest": "document",
+                "Sec-Fetch-Mode": "navigate",
+                "Sec-Fetch-Site": "none",
+                "Sec-Fetch-User": "?1",
+                "Upgrade-Insecure-Requests": "1",
+            }
+            
             context = browser.new_context(
                 user_agent=user_agent,
                 viewport={"width": 1920, "height": 1080},
                 locale="en-US",
                 timezone_id="Asia/Kolkata",
+                extra_http_headers=extra_headers,
                 proxy=proxy,
             )
             page = context.new_page()
             stealth.apply_stealth_sync(page)
-
-            # Block heavy media resources for speed while keeping necessary scripts
-            page.route("**/*", lambda route: (
-                route.abort() if route.request.resource_type in ["image", "media", "font"]
-                else route.continue_()
-            ))
 
             page.goto(url, wait_until="domcontentloaded", timeout=settings.DEFAULT_TIMEOUT * 1000)
 

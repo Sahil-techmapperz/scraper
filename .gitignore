@@ -138,3 +138,5 @@ venv/
 *.egg-info/
 .pytest_cache/
 writable/*.sqlite
+*.rdb
+writable/*.rdb
