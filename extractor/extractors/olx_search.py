@@ -111,6 +111,75 @@ class OlxSearchExtractor:
             return f"{url_path}?{urlencode(query_dict)}"
         return url_path
 
+    def build_api_url(self, params: SearchQueryParams, page_override: Optional[int] = None) -> str:
+        api_base = f"{settings.OLX_IN_BASE_URL.rstrip('/')}/api/relevance/v4/search"
+        query_dict: Dict[str, Any] = {
+            "facet_limit": 100,
+            "size": 40,
+        }
+        page_num = (page_override or params.page) - 1
+        if page_num > 0:
+            query_dict["page"] = page_num
+
+        if params.city:
+            clean_city = params.city.strip().lower()
+            slug = CITY_SLUGS.get(clean_city, "")
+            m = re.search(r"_g(\d+)", slug)
+            if m:
+                query_dict["location"] = m.group(1)
+
+        cat_key = (params.subcategory or params.category or "").strip().lower()
+        if cat_key:
+            c_slug = CATEGORY_SLUGS.get(cat_key, "")
+            m = re.search(r"_c(\d+)", c_slug)
+            if m:
+                query_dict["category"] = m.group(1)
+
+        if params.keyword:
+            query_dict["query"] = params.keyword
+
+        if params.min_price is not None:
+            query_dict["price_min"] = params.min_price
+        if params.max_price is not None:
+            query_dict["price_max"] = params.max_price
+
+        if params.sort:
+            sort_map = {
+                "newest": "created_at:desc",
+                "oldest": "created_at:asc",
+                "price_low_to_high": "price:asc",
+                "price_high_to_low": "price:desc",
+            }
+            if params.sort in sort_map:
+                query_dict["sorting"] = sort_map[params.sort]
+
+        return f"{api_base}?{urlencode(query_dict)}"
+
+    async def fetch_api_page(self, api_url: str) -> List[ListingItem]:
+        headers = {
+            "Accept": "application/json, text/plain, */*",
+            "Referer": "https://www.olx.in/",
+            "Origin": "https://www.olx.in",
+        }
+        response = await http_client.get(api_url, headers=headers)
+        if response and response.status_code == 200:
+            try:
+                json_data = response.json()
+                raw_list = json_data.get("data")
+                if isinstance(raw_list, list) and raw_list:
+                    items = []
+                    for row in raw_list:
+                        if isinstance(row, dict):
+                            item = self.normalize_raw_item(row)
+                            if item:
+                                items.append(item)
+                    if items:
+                        logger.info(f"OLX API returned {len(items)} listings")
+                        return items
+            except Exception as e:
+                logger.debug(f"Error parsing OLX API response: {e}")
+        return []
+
     async def fetch_single_page(self, url: str) -> List[ListingItem]:
         html_content = None
         response = await http_client.get(url)
@@ -138,26 +207,37 @@ class OlxSearchExtractor:
 
     async def search(self, params: SearchQueryParams) -> SearchResponse:
         # Determine number of pages to fetch (40 items per page on OLX)
-        # For limit=300: ceil(300 / 40) = 8 pages
         limit = min(300, max(1, params.limit))
         pages_needed = math.ceil(limit / 40)
         start_page = max(1, params.page)
-        
-        urls = [self.build_url(params, page_override=p) for p in range(start_page, start_page + pages_needed)]
-        logger.info(f"Extracting {len(urls)} pages for limit={limit}: {urls[0]}")
 
-        # Fetch all pages concurrently
-        results = await asyncio.gather(*[self.fetch_single_page(u) for u in urls], return_exceptions=True)
+        # 1. Try OLX direct JSON API first (fastest and most reliable)
+        api_urls = [self.build_api_url(params, page_override=p) for p in range(start_page, start_page + pages_needed)]
+        logger.info(f"Extracting OLX API {len(api_urls)} page(s) for limit={limit}: {api_urls[0]}")
+        api_results = await asyncio.gather(*[self.fetch_api_page(u) for u in api_urls], return_exceptions=True)
 
         all_items: List[ListingItem] = []
         seen_ids = set()
 
-        for page_result in results:
-            if isinstance(page_result, list):
-                for item in page_result:
+        for res in api_results:
+            if isinstance(res, list):
+                for item in res:
                     if item.id and item.id not in seen_ids:
                         seen_ids.add(item.id)
                         all_items.append(item)
+
+        # 2. Fallback to HTML web scraping + stealth browser if API returned no items
+        if not all_items:
+            urls = [self.build_url(params, page_override=p) for p in range(start_page, start_page + pages_needed)]
+            logger.info(f"Falling back to OLX web extraction: {urls[0]}")
+
+            results = await asyncio.gather(*[self.fetch_single_page(u) for u in urls], return_exceptions=True)
+            for page_result in results:
+                if isinstance(page_result, list):
+                    for item in page_result:
+                        if item.id and item.id not in seen_ids:
+                            seen_ids.add(item.id)
+                            all_items.append(item)
 
         # In-memory filter if price/keyword constraints are passed
         filtered = self._filter_items(all_items, params)

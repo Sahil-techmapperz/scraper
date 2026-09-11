@@ -18,6 +18,7 @@ def _fetch_page_sync(url: str, wait_selector: Optional[str] = None, wait_ms: int
                 "--disable-setuid-sandbox",
                 "--disable-dev-shm-usage",
                 "--disable-infobars",
+                "--disable-http2",
             ]
             
             browser = None

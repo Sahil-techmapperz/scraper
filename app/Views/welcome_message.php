@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
+
     <style>
         :root {
             --bg-primary: #0a0e17;
@@ -47,7 +48,7 @@
             color: var(--text-primary);
             min-height: 100vh;
             line-height: 1.5;
-            background-image: 
+            background-image:
                 radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.12) 0px, transparent 50%),
                 radial-gradient(at 100% 100%, rgba(6, 182, 212, 0.1) 0px, transparent 50%);
             background-attachment: fixed;
@@ -136,8 +137,17 @@
         }
 
         @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.4; transform: scale(0.85); }
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.4;
+                transform: scale(0.85);
+            }
         }
 
         .btn-docs {
@@ -525,7 +535,7 @@
             color: white;
             padding: 14px 20px;
             border-radius: var(--radius-md);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
             display: flex;
             align-items: center;
             gap: 12px;
@@ -535,8 +545,15 @@
         }
 
         @keyframes slideUpToast {
-            from { transform: translateY(100%); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
 
         /* Job Specific Styling */
@@ -743,7 +760,9 @@
         }
 
         @keyframes spin {
-            to { transform: rotate(360deg); }
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         /* JSON Drawer Toggle */
@@ -775,6 +794,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -994,29 +1014,80 @@
         const XYZFINDERS_API_URL = 'http://localhost:3000/api/external/ingest';
 
         const categoryOptions = {
-            olx: [
-                { value: 'cars', label: 'Cars & Automobiles' },
-                { value: 'bikes', label: 'Motorcycles & Bikes' },
-                { value: 'mobile-phones', label: 'Mobile Phones' },
-                { value: 'real-estate', label: 'Real Estate & Houses' }
+            olx: [{
+                    value: 'cars',
+                    label: 'Cars & Automobiles'
+                },
+                {
+                    value: 'bikes',
+                    label: 'Motorcycles & Bikes'
+                },
+                {
+                    value: 'mobile-phones',
+                    label: 'Mobile Phones'
+                },
+                {
+                    value: 'real-estate',
+                    label: 'Real Estate & Houses'
+                }
             ],
-            naukri: [
-                { value: 'jobs', label: 'All Tech & Corporate Jobs' },
-                { value: 'software-engineer', label: 'Software Engineer / Developer' },
-                { value: 'data-scientist', label: 'Data Science & AI / ML' },
-                { value: 'devops-engineer', label: 'DevOps & Cloud Engineer' },
-                { value: 'product-manager', label: 'Product & Project Manager' },
-                { value: 'frontend-developer', label: 'Frontend / UI Developer' },
-                { value: 'backend-developer', label: 'Backend Developer' },
-                { value: 'full-stack-developer', label: 'Full Stack Engineer' }
+            naukri: [{
+                    value: 'jobs',
+                    label: 'All Tech & Corporate Jobs'
+                },
+                {
+                    value: 'software-engineer',
+                    label: 'Software Engineer / Developer'
+                },
+                {
+                    value: 'data-scientist',
+                    label: 'Data Science & AI / ML'
+                },
+                {
+                    value: 'devops-engineer',
+                    label: 'DevOps & Cloud Engineer'
+                },
+                {
+                    value: 'product-manager',
+                    label: 'Product & Project Manager'
+                },
+                {
+                    value: 'frontend-developer',
+                    label: 'Frontend / UI Developer'
+                },
+                {
+                    value: 'backend-developer',
+                    label: 'Backend Developer'
+                },
+                {
+                    value: 'full-stack-developer',
+                    label: 'Full Stack Engineer'
+                }
             ],
-            cashify: [
-                { value: 'mobile-phones', label: 'Refurbished Mobile Phones' },
-                { value: 'laptops', label: 'Refurbished Laptops' },
-                { value: 'smartwatches', label: 'Refurbished Smartwatches' },
-                { value: 'tablets', label: 'Refurbished Tablets' },
-                { value: 'accessories', label: 'Audio & Accessories' },
-                { value: 'gaming-consoles', label: 'Gaming Consoles' }
+            cashify: [{
+                    value: 'mobile-phones',
+                    label: 'Refurbished Mobile Phones'
+                },
+                {
+                    value: 'laptops',
+                    label: 'Refurbished Laptops'
+                },
+                {
+                    value: 'smartwatches',
+                    label: 'Refurbished Smartwatches'
+                },
+                {
+                    value: 'tablets',
+                    label: 'Refurbished Tablets'
+                },
+                {
+                    value: 'accessories',
+                    label: 'Audio & Accessories'
+                },
+                {
+                    value: 'gaming-consoles',
+                    label: 'Gaming Consoles'
+                }
             ]
         };
 
@@ -1056,7 +1127,7 @@
                 if (maxPriceLabel) maxPriceLabel.textContent = 'Max Salary (₹)';
                 if (minPriceInput) minPriceInput.placeholder = 'e.g. 600000 (6 LPA)';
                 if (maxPriceInput) maxPriceInput.placeholder = 'e.g. 2500000 (25 LPA)';
-                
+
                 // Populate category options
                 categorySelect.innerHTML = '';
                 categoryOptions.naukri.forEach(opt => {
@@ -1077,7 +1148,7 @@
                 if (maxPriceLabel) maxPriceLabel.textContent = 'Max Price (₹)';
                 if (minPriceInput) minPriceInput.placeholder = 'Min ₹ (e.g. 10000)';
                 if (maxPriceInput) maxPriceInput.placeholder = 'Max ₹ (e.g. 80000)';
-                
+
                 // Populate category options
                 categorySelect.innerHTML = '';
                 categoryOptions.cashify.forEach(opt => {
@@ -1098,7 +1169,7 @@
                 if (maxPriceLabel) maxPriceLabel.textContent = 'Max Price (₹)';
                 if (minPriceInput) minPriceInput.placeholder = 'Min ₹ (e.g. 10000)';
                 if (maxPriceInput) maxPriceInput.placeholder = 'Max ₹ (e.g. 500000)';
-                
+
                 // Populate category options
                 categorySelect.innerHTML = '';
                 categoryOptions.olx.forEach(opt => {
@@ -1242,7 +1313,7 @@
                     const applyUrl = item.job?.apply_url || item.listing_url || '#';
 
                     const ratingHtml = rating ? `<span class="rating-badge"><i class="fa-solid fa-star"></i> ${rating}</span>` : '';
-                    
+
                     const skillsHtml = skills.slice(0, 5).map(s => `<span class="skill-chip">${escapeHtml(s)}</span>`).join('');
 
                     card.innerHTML = `
@@ -1285,9 +1356,9 @@
                     card.className = 'listing-card';
 
                     const isCashify = source === 'cashify' || !!item.electronics;
-                    let priceDisplay = item.price && item.price.amount 
-                        ? `₹ ${Number(item.price.amount).toLocaleString('en-IN')}` 
-                        : 'Price on Request';
+                    let priceDisplay = item.price && item.price.amount ?
+                        `₹ ${Number(item.price.amount).toLocaleString('en-IN')}` :
+                        'Price on Request';
 
                     if (isCashify && item.electronics?.original_price && item.price?.amount && item.electronics.original_price > item.price.amount) {
                         const disc = item.electronics.discount ? ` (${item.electronics.discount}% OFF)` : '';
@@ -1304,9 +1375,9 @@
                         .filter(Boolean)
                         .join(', ') || (isCashify ? 'Cashify Certified Store' : 'India');
 
-                    const imageHtml = firstImage 
-                        ? `<img src="${firstImage}" alt="${escapeHtml(item.title || 'Listing')}" loading="lazy">`
-                        : `<div class="image-placeholder"><i class="fa-regular fa-image" style="font-size: 2rem;"></i><span>No Image</span></div>`;
+                    const imageHtml = firstImage ?
+                        `<img src="${firstImage}" alt="${escapeHtml(item.title || 'Listing')}" loading="lazy">` :
+                        `<div class="image-placeholder"><i class="fa-regular fa-image" style="font-size: 2rem;"></i><span>No Image</span></div>`;
 
                     let categoryBadge = '';
                     if (isCashify) {
@@ -1359,18 +1430,18 @@
             const item = currentData.data[index];
 
             document.getElementById('modal-title').textContent = item.title || 'Listing Detail';
-            
+
             if (item.job) {
                 document.getElementById('modal-price').textContent = item.job.salary_text || (item.price?.amount ? `₹ ${Number(item.price.amount).toLocaleString('en-IN')}` : 'Salary Not Disclosed');
             } else {
-                document.getElementById('modal-price').textContent = item.price && item.price.amount 
-                    ? `₹ ${Number(item.price.amount).toLocaleString('en-IN')}` 
-                    : 'Price on Request';
+                document.getElementById('modal-price').textContent = item.price && item.price.amount ?
+                    `₹ ${Number(item.price.amount).toLocaleString('en-IN')}` :
+                    'Price on Request';
             }
 
             document.getElementById('modal-desc').textContent = item.description || 'No detailed description provided.';
             document.getElementById('modal-location').innerHTML = `<i class="fa-solid fa-location-dot"></i> ${[item.location?.locality, item.location?.city, item.location?.state].filter(Boolean).join(', ')}`;
-            
+
             const platform = (item.source || currentData?.source?.platform || document.getElementById('filter-source')?.value || 'source').toLowerCase();
             const platformLabel = platform === 'cardekho' ? 'CarDekho' : (platform === 'naukri' ? 'Naukri.com' : (platform === 'cashify' ? 'Cashify' : 'OLX'));
             const linkTextEl = document.getElementById('modal-link-text');
@@ -1422,7 +1493,13 @@
         function escapeHtml(text) {
             if (!text) return '';
             return text.replace(/[&<>"']/g, function(m) {
-                return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[m];
+                return {
+                    '&': '&amp;',
+                    '<': '&lt;',
+                    '>': '&gt;',
+                    '"': '&quot;',
+                    "'": '&#039;'
+                } [m];
             });
         }
 
@@ -1460,30 +1537,66 @@
                 category = catEl ? catEl.value : null;
             }
             if (source === 'cardekho') {
-                return { url: 'http://localhost:3000/automobiles', label: 'View on Automobiles Page', icon: 'fa-car' };
+                return {
+                    url: 'http://localhost:3000/automobiles',
+                    label: 'View on Automobiles Page',
+                    icon: 'fa-car'
+                };
             }
             if (source === 'naukri') {
-                return { url: 'http://localhost:3000/jobs', label: 'View on Jobs Page', icon: 'fa-briefcase' };
+                return {
+                    url: 'http://localhost:3000/jobs',
+                    label: 'View on Jobs Page',
+                    icon: 'fa-briefcase'
+                };
             }
             if (source === 'cashify') {
                 if (category === 'mobile-phones') {
-                    return { url: 'http://localhost:3000/mobiles', label: 'View on Mobiles Page', icon: 'fa-mobile-screen' };
+                    return {
+                        url: 'http://localhost:3000/mobiles',
+                        label: 'View on Mobiles Page',
+                        icon: 'fa-mobile-screen'
+                    };
                 }
-                return { url: 'http://localhost:3000/gadgets', label: 'View on Gadgets Page', icon: 'fa-laptop' };
+                return {
+                    url: 'http://localhost:3000/gadgets',
+                    label: 'View on Gadgets Page',
+                    icon: 'fa-laptop'
+                };
             }
             if (source === 'olx') {
                 if (category === 'cars' || category === 'bikes') {
-                    return { url: 'http://localhost:3000/automobiles', label: 'View on Automobiles Page', icon: 'fa-car' };
+                    return {
+                        url: 'http://localhost:3000/automobiles',
+                        label: 'View on Automobiles Page',
+                        icon: 'fa-car'
+                    };
                 }
                 if (category === 'mobile-phones') {
-                    return { url: 'http://localhost:3000/mobiles', label: 'View on Mobiles Page', icon: 'fa-mobile-screen' };
+                    return {
+                        url: 'http://localhost:3000/mobiles',
+                        label: 'View on Mobiles Page',
+                        icon: 'fa-mobile-screen'
+                    };
                 }
                 if (category === 'real-estate') {
-                    return { url: 'http://localhost:3000/real-estate', label: 'View on Real Estate Page', icon: 'fa-house' };
+                    return {
+                        url: 'http://localhost:3000/real-estate',
+                        label: 'View on Real Estate Page',
+                        icon: 'fa-house'
+                    };
                 }
-                return { url: 'http://localhost:3000/mobiles', label: 'View on Mobiles Page', icon: 'fa-mobile-screen' };
+                return {
+                    url: 'http://localhost:3000/mobiles',
+                    label: 'View on Mobiles Page',
+                    icon: 'fa-mobile-screen'
+                };
             }
-            return { url: 'http://localhost:3000/mobiles', label: 'View on Mobiles Page', icon: 'fa-mobile-screen' };
+            return {
+                url: 'http://localhost:3000/mobiles',
+                label: 'View on Mobiles Page',
+                icon: 'fa-mobile-screen'
+            };
         }
 
         function updateTopSiteLink() {
@@ -1582,5 +1695,5 @@
         });
     </script>
 </body>
-</html>
 
+</html>
