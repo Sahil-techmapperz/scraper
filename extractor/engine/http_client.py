@@ -16,7 +16,7 @@ class HttpClient:
         if headers:
             req_headers.update(headers)
 
-        proxies = {"http": self.proxy, "https": self.proxy} if self.proxy else None
+        proxy = self.proxy if self.proxy else None
 
         for attempt in range(1, settings.MAX_RETRIES + 1):
             try:
@@ -26,7 +26,7 @@ class HttpClient:
                         params=params,
                         headers=req_headers,
                         timeout=self.timeout,
-                        proxies=proxies,
+                        proxy=proxy,
                     )
                     if response.status_code == 200:
                         return response
