@@ -1,6 +1,6 @@
 # PowerShell Script to Start Both Scraper Services
 Write-Host "========================================================" -ForegroundColor Green
-Write-Host "  Starting OLX Real-Time Data Scraper Stack" -ForegroundColor Green
+Write-Host "  Starting Multi-Platform (OLX & Cashify) Scraper Stack" -ForegroundColor Green
 Write-Host "========================================================" -ForegroundColor Green
 Write-Host ""
 
@@ -33,7 +33,7 @@ if (-not $RedisRunning) {
 
 # 2. Start Python Extractor
 Write-Host "[2/3] Launching Python Extraction Microservice on Port 8000..." -ForegroundColor Cyan
-Start-Process -FilePath "cmd.exe" -ArgumentList "/k cd /d `"$RootPath`" && extractor\.venv\Scripts\python -m uvicorn extractor.main:app --host 127.0.0.1 --port 8000 --loop asyncio" -WindowStyle Normal
+Start-Process -FilePath "cmd.exe" -ArgumentList "/k cd /d `"$RootPath`" && extractor\.venv\Scripts\python -m uvicorn extractor.main:app --host 127.0.0.1 --port 8000 --reload --loop asyncio" -WindowStyle Normal
 
 Start-Sleep -Seconds 3
 

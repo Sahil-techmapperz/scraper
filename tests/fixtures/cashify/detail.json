@@ -1,0 +1,148 @@
+{
+  "data": {
+    "id": "cashify-prod-estore-refurbished-catalogue-10446",
+    "title": "Apple iPhone 16 Pro Max - Refurbished",
+    "description": "Apple iPhone 16 Pro Max - Refurbished - Cashify certified refurbished device. 32-point quality check, Cashify Warranty, tested and verified with warranty support.",
+    "url": "https://www.cashify.in/buy-refurbished-mobile-phones/renewed-apple-iphone-16-pro-max",
+    "price": {
+      "value": 89599,
+      "currency": "INR",
+      "negotiable": null
+    },
+    "category": {
+      "id": "mobiles",
+      "name": "Mobiles",
+      "slug": "mobiles"
+    },
+    "subcategory": {
+      "id": "smartphones",
+      "name": "Refurbished Smartphones",
+      "slug": "smartphones"
+    },
+    "location": {
+      "state": "All India",
+      "city": "Pan India",
+      "locality": "Cashify Certified Store",
+      "pincode": null
+    },
+    "seller": {
+      "name": "Cashify Store Verified",
+      "type": "verified_store",
+      "contact_available": true
+    },
+    "images": [
+      {
+        "url": "https://s3n.cashify.in/cashify/product/img/xxhdpi/d197ee88-ccff.jpg",
+        "position": 0
+      }
+    ],
+    "created_at": null,
+    "updated_at": null,
+    "parameters": [
+      {
+        "key": "brand",
+        "value": "Apple"
+      },
+      {
+        "key": "condition",
+        "value": "Refurbished"
+      },
+      {
+        "key": "warranty",
+        "value": "Cashify Warranty"
+      },
+      {
+        "key": "assured_by",
+        "value": "Cashify Select"
+      },
+      {
+        "key": "rating",
+        "value": "4.6"
+      },
+      {
+        "key": "total_reviews",
+        "value": "33"
+      },
+      {
+        "key": "inventory",
+        "value": "21"
+      },
+      {
+        "key": "emi_amount",
+        "value": "4480"
+      },
+      {
+        "key": "original_price",
+        "value": "134900"
+      }
+    ],
+    "raw_data": {
+      "usingSalePrice": true,
+      "channelPrice": 122199,
+      "productId": "prod-estore-refurbished-catalogue|10446",
+      "inventory": 21,
+      "image": "https://s3n.cashify.in/cashify/product/img/xxhdpi/d197ee88-ccff.jpg",
+      "mrp": 134900,
+      "effectivePrice": 87807,
+      "salePrice": 89599,
+      "saleData": {
+        "saleTitle": "Apple Bumper Sale",
+        "minSalePrice": 89599,
+        "saleOfferText": "Price Dropped By Rs. {amount}",
+        "shortSaleOfferText": "Apple Bumper Sale ",
+        "variantId": 150210
+      },
+      "productType": "Mobile Phone",
+      "averageRating": 4.6,
+      "totalRatings": 33,
+      "productName": "Apple iPhone 16 Pro Max - Refurbished",
+      "productDiscoveryId": 72093,
+      "meta": {},
+      "slug": "/buy-refurbished-mobile-phones/renewed-apple-iphone-16-pro-max",
+      "emiAmount": 4480,
+      "productTimer": {
+        "label": "Deals of The Day",
+        "startTime": 1788760800000,
+        "endTime": 1788805740000,
+        "timerText": "Price Inc. in :"
+      },
+      "warrantyType": [
+        "Cashify Warranty"
+      ],
+      "tags": [
+        {
+          "id": 10,
+          "image": "https://s3n.cashify.in/estore/f067ac03eb064a49bf95f6534aeda3b8.png",
+          "tagName": "Seamless with Apple AI"
+        },
+        {
+          "id": 4,
+          "image": "https://s3n.cashify.in/estore/33bf018db6c44f7da1a0f19c9a1f1554.png",
+          "tagName": "Gaming"
+        },
+        {
+          "id": 2,
+          "image": "https://s3n.cashify.in/estore/6922b86d54e14e37b2e81d5825f72f5c.png",
+          "tagName": "Camera Focused"
+        },
+        {
+          "id": 1,
+          "image": "https://s3n.cashify.in/estore/a484df635525488d8415cad4ba6e93fa.png",
+          "tagName": "Flagship"
+        }
+      ],
+      "assuredByImage": "https://s3n.cashify.in/estore/ff33c2adaee048018630f33add311f57.webp",
+      "assuredBy": "Cashify Select",
+      "deviceVideo": {
+        "color": "",
+        "videoUrl": "",
+        "thumbnailUrl": ""
+      },
+      "productVideos": [],
+      "source": "cashify",
+      "brand": "Apple",
+      "original_price": 134900,
+      "sale_price": 89599
+    }
+  }
+}

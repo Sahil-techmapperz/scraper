@@ -140,3 +140,6 @@ venv/
 writable/*.sqlite
 *.rdb
 writable/*.rdb
+
+debug_*.txt
+debug.txt

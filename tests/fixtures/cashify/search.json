@@ -1,0 +1,1307 @@
+{
+  "data": [
+    {
+      "id": "cashify-prod-estore-refurbished-catalogue-10446",
+      "title": "Apple iPhone 16 Pro Max - Refurbished",
+      "description": "Apple iPhone 16 Pro Max - Refurbished - Cashify certified refurbished device. 32-point quality check, Cashify Warranty, tested and verified with warranty support.",
+      "url": "https://www.cashify.in/buy-refurbished-mobile-phones/renewed-apple-iphone-16-pro-max",
+      "price": {
+        "value": 89599,
+        "currency": "INR",
+        "negotiable": null
+      },
+      "category": {
+        "id": "mobiles",
+        "name": "Mobiles",
+        "slug": "mobiles"
+      },
+      "subcategory": {
+        "id": "smartphones",
+        "name": "Refurbished Smartphones",
+        "slug": "smartphones"
+      },
+      "location": {
+        "state": "All India",
+        "city": "Pan India",
+        "locality": "Cashify Certified Store",
+        "pincode": null
+      },
+      "seller": {
+        "name": "Cashify Store Verified",
+        "type": "verified_store",
+        "contact_available": true
+      },
+      "images": [
+        {
+          "url": "https://s3n.cashify.in/cashify/product/img/xxhdpi/d197ee88-ccff.jpg",
+          "position": 0
+        }
+      ],
+      "created_at": null,
+      "updated_at": null,
+      "parameters": [
+        {
+          "key": "brand",
+          "value": "Apple"
+        },
+        {
+          "key": "condition",
+          "value": "Refurbished"
+        },
+        {
+          "key": "warranty",
+          "value": "Cashify Warranty"
+        },
+        {
+          "key": "assured_by",
+          "value": "Cashify Select"
+        },
+        {
+          "key": "rating",
+          "value": "4.6"
+        },
+        {
+          "key": "total_reviews",
+          "value": "33"
+        },
+        {
+          "key": "inventory",
+          "value": "21"
+        },
+        {
+          "key": "emi_amount",
+          "value": "4480"
+        },
+        {
+          "key": "original_price",
+          "value": "134900"
+        }
+      ],
+      "raw_data": {
+        "usingSalePrice": true,
+        "channelPrice": 122199,
+        "productId": "prod-estore-refurbished-catalogue|10446",
+        "inventory": 21,
+        "image": "https://s3n.cashify.in/cashify/product/img/xxhdpi/d197ee88-ccff.jpg",
+        "mrp": 134900,
+        "effectivePrice": 87807,
+        "salePrice": 89599,
+        "saleData": {
+          "saleTitle": "Apple Bumper Sale",
+          "minSalePrice": 89599,
+          "saleOfferText": "Price Dropped By Rs. {amount}",
+          "shortSaleOfferText": "Apple Bumper Sale ",
+          "variantId": 150210
+        },
+        "productType": "Mobile Phone",
+        "averageRating": 4.6,
+        "totalRatings": 33,
+        "productName": "Apple iPhone 16 Pro Max - Refurbished",
+        "productDiscoveryId": 72093,
+        "meta": {},
+        "slug": "/buy-refurbished-mobile-phones/renewed-apple-iphone-16-pro-max",
+        "emiAmount": 4480,
+        "productTimer": {
+          "label": "Deals of The Day",
+          "startTime": 1788760800000,
+          "endTime": 1788805740000,
+          "timerText": "Price Inc. in :"
+        },
+        "warrantyType": [
+          "Cashify Warranty"
+        ],
+        "tags": [
+          {
+            "id": 10,
+            "image": "https://s3n.cashify.in/estore/f067ac03eb064a49bf95f6534aeda3b8.png",
+            "tagName": "Seamless with Apple AI"
+          },
+          {
+            "id": 4,
+            "image": "https://s3n.cashify.in/estore/33bf018db6c44f7da1a0f19c9a1f1554.png",
+            "tagName": "Gaming"
+          },
+          {
+            "id": 2,
+            "image": "https://s3n.cashify.in/estore/6922b86d54e14e37b2e81d5825f72f5c.png",
+            "tagName": "Camera Focused"
+          },
+          {
+            "id": 1,
+            "image": "https://s3n.cashify.in/estore/a484df635525488d8415cad4ba6e93fa.png",
+            "tagName": "Flagship"
+          }
+        ],
+        "assuredByImage": "https://s3n.cashify.in/estore/ff33c2adaee048018630f33add311f57.webp",
+        "assuredBy": "Cashify Select",
+        "deviceVideo": {
+          "color": "",
+          "videoUrl": "",
+          "thumbnailUrl": ""
+        },
+        "productVideos": [],
+        "source": "cashify",
+        "brand": "Apple",
+        "original_price": 134900,
+        "sale_price": 89599
+      }
+    },
+    {
+      "id": "cashify-prod-estore-refurbished-catalogue-10411",
+      "title": "Apple iPhone 16 Pro - Refurbished",
+      "description": "Apple iPhone 16 Pro - Refurbished - Cashify certified refurbished device. 32-point quality check, Cashify Warranty, tested and verified with warranty support.",
+      "url": "https://www.cashify.in/buy-refurbished-mobile-phones/renewed-apple-iphone-16-pro",
+      "price": {
+        "value": 74599,
+        "currency": "INR",
+        "negotiable": null
+      },
+      "category": {
+        "id": "mobiles",
+        "name": "Mobiles",
+        "slug": "mobiles"
+      },
+      "subcategory": {
+        "id": "smartphones",
+        "name": "Refurbished Smartphones",
+        "slug": "smartphones"
+      },
+      "location": {
+        "state": "All India",
+        "city": "Pan India",
+        "locality": "Cashify Certified Store",
+        "pincode": null
+      },
+      "seller": {
+        "name": "Cashify Store Verified",
+        "type": "verified_store",
+        "contact_available": true
+      },
+      "images": [
+        {
+          "url": "https://s3n.cashify.in/cashify/product/img/xxhdpi/c6842e95-7635.jpg",
+          "position": 0
+        }
+      ],
+      "created_at": null,
+      "updated_at": null,
+      "parameters": [
+        {
+          "key": "brand",
+          "value": "Apple"
+        },
+        {
+          "key": "condition",
+          "value": "Refurbished"
+        },
+        {
+          "key": "warranty",
+          "value": "Cashify Warranty"
+        },
+        {
+          "key": "assured_by",
+          "value": "Cashify Select"
+        },
+        {
+          "key": "rating",
+          "value": "4.8"
+        },
+        {
+          "key": "total_reviews",
+          "value": "44"
+        },
+        {
+          "key": "inventory",
+          "value": "21"
+        },
+        {
+          "key": "emi_amount",
+          "value": "3730"
+        },
+        {
+          "key": "original_price",
+          "value": "136499"
+        }
+      ],
+      "raw_data": {
+        "usingSalePrice": true,
+        "channelPrice": 95599,
+        "productId": "prod-estore-refurbished-catalogue|10411",
+        "inventory": 21,
+        "image": "https://s3n.cashify.in/cashify/product/img/xxhdpi/c6842e95-7635.jpg",
+        "mrp": 136499,
+        "effectivePrice": 73107,
+        "salePrice": 74599,
+        "saleData": {
+          "saleTitle": "Apple Bumper Sale",
+          "minSalePrice": 74599,
+          "saleOfferText": "Price Dropped By Rs. {amount}",
+          "shortSaleOfferText": "Apple Bumper Sale ",
+          "variantId": 149952
+        },
+        "productType": "Mobile Phone",
+        "averageRating": 4.8,
+        "totalRatings": 44,
+        "productName": "Apple iPhone 16 Pro - Refurbished",
+        "productDiscoveryId": 55300,
+        "meta": {},
+        "slug": "/buy-refurbished-mobile-phones/renewed-apple-iphone-16-pro",
+        "emiAmount": 3730,
+        "productTimer": {
+          "label": "Deals of the day",
+          "startTime": 1788760800000,
+          "endTime": 1788805740000,
+          "timerText": "Price Inc. in :"
+        },
+        "warrantyType": [
+          "Cashify Warranty"
+        ],
+        "tags": [
+          {
+            "id": 10,
+            "image": "https://s3n.cashify.in/estore/f067ac03eb064a49bf95f6534aeda3b8.png",
+            "tagName": "Seamless with Apple AI"
+          },
+          {
+            "id": 2,
+            "image": "https://s3n.cashify.in/estore/6922b86d54e14e37b2e81d5825f72f5c.png",
+            "tagName": "Camera Focused"
+          }
+        ],
+        "assuredByImage": "https://s3n.cashify.in/estore/ff33c2adaee048018630f33add311f57.webp",
+        "assuredBy": "Cashify Select",
+        "deviceVideo": {
+          "color": "",
+          "videoUrl": "",
+          "thumbnailUrl": ""
+        },
+        "productVideos": [],
+        "source": "cashify",
+        "brand": "Apple",
+        "original_price": 136499,
+        "sale_price": 74599
+      }
+    },
+    {
+      "id": "cashify-prod-estore-refurbished-catalogue-8784",
+      "title": "Apple iPhone 15 Pro Max - Refurbished",
+      "description": "Apple iPhone 15 Pro Max - Refurbished - Cashify certified refurbished device. 32-point quality check, Cashify Warranty, tested and verified with warranty support.",
+      "url": "https://www.cashify.in/buy-refurbished-mobile-phones/renewed-apple-iphone-15-pro-max",
+      "price": {
+        "value": 73899,
+        "currency": "INR",
+        "negotiable": null
+      },
+      "category": {
+        "id": "mobiles",
+        "name": "Mobiles",
+        "slug": "mobiles"
+      },
+      "subcategory": {
+        "id": "smartphones",
+        "name": "Refurbished Smartphones",
+        "slug": "smartphones"
+      },
+      "location": {
+        "state": "All India",
+        "city": "Pan India",
+        "locality": "Cashify Certified Store",
+        "pincode": null
+      },
+      "seller": {
+        "name": "Cashify Store Verified",
+        "type": "verified_store",
+        "contact_available": true
+      },
+      "images": [
+        {
+          "url": "https://s3n.cashify.in/cashify/product/img/xxhdpi/e14bb4d9-988f.jpg",
+          "position": 0
+        }
+      ],
+      "created_at": null,
+      "updated_at": null,
+      "parameters": [
+        {
+          "key": "brand",
+          "value": "Apple"
+        },
+        {
+          "key": "condition",
+          "value": "Refurbished"
+        },
+        {
+          "key": "warranty",
+          "value": "Cashify Warranty"
+        },
+        {
+          "key": "assured_by",
+          "value": "Cashify Select"
+        },
+        {
+          "key": "rating",
+          "value": "4.8"
+        },
+        {
+          "key": "total_reviews",
+          "value": "298"
+        },
+        {
+          "key": "inventory",
+          "value": "21"
+        },
+        {
+          "key": "emi_amount",
+          "value": "3695"
+        },
+        {
+          "key": "original_price",
+          "value": "159900"
+        }
+      ],
+      "raw_data": {
+        "usingSalePrice": true,
+        "channelPrice": 85499,
+        "productId": "prod-estore-refurbished-catalogue|8784",
+        "inventory": 21,
+        "image": "https://s3n.cashify.in/cashify/product/img/xxhdpi/e14bb4d9-988f.jpg",
+        "mrp": 159900,
+        "effectivePrice": 72421,
+        "salePrice": 73899,
+        "saleData": {
+          "saleTitle": "Apple Bumper Sale",
+          "minSalePrice": 73899,
+          "saleOfferText": "Price Dropped By Rs. {amount}",
+          "shortSaleOfferText": "Apple Bumper Sale ",
+          "variantId": 136484
+        },
+        "productType": "Mobile Phone",
+        "averageRating": 4.8,
+        "totalRatings": 298,
+        "productName": "Apple iPhone 15 Pro Max - Refurbished",
+        "productDiscoveryId": 39541,
+        "meta": {},
+        "slug": "/buy-refurbished-mobile-phones/renewed-apple-iphone-15-pro-max",
+        "emiAmount": 3695,
+        "productTimer": {},
+        "warrantyType": [
+          "Cashify Warranty"
+        ],
+        "tags": [
+          {
+            "id": 4,
+            "image": "https://s3n.cashify.in/estore/33bf018db6c44f7da1a0f19c9a1f1554.png",
+            "tagName": "Gaming"
+          },
+          {
+            "id": 2,
+            "image": "https://s3n.cashify.in/estore/6922b86d54e14e37b2e81d5825f72f5c.png",
+            "tagName": "Camera Focused"
+          },
+          {
+            "id": 1,
+            "image": "https://s3n.cashify.in/estore/a484df635525488d8415cad4ba6e93fa.png",
+            "tagName": "Flagship"
+          }
+        ],
+        "assuredByImage": "https://s3n.cashify.in/estore/ff33c2adaee048018630f33add311f57.webp",
+        "assuredBy": "Cashify Select",
+        "deviceVideo": {
+          "color": "",
+          "videoUrl": "",
+          "thumbnailUrl": ""
+        },
+        "productVideos": [],
+        "source": "cashify",
+        "brand": "Apple",
+        "original_price": 159900,
+        "sale_price": 73899
+      }
+    },
+    {
+      "id": "cashify-prod-estore-refurbished-catalogue-8785",
+      "title": "Apple iPhone 15 Pro - Refurbished",
+      "description": "Apple iPhone 15 Pro - Refurbished - Cashify certified refurbished device. 32-point quality check, Cashify Warranty, tested and verified with warranty support.",
+      "url": "https://www.cashify.in/buy-refurbished-mobile-phones/renewed-apple-iphone-15-pro",
+      "price": {
+        "value": 63699,
+        "currency": "INR",
+        "negotiable": null
+      },
+      "category": {
+        "id": "mobiles",
+        "name": "Mobiles",
+        "slug": "mobiles"
+      },
+      "subcategory": {
+        "id": "smartphones",
+        "name": "Refurbished Smartphones",
+        "slug": "smartphones"
+      },
+      "location": {
+        "state": "All India",
+        "city": "Pan India",
+        "locality": "Cashify Certified Store",
+        "pincode": null
+      },
+      "seller": {
+        "name": "Cashify Store Verified",
+        "type": "verified_store",
+        "contact_available": true
+      },
+      "images": [
+        {
+          "url": "https://s3n.cashify.in/cashify/product/img/xxhdpi/f43b6269-c954.jpg",
+          "position": 0
+        }
+      ],
+      "created_at": null,
+      "updated_at": null,
+      "parameters": [
+        {
+          "key": "brand",
+          "value": "Apple"
+        },
+        {
+          "key": "condition",
+          "value": "Refurbished"
+        },
+        {
+          "key": "warranty",
+          "value": "Cashify Warranty"
+        },
+        {
+          "key": "assured_by",
+          "value": "Cashify Select"
+        },
+        {
+          "key": "rating",
+          "value": "4.8"
+        },
+        {
+          "key": "total_reviews",
+          "value": "336"
+        },
+        {
+          "key": "inventory",
+          "value": "21"
+        },
+        {
+          "key": "emi_amount",
+          "value": "3185"
+        },
+        {
+          "key": "original_price",
+          "value": "134900"
+        }
+      ],
+      "raw_data": {
+        "usingSalePrice": true,
+        "channelPrice": 77699,
+        "productId": "prod-estore-refurbished-catalogue|8785",
+        "inventory": 21,
+        "image": "https://s3n.cashify.in/cashify/product/img/xxhdpi/f43b6269-c954.jpg",
+        "mrp": 134900,
+        "effectivePrice": 62425,
+        "salePrice": 63699,
+        "saleData": {
+          "saleTitle": "Apple Bumper Sale",
+          "minSalePrice": 63699,
+          "saleOfferText": "Price Dropped By Rs. {amount}",
+          "shortSaleOfferText": "Apple Bumper Sale ",
+          "variantId": 136540
+        },
+        "productType": "Mobile Phone",
+        "averageRating": 4.8,
+        "totalRatings": 336,
+        "productName": "Apple iPhone 15 Pro - Refurbished",
+        "productDiscoveryId": 40092,
+        "meta": {},
+        "slug": "/buy-refurbished-mobile-phones/renewed-apple-iphone-15-pro",
+        "emiAmount": 3185,
+        "productTimer": {
+          "label": "Flash Sale",
+          "startTime": 1788761100000,
+          "endTime": 1788805740000,
+          "timerText": "Price Inc. in :"
+        },
+        "warrantyType": [
+          "Cashify Warranty"
+        ],
+        "tags": [
+          {
+            "id": 2,
+            "image": "https://s3n.cashify.in/estore/6922b86d54e14e37b2e81d5825f72f5c.png",
+            "tagName": "Camera Focused"
+          }
+        ],
+        "assuredByImage": "https://s3n.cashify.in/estore/ff33c2adaee048018630f33add311f57.webp",
+        "assuredBy": "Cashify Select",
+        "deviceVideo": {
+          "color": "",
+          "videoUrl": "",
+          "thumbnailUrl": ""
+        },
+        "productVideos": [],
+        "source": "cashify",
+        "brand": "Apple",
+        "original_price": 134900,
+        "sale_price": 63699
+      }
+    },
+    {
+      "id": "cashify-prod-estore-refurbished-catalogue-6567",
+      "title": "Apple iPhone 13 - Refurbished",
+      "description": "Apple iPhone 13 - Refurbished - Cashify certified refurbished device. 32-point quality check, Cashify Warranty, tested and verified with warranty support.",
+      "url": "https://www.cashify.in/buy-refurbished-mobile-phones/renewed-apple-iphone-13",
+      "price": {
+        "value": 27299,
+        "currency": "INR",
+        "negotiable": null
+      },
+      "category": {
+        "id": "mobiles",
+        "name": "Mobiles",
+        "slug": "mobiles"
+      },
+      "subcategory": {
+        "id": "smartphones",
+        "name": "Refurbished Smartphones",
+        "slug": "smartphones"
+      },
+      "location": {
+        "state": "All India",
+        "city": "Pan India",
+        "locality": "Cashify Certified Store",
+        "pincode": null
+      },
+      "seller": {
+        "name": "Cashify Store Verified",
+        "type": "verified_store",
+        "contact_available": true
+      },
+      "images": [
+        {
+          "url": "https://s3n.cashify.in/cashify/product/img/xxhdpi/96a67b00-9389.jpg",
+          "position": 0
+        }
+      ],
+      "created_at": null,
+      "updated_at": null,
+      "parameters": [
+        {
+          "key": "brand",
+          "value": "Apple"
+        },
+        {
+          "key": "condition",
+          "value": "Refurbished"
+        },
+        {
+          "key": "warranty",
+          "value": "Cashify Warranty"
+        },
+        {
+          "key": "assured_by",
+          "value": "Cashify Assured"
+        },
+        {
+          "key": "rating",
+          "value": "4.4"
+        },
+        {
+          "key": "total_reviews",
+          "value": "5121"
+        },
+        {
+          "key": "inventory",
+          "value": "21"
+        },
+        {
+          "key": "emi_amount",
+          "value": "1365"
+        },
+        {
+          "key": "original_price",
+          "value": "59900"
+        }
+      ],
+      "raw_data": {
+        "usingSalePrice": true,
+        "channelPrice": 28799,
+        "productId": "prod-estore-refurbished-catalogue|6567",
+        "inventory": 21,
+        "image": "https://s3n.cashify.in/cashify/product/img/xxhdpi/96a67b00-9389.jpg",
+        "mrp": 59900,
+        "effectivePrice": 26753,
+        "salePrice": 27299,
+        "saleData": {
+          "saleTitle": "Apple Bumper Sale",
+          "minSalePrice": 27299,
+          "saleOfferText": "Price Dropped By Rs. {amount}",
+          "shortSaleOfferText": "Apple Bumper Sale ",
+          "variantId": 209296
+        },
+        "productType": "Mobile Phone",
+        "averageRating": 4.4,
+        "totalRatings": 5121,
+        "productName": "Apple iPhone 13 - Refurbished",
+        "productDiscoveryId": 32547,
+        "meta": {},
+        "slug": "/buy-refurbished-mobile-phones/renewed-apple-iphone-13",
+        "emiAmount": 1365,
+        "productTimer": {},
+        "warrantyType": [
+          "Cashify Warranty"
+        ],
+        "tags": [],
+        "assuredByImage": "https://s3ng.cashify.in/estore/658f05797b2d4354a604fe75c5c0499a.webp",
+        "assuredBy": "Cashify Assured",
+        "deviceVideo": {
+          "color": "",
+          "videoUrl": "",
+          "thumbnailUrl": ""
+        },
+        "productVideos": [],
+        "source": "cashify",
+        "brand": "Apple",
+        "original_price": 59900,
+        "sale_price": 27299
+      }
+    },
+    {
+      "id": "cashify-prod-estore-refurbished-catalogue-8787",
+      "title": "Apple iPhone 15 - Refurbished",
+      "description": "Apple iPhone 15 - Refurbished - Cashify certified refurbished device. 32-point quality check, Cashify Warranty, tested and verified with warranty support.",
+      "url": "https://www.cashify.in/buy-refurbished-mobile-phones/renewed-apple-iphone-15",
+      "price": {
+        "value": 41099,
+        "currency": "INR",
+        "negotiable": null
+      },
+      "category": {
+        "id": "mobiles",
+        "name": "Mobiles",
+        "slug": "mobiles"
+      },
+      "subcategory": {
+        "id": "smartphones",
+        "name": "Refurbished Smartphones",
+        "slug": "smartphones"
+      },
+      "location": {
+        "state": "All India",
+        "city": "Pan India",
+        "locality": "Cashify Certified Store",
+        "pincode": null
+      },
+      "seller": {
+        "name": "Cashify Store Verified",
+        "type": "verified_store",
+        "contact_available": true
+      },
+      "images": [
+        {
+          "url": "https://s3n.cashify.in/cashify/product/img/xxhdpi/e2c7dff8-23a0.jpg",
+          "position": 0
+        }
+      ],
+      "created_at": null,
+      "updated_at": null,
+      "parameters": [
+        {
+          "key": "brand",
+          "value": "Apple"
+        },
+        {
+          "key": "condition",
+          "value": "Refurbished"
+        },
+        {
+          "key": "warranty",
+          "value": "Cashify Warranty"
+        },
+        {
+          "key": "assured_by",
+          "value": "Cashify Select"
+        },
+        {
+          "key": "rating",
+          "value": "4.8"
+        },
+        {
+          "key": "total_reviews",
+          "value": "850"
+        },
+        {
+          "key": "inventory",
+          "value": "21"
+        },
+        {
+          "key": "emi_amount",
+          "value": "2055"
+        },
+        {
+          "key": "original_price",
+          "value": "49499"
+        }
+      ],
+      "raw_data": {
+        "usingSalePrice": true,
+        "channelPrice": 42199,
+        "productId": "prod-estore-refurbished-catalogue|8787",
+        "inventory": 21,
+        "image": "https://s3n.cashify.in/cashify/product/img/xxhdpi/e2c7dff8-23a0.jpg",
+        "mrp": 49499,
+        "effectivePrice": 40277,
+        "salePrice": 41099,
+        "saleData": {
+          "saleTitle": "Apple Bumper Sale",
+          "minSalePrice": 41099,
+          "saleOfferText": "Price Dropped By Rs. {amount}",
+          "shortSaleOfferText": "Apple Bumper Sale ",
+          "variantId": 222880
+        },
+        "productType": "Mobile Phone",
+        "averageRating": 4.8,
+        "totalRatings": 850,
+        "productName": "Apple iPhone 15 - Refurbished",
+        "productDiscoveryId": 40093,
+        "meta": {},
+        "slug": "/buy-refurbished-mobile-phones/renewed-apple-iphone-15",
+        "emiAmount": 2055,
+        "productTimer": {},
+        "warrantyType": [
+          "Cashify Warranty"
+        ],
+        "tags": [
+          {
+            "id": 2,
+            "image": "https://s3n.cashify.in/estore/6922b86d54e14e37b2e81d5825f72f5c.png",
+            "tagName": "Camera Focused"
+          }
+        ],
+        "assuredByImage": "https://s3n.cashify.in/estore/ff33c2adaee048018630f33add311f57.webp",
+        "assuredBy": "Cashify Select",
+        "deviceVideo": {
+          "color": "",
+          "videoUrl": "",
+          "thumbnailUrl": ""
+        },
+        "productVideos": [],
+        "source": "cashify",
+        "brand": "Apple",
+        "original_price": 49499,
+        "sale_price": 41099
+      }
+    },
+    {
+      "id": "cashify-prod-estore-refurbished-catalogue-6851",
+      "title": "Apple iPhone 14 - Refurbished",
+      "description": "Apple iPhone 14 - Refurbished - Cashify certified refurbished device. 32-point quality check, Cashify Warranty, tested and verified with warranty support.",
+      "url": "https://www.cashify.in/buy-refurbished-mobile-phones/renewed-apple-iphone-14",
+      "price": {
+        "value": 31799,
+        "currency": "INR",
+        "negotiable": null
+      },
+      "category": {
+        "id": "mobiles",
+        "name": "Mobiles",
+        "slug": "mobiles"
+      },
+      "subcategory": {
+        "id": "smartphones",
+        "name": "Refurbished Smartphones",
+        "slug": "smartphones"
+      },
+      "location": {
+        "state": "All India",
+        "city": "Pan India",
+        "locality": "Cashify Certified Store",
+        "pincode": null
+      },
+      "seller": {
+        "name": "Cashify Store Verified",
+        "type": "verified_store",
+        "contact_available": true
+      },
+      "images": [
+        {
+          "url": "https://s3n.cashify.in/cashify/product/img/xxhdpi/36ea82c3-6d6a.jpg",
+          "position": 0
+        }
+      ],
+      "created_at": null,
+      "updated_at": null,
+      "parameters": [
+        {
+          "key": "brand",
+          "value": "Apple"
+        },
+        {
+          "key": "condition",
+          "value": "Refurbished"
+        },
+        {
+          "key": "warranty",
+          "value": "Cashify Warranty"
+        },
+        {
+          "key": "assured_by",
+          "value": "Cashify Assured"
+        },
+        {
+          "key": "rating",
+          "value": "4.8"
+        },
+        {
+          "key": "total_reviews",
+          "value": "1787"
+        },
+        {
+          "key": "inventory",
+          "value": "21"
+        },
+        {
+          "key": "emi_amount",
+          "value": "1590"
+        },
+        {
+          "key": "original_price",
+          "value": "59900"
+        }
+      ],
+      "raw_data": {
+        "usingSalePrice": true,
+        "channelPrice": 32799,
+        "productId": "prod-estore-refurbished-catalogue|6851",
+        "inventory": 21,
+        "image": "https://s3n.cashify.in/cashify/product/img/xxhdpi/36ea82c3-6d6a.jpg",
+        "mrp": 59900,
+        "effectivePrice": 31163,
+        "salePrice": 31799,
+        "saleData": {
+          "saleTitle": "Apple Bumper Sale",
+          "minSalePrice": 31799,
+          "saleOfferText": "Price Dropped By Rs. {amount}",
+          "shortSaleOfferText": "Apple Bumper Sale ",
+          "variantId": 209290
+        },
+        "productType": "Mobile Phone",
+        "averageRating": 4.8,
+        "totalRatings": 1787,
+        "productName": "Apple iPhone 14 - Refurbished",
+        "productDiscoveryId": 36767,
+        "meta": {},
+        "slug": "/buy-refurbished-mobile-phones/renewed-apple-iphone-14",
+        "emiAmount": 1590,
+        "productTimer": {},
+        "warrantyType": [
+          "Cashify Warranty"
+        ],
+        "tags": [],
+        "assuredByImage": "https://s3ng.cashify.in/estore/658f05797b2d4354a604fe75c5c0499a.webp",
+        "assuredBy": "Cashify Assured",
+        "deviceVideo": {
+          "color": "",
+          "videoUrl": "",
+          "thumbnailUrl": ""
+        },
+        "productVideos": [],
+        "source": "cashify",
+        "brand": "Apple",
+        "original_price": 59900,
+        "sale_price": 31799
+      }
+    },
+    {
+      "id": "cashify-prod-estore-refurbished-catalogue-6635",
+      "title": "Apple iPhone 12 - Refurbished",
+      "description": "Apple iPhone 12 - Refurbished - Cashify certified refurbished device. 32-point quality check, Cashify Warranty, tested and verified with warranty support.",
+      "url": "https://www.cashify.in/buy-refurbished-mobile-phones/renewed-apple-iphone-12",
+      "price": {
+        "value": 19799,
+        "currency": "INR",
+        "negotiable": null
+      },
+      "category": {
+        "id": "mobiles",
+        "name": "Mobiles",
+        "slug": "mobiles"
+      },
+      "subcategory": {
+        "id": "smartphones",
+        "name": "Refurbished Smartphones",
+        "slug": "smartphones"
+      },
+      "location": {
+        "state": "All India",
+        "city": "Pan India",
+        "locality": "Cashify Certified Store",
+        "pincode": null
+      },
+      "seller": {
+        "name": "Cashify Store Verified",
+        "type": "verified_store",
+        "contact_available": true
+      },
+      "images": [
+        {
+          "url": "https://s3n.cashify.in/cashify/product/img/xxhdpi/bf8ed21e-96c9.jpg",
+          "position": 0
+        }
+      ],
+      "created_at": null,
+      "updated_at": null,
+      "parameters": [
+        {
+          "key": "brand",
+          "value": "Apple"
+        },
+        {
+          "key": "condition",
+          "value": "Refurbished"
+        },
+        {
+          "key": "warranty",
+          "value": "Cashify Warranty"
+        },
+        {
+          "key": "assured_by",
+          "value": "Cashify Assured"
+        },
+        {
+          "key": "rating",
+          "value": "4.6"
+        },
+        {
+          "key": "total_reviews",
+          "value": "5083"
+        },
+        {
+          "key": "inventory",
+          "value": "21"
+        },
+        {
+          "key": "emi_amount",
+          "value": "990"
+        },
+        {
+          "key": "original_price",
+          "value": "49900"
+        }
+      ],
+      "raw_data": {
+        "usingSalePrice": true,
+        "channelPrice": 21299,
+        "productId": "prod-estore-refurbished-catalogue|6635",
+        "inventory": 21,
+        "image": "https://s3n.cashify.in/cashify/product/img/xxhdpi/bf8ed21e-96c9.jpg",
+        "mrp": 49900,
+        "effectivePrice": 19403,
+        "salePrice": 19799,
+        "saleData": {
+          "saleTitle": "Apple Bumper Sale",
+          "minSalePrice": 19799,
+          "saleOfferText": "Price Dropped By Rs. {amount}",
+          "shortSaleOfferText": "Apple Bumper Sale ",
+          "variantId": 227362
+        },
+        "productType": "Mobile Phone",
+        "averageRating": 4.6,
+        "totalRatings": 5083,
+        "productName": "Apple iPhone 12 - Refurbished",
+        "productDiscoveryId": 32184,
+        "meta": {},
+        "slug": "/buy-refurbished-mobile-phones/renewed-apple-iphone-12",
+        "emiAmount": 990,
+        "productTimer": {},
+        "warrantyType": [
+          "Cashify Warranty"
+        ],
+        "tags": [],
+        "assuredByImage": "https://s3ng.cashify.in/estore/658f05797b2d4354a604fe75c5c0499a.webp",
+        "assuredBy": "Cashify Assured",
+        "deviceVideo": {
+          "color": "",
+          "videoUrl": "",
+          "thumbnailUrl": ""
+        },
+        "productVideos": [],
+        "source": "cashify",
+        "brand": "Apple",
+        "original_price": 49900,
+        "sale_price": 19799
+      }
+    },
+    {
+      "id": "cashify-prod-estore-refurbished-catalogue-6711",
+      "title": "Apple iPhone 11 - Refurbished",
+      "description": "Apple iPhone 11 - Refurbished - Cashify certified refurbished device. 32-point quality check, Cashify Warranty, tested and verified with warranty support.",
+      "url": "https://www.cashify.in/buy-refurbished-mobile-phones/renewed-apple-iphone-11",
+      "price": {
+        "value": 16399,
+        "currency": "INR",
+        "negotiable": null
+      },
+      "category": {
+        "id": "mobiles",
+        "name": "Mobiles",
+        "slug": "mobiles"
+      },
+      "subcategory": {
+        "id": "smartphones",
+        "name": "Refurbished Smartphones",
+        "slug": "smartphones"
+      },
+      "location": {
+        "state": "All India",
+        "city": "Pan India",
+        "locality": "Cashify Certified Store",
+        "pincode": null
+      },
+      "seller": {
+        "name": "Cashify Store Verified",
+        "type": "verified_store",
+        "contact_available": true
+      },
+      "images": [
+        {
+          "url": "https://s3n.cashify.in/cashify/product/img/xxhdpi/d8394bf8-e922.jpg",
+          "position": 0
+        }
+      ],
+      "created_at": null,
+      "updated_at": null,
+      "parameters": [
+        {
+          "key": "brand",
+          "value": "Apple"
+        },
+        {
+          "key": "condition",
+          "value": "Refurbished"
+        },
+        {
+          "key": "warranty",
+          "value": "Cashify Warranty"
+        },
+        {
+          "key": "assured_by",
+          "value": "Cashify Assured"
+        },
+        {
+          "key": "rating",
+          "value": "4.5"
+        },
+        {
+          "key": "total_reviews",
+          "value": "4603"
+        },
+        {
+          "key": "inventory",
+          "value": "21"
+        },
+        {
+          "key": "emi_amount",
+          "value": "820"
+        },
+        {
+          "key": "original_price",
+          "value": "41599"
+        }
+      ],
+      "raw_data": {
+        "usingSalePrice": true,
+        "channelPrice": 18599,
+        "productId": "prod-estore-refurbished-catalogue|6711",
+        "inventory": 21,
+        "image": "https://s3n.cashify.in/cashify/product/img/xxhdpi/d8394bf8-e922.jpg",
+        "mrp": 41599,
+        "effectivePrice": 16071,
+        "salePrice": 16399,
+        "saleData": {
+          "saleTitle": "Apple Bumper Sale",
+          "minSalePrice": 16399,
+          "saleOfferText": "Price Dropped By Rs. {amount}",
+          "shortSaleOfferText": "Apple Bumper Sale ",
+          "variantId": 94757
+        },
+        "productType": "Mobile Phone",
+        "averageRating": 4.5,
+        "totalRatings": 4603,
+        "productName": "Apple iPhone 11 - Refurbished",
+        "productDiscoveryId": 22923,
+        "meta": {},
+        "slug": "/buy-refurbished-mobile-phones/renewed-apple-iphone-11",
+        "emiAmount": 820,
+        "productTimer": {},
+        "warrantyType": [
+          "Cashify Warranty"
+        ],
+        "tags": [
+          {
+            "id": 3,
+            "image": "https://s3n.cashify.in/estore/97313f7d47824351b001f368d4a9ecf8.png",
+            "tagName": "Budget Friendly"
+          }
+        ],
+        "assuredByImage": "https://s3ng.cashify.in/estore/658f05797b2d4354a604fe75c5c0499a.webp",
+        "assuredBy": "Cashify Assured",
+        "deviceVideo": {
+          "color": "",
+          "videoUrl": "",
+          "thumbnailUrl": ""
+        },
+        "productVideos": [],
+        "source": "cashify",
+        "brand": "Apple",
+        "original_price": 41599,
+        "sale_price": 16399
+      }
+    },
+    {
+      "id": "cashify-prod-estore-refurbished-catalogue-10115",
+      "title": "Apple iPhone 16 - Refurbished",
+      "description": "Apple iPhone 16 - Refurbished - Cashify certified refurbished device. 32-point quality check, Cashify Warranty, tested and verified with warranty support.",
+      "url": "https://www.cashify.in/buy-refurbished-mobile-phones/renewed-apple-iphone-16",
+      "price": {
+        "value": 49799,
+        "currency": "INR",
+        "negotiable": null
+      },
+      "category": {
+        "id": "mobiles",
+        "name": "Mobiles",
+        "slug": "mobiles"
+      },
+      "subcategory": {
+        "id": "smartphones",
+        "name": "Refurbished Smartphones",
+        "slug": "smartphones"
+      },
+      "location": {
+        "state": "All India",
+        "city": "Pan India",
+        "locality": "Cashify Certified Store",
+        "pincode": null
+      },
+      "seller": {
+        "name": "Cashify Store Verified",
+        "type": "verified_store",
+        "contact_available": true
+      },
+      "images": [
+        {
+          "url": "https://s3n.cashify.in/cashify/product/img/xxhdpi/db36cde6-e6e5.jpg",
+          "position": 0
+        }
+      ],
+      "created_at": null,
+      "updated_at": null,
+      "parameters": [
+        {
+          "key": "brand",
+          "value": "Apple"
+        },
+        {
+          "key": "condition",
+          "value": "Refurbished"
+        },
+        {
+          "key": "warranty",
+          "value": "Cashify Warranty"
+        },
+        {
+          "key": "assured_by",
+          "value": "Cashify Select"
+        },
+        {
+          "key": "rating",
+          "value": "4.5"
+        },
+        {
+          "key": "total_reviews",
+          "value": "123"
+        },
+        {
+          "key": "inventory",
+          "value": "21"
+        },
+        {
+          "key": "emi_amount",
+          "value": "2490"
+        },
+        {
+          "key": "original_price",
+          "value": "64869"
+        }
+      ],
+      "raw_data": {
+        "usingSalePrice": true,
+        "channelPrice": 51799,
+        "productId": "prod-estore-refurbished-catalogue|10115",
+        "inventory": 21,
+        "image": "https://s3n.cashify.in/cashify/product/img/xxhdpi/db36cde6-e6e5.jpg",
+        "mrp": 64869,
+        "effectivePrice": 48803,
+        "salePrice": 49799,
+        "saleData": {
+          "saleTitle": "Apple Bumper Sale",
+          "minSalePrice": 49799,
+          "saleOfferText": "Price Dropped By Rs. {amount}",
+          "shortSaleOfferText": "Apple Bumper Sale ",
+          "variantId": 225815
+        },
+        "productType": "Mobile Phone",
+        "averageRating": 4.5,
+        "totalRatings": 123,
+        "productName": "Apple iPhone 16 - Refurbished",
+        "productDiscoveryId": 55299,
+        "meta": {},
+        "slug": "/buy-refurbished-mobile-phones/renewed-apple-iphone-16",
+        "emiAmount": 2490,
+        "productTimer": {},
+        "warrantyType": [
+          "Cashify Warranty"
+        ],
+        "tags": [
+          {
+            "id": 10,
+            "image": "https://s3n.cashify.in/estore/f067ac03eb064a49bf95f6534aeda3b8.png",
+            "tagName": "Seamless with Apple AI"
+          },
+          {
+            "id": 11,
+            "image": "https://s3n.cashify.in/estore/6bea023ff88446e087bb90f68c711b29.png",
+            "tagName": "AI on Another Level"
+          },
+          {
+            "id": 12,
+            "image": "https://s3n.cashify.in/estore/82c7092935ab4c5bb2e91d24d4324e9a.png",
+            "tagName": "AI Portrait Camera"
+          }
+        ],
+        "assuredByImage": "https://s3n.cashify.in/estore/ff33c2adaee048018630f33add311f57.webp",
+        "assuredBy": "Cashify Select",
+        "deviceVideo": {
+          "color": "",
+          "videoUrl": "",
+          "thumbnailUrl": ""
+        },
+        "productVideos": [],
+        "source": "cashify",
+        "brand": "Apple",
+        "original_price": 64869,
+        "sale_price": 49799
+      }
+    }
+  ],
+  "pagination": {
+    "page": 1,
+    "limit": 10,
+    "has_next": true,
+    "total_records": 10
+  }
+}

@@ -20,6 +20,8 @@ from extractor.extractors.cardekho_search import cardekho_search_extractor
 from extractor.extractors.cardekho_detail import cardekho_detail_extractor
 from extractor.extractors.naukri_search import naukri_search_extractor
 from extractor.extractors.naukri_detail import naukri_detail_extractor
+from extractor.extractors.cashify_search import cashify_search_extractor
+from extractor.extractors.cashify_detail import cashify_detail_extractor
 from extractor.engine.browser_pool import browser_manager
 
 logging.basicConfig(
@@ -30,15 +32,15 @@ logger = logging.getLogger("marketplace_extractor")
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    logger.info("Starting Data Extraction Microservice (OLX, CarDekho & Naukri)...")
+    logger.info("Starting Data Extraction Microservice (OLX, CarDekho, Naukri & Cashify)...")
     yield
     logger.info("Shutting down extractor and closing browser pool...")
     await browser_manager.close()
 
 app = FastAPI(
     title="Marketplace Data Extractor Microservice",
-    description="High-performance extraction engine for real-time OLX India, CarDekho, and Naukri.com job marketplace data",
-    version="1.2.0",
+    description="High-performance extraction engine for real-time OLX India, CarDekho, Naukri.com, and Cashify.in marketplace data",
+    version="1.3.0",
     lifespan=lifespan,
 )
 
@@ -55,9 +57,10 @@ async def health_check():
     return {
         "status": "healthy",
         "service": "marketplace-python-extractor",
-        "sources": ["olx", "cardekho", "naukri"],
+        "sources": ["olx", "cardekho", "naukri", "cashify"],
         "browser_fallback_enabled": settings.ENABLE_BROWSER_FALLBACK,
     }
+
 
 # ==================== OLX ENDPOINTS ====================
 
@@ -257,6 +260,59 @@ async def get_naukri_listing_by_url(url: str = Query(...)):
         raise HTTPException(status_code=404, detail="Naukri listing not found at provided URL")
     return res
 
+# ==================== CASHIFY ENDPOINTS ====================
+
+@app.get("/cashify/listings", response_model=SearchResponse, tags=["Cashify"])
+async def search_cashify_listings(
+    keyword: Optional[str] = Query(None),
+    category: Optional[str] = Query(None),
+    subcategory: Optional[str] = Query(None),
+    brand: Optional[str] = Query(None),
+    city: Optional[str] = Query(None),
+    min_price: Optional[int] = Query(None),
+    max_price: Optional[int] = Query(None),
+    sort: Optional[str] = Query(None),
+    page: int = Query(1, ge=1),
+    limit: int = Query(20, ge=1, le=300),
+    url: Optional[str] = Query(None),
+):
+    if url:
+        detail_res = await cashify_detail_extractor.get_detail(listing_id="", listing_url=url)
+        if not detail_res.data:
+            raise HTTPException(status_code=404, detail="Cashify listing not found at provided URL")
+        return SearchResponse(
+            data=[detail_res.data],
+            pagination={"page": 1, "limit": 1, "has_next": False, "total_records": 1}
+        )
+
+    params = SearchQueryParams(
+        category=category or "mobiles",
+        subcategory=subcategory,
+        keyword=keyword,
+        brand=brand,
+        city=city,
+        min_price=min_price,
+        max_price=max_price,
+        sort=sort,
+        page=page,
+        limit=limit,
+    )
+    return await cashify_search_extractor.search(params)
+
+@app.get("/cashify/listings/{listing_id}", response_model=DetailResponse, tags=["Cashify"])
+async def get_cashify_listing_detail(listing_id: str, url: Optional[str] = Query(None)):
+    res = await cashify_detail_extractor.get_detail(listing_id=listing_id, listing_url=url)
+    if not res.data:
+        raise HTTPException(status_code=404, detail=f"Cashify listing {listing_id} not found")
+    return res
+
+@app.get("/cashify/listing", response_model=DetailResponse, tags=["Cashify"])
+async def get_cashify_listing_by_url(url: str = Query(...)):
+    res = await cashify_detail_extractor.get_detail(listing_id="", listing_url=url)
+    if not res.data:
+        raise HTTPException(status_code=404, detail="Cashify listing not found at provided URL")
+    return res
+
 if __name__ == "__main__":
     uvicorn.run(
         "extractor.main:app",
@@ -264,3 +320,4 @@ if __name__ == "__main__":
         port=settings.PORT,
         reload=settings.DEBUG,
     )
+

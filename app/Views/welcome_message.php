@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marketplace & Job Live Data Explorer | OLX, CarDekho & Naukri.com</title>
+    <title>Marketplace & Job Live Data Explorer | OLX, CarDekho, Naukri.com & Cashify</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -452,6 +453,92 @@
             color: black;
         }
 
+        /* XYZFinders Sync & Database Push Styles */
+        .btn-push-all {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            border: none;
+            color: white;
+            padding: 8px 18px;
+            border-radius: var(--radius-sm);
+            font-size: 0.85rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-push-all:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(16, 185, 129, 0.45);
+        }
+
+        .btn-push-single {
+            background: rgba(16, 185, 129, 0.15);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+            color: #34d399;
+            padding: 5px 11px;
+            border-radius: var(--radius-sm);
+            font-size: 0.75rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: var(--transition);
+        }
+
+        .btn-push-single:hover {
+            background: #10b981;
+            color: white;
+        }
+
+        .btn-site-link {
+            background: rgba(99, 102, 241, 0.15);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            color: #a5b4fc;
+            padding: 7px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: var(--transition);
+        }
+
+        .btn-site-link:hover {
+            background: var(--accent-primary);
+            color: white;
+        }
+
+        .toast-notify {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 9999;
+            background: rgba(16, 185, 129, 0.95);
+            backdrop-filter: blur(12px);
+            color: white;
+            padding: 14px 20px;
+            border-radius: var(--radius-md);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            animation: slideUpToast 0.3s ease-out;
+        }
+
+        @keyframes slideUpToast {
+            from { transform: translateY(100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
         /* Job Specific Styling */
         .job-card {
             background: var(--bg-card);
@@ -698,7 +785,7 @@
                 </div>
                 <div class="brand-text">
                     <h1>Marketplace & Job Live Data Explorer</h1>
-                    <p>Powered by CodeIgniter 4 & Python Engine (OLX, CarDekho & Naukri.com)</p>
+                    <p>Powered by CodeIgniter 4 & Python Engine (OLX, CarDekho, Naukri & Cashify)</p>
                 </div>
             </a>
             <div class="header-actions">
@@ -726,15 +813,17 @@
                             <option value="olx">OLX India</option>
                             <option value="cardekho">CarDekho Cars</option>
                             <option value="naukri" selected>Naukri.com Jobs</option>
+                            <option value="cashify">Cashify Refurbished Gadgets</option>
                         </select>
                     </div>
                 </div>
+
 
                 <div class="form-group" id="group-category">
                     <label id="label-category">Category / Role</label>
                     <div class="input-wrapper">
                         <i class="fa-solid fa-list"></i>
-                        <select id="filter-category" class="form-control">
+                        <select id="filter-category" class="form-control" onchange="updateTopSiteLink()">
                             <option value="jobs" selected>All Tech & Corporate Jobs</option>
                             <option value="software-engineer">Software Engineer / Developer</option>
                             <option value="data-scientist">Data Science & AI / ML</option>
@@ -841,12 +930,18 @@
         <!-- Metrics & Info -->
         <section class="metrics-bar">
             <div id="results-count">Showing 0 listings</div>
-            <div class="metrics-tags">
+            <div class="metrics-tags" style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
                 <div class="metric-tag">Status: <span id="metric-status">200 OK</span></div>
                 <div class="metric-tag">Latency: <span id="metric-latency">0ms</span></div>
                 <button class="json-toggle" onclick="toggleJsonDrawer()">
                     <i class="fa-solid fa-code"></i> JSON Response
                 </button>
+                <button id="btn-push-all" class="btn-push-all" onclick="pushAllToDatabase()" title="Push all extracted listings to XYZFinders Database table">
+                    <i class="fa-solid fa-cloud-arrow-up"></i> Push All to DB
+                </button>
+                <a href="http://localhost:3000/mobiles" target="_blank" class="btn-site-link" id="btn-top-view-site" title="Open XYZFinders Category Page">
+                    <i class="fa-solid fa-mobile-screen" id="btn-top-view-icon"></i> <span id="btn-top-view-label">View on Site</span> <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 11px;"></i>
+                </a>
             </div>
         </section>
 
@@ -878,11 +973,16 @@
                     <h4 style="font-size: 0.9rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 8px;">Description</h4>
                     <div id="modal-desc" class="description-box"></div>
                 </div>
-                <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 1rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 1rem; flex-wrap: wrap; gap: 10px;">
                     <span id="modal-location" style="color: var(--text-muted); font-size: 0.85rem;"><i class="fa-solid fa-location-dot"></i> </span>
-                    <a id="modal-link" href="#" target="_blank" class="btn-search" style="font-size: 0.85rem; padding: 6px 16px; text-decoration: none;">
-                        <span id="modal-link-text">Open on CarDekho</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
+                    <div style="display: flex; gap: 8px; align-items: center;">
+                        <button id="modal-btn-push" class="btn-push-all" onclick="pushSingleToDatabase(currentModalIndex)" style="font-size: 0.85rem; padding: 6px 14px;">
+                            <i class="fa-solid fa-cloud-arrow-up"></i> Push to DB
+                        </button>
+                        <a id="modal-link" href="#" target="_blank" class="btn-search" style="font-size: 0.85rem; padding: 6px 16px; text-decoration: none;">
+                            <span id="modal-link-text">Open Source</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -890,6 +990,8 @@
 
     <script>
         let currentData = null;
+        let currentModalIndex = 0;
+        const XYZFINDERS_API_URL = 'http://localhost:3000/api/external/ingest';
 
         const categoryOptions = {
             olx: [
@@ -907,6 +1009,14 @@
                 { value: 'frontend-developer', label: 'Frontend / UI Developer' },
                 { value: 'backend-developer', label: 'Backend Developer' },
                 { value: 'full-stack-developer', label: 'Full Stack Engineer' }
+            ],
+            cashify: [
+                { value: 'mobile-phones', label: 'Refurbished Mobile Phones' },
+                { value: 'laptops', label: 'Refurbished Laptops' },
+                { value: 'smartwatches', label: 'Refurbished Smartwatches' },
+                { value: 'tablets', label: 'Refurbished Tablets' },
+                { value: 'accessories', label: 'Audio & Accessories' },
+                { value: 'gaming-consoles', label: 'Gaming Consoles' }
             ]
         };
 
@@ -929,7 +1039,7 @@
                 expGroup.style.display = 'none';
                 keywordInput.placeholder = 'e.g. Swift, Creta, BMW X5, Honda City';
                 cityInput.placeholder = 'e.g. Delhi-NCR, Mumbai, Bangalore';
-                if (cityInput.value === 'Bangalore') cityInput.value = 'delhi-ncr';
+                if (cityInput.value === 'Bangalore' || cityInput.value === 'Pan India') cityInput.value = 'delhi-ncr';
                 if (minPriceLabel) minPriceLabel.textContent = 'Min Price (₹)';
                 if (maxPriceLabel) maxPriceLabel.textContent = 'Max Price (₹)';
                 if (minPriceInput) minPriceInput.placeholder = 'Min ₹ (e.g. 200000)';
@@ -941,7 +1051,7 @@
                 expGroup.style.display = 'block';
                 keywordInput.placeholder = 'e.g. Python, React, FastAPI, Docker, AWS';
                 cityInput.placeholder = 'e.g. Bangalore, Hyderabad, Pune, Delhi-NCR, Mumbai';
-                if (!cityInput.value || cityInput.value === 'delhi-ncr') cityInput.value = 'Bangalore';
+                if (!cityInput.value || cityInput.value === 'delhi-ncr' || cityInput.value === 'Pan India') cityInput.value = 'Bangalore';
                 if (minPriceLabel) minPriceLabel.textContent = 'Min Salary (₹)';
                 if (maxPriceLabel) maxPriceLabel.textContent = 'Max Salary (₹)';
                 if (minPriceInput) minPriceInput.placeholder = 'e.g. 600000 (6 LPA)';
@@ -955,6 +1065,27 @@
                     el.textContent = opt.label;
                     categorySelect.appendChild(el);
                 });
+            } else if (source === 'cashify') {
+                categoryGroup.style.opacity = '1';
+                categoryGroup.style.pointerEvents = 'auto';
+                categoryLabel.textContent = 'Device Category';
+                expGroup.style.display = 'none';
+                keywordInput.placeholder = 'e.g. iPhone 13, MacBook Air, Galaxy S23, iPad';
+                cityInput.placeholder = 'e.g. Pan India / Cashify Store';
+                cityInput.value = 'Pan India';
+                if (minPriceLabel) minPriceLabel.textContent = 'Min Price (₹)';
+                if (maxPriceLabel) maxPriceLabel.textContent = 'Max Price (₹)';
+                if (minPriceInput) minPriceInput.placeholder = 'Min ₹ (e.g. 10000)';
+                if (maxPriceInput) maxPriceInput.placeholder = 'Max ₹ (e.g. 80000)';
+                
+                // Populate category options
+                categorySelect.innerHTML = '';
+                categoryOptions.cashify.forEach(opt => {
+                    const el = document.createElement('option');
+                    el.value = opt.value;
+                    el.textContent = opt.label;
+                    categorySelect.appendChild(el);
+                });
             } else { // olx
                 categoryGroup.style.opacity = '1';
                 categoryGroup.style.pointerEvents = 'auto';
@@ -962,6 +1093,7 @@
                 expGroup.style.display = 'none';
                 keywordInput.placeholder = 'e.g. Maruti, iPhone, 2 BHK';
                 cityInput.placeholder = 'e.g. Delhi, Mumbai, Bangalore';
+                if (cityInput.value === 'Pan India') cityInput.value = 'Bangalore';
                 if (minPriceLabel) minPriceLabel.textContent = 'Min Price (₹)';
                 if (maxPriceLabel) maxPriceLabel.textContent = 'Max Price (₹)';
                 if (minPriceInput) minPriceInput.placeholder = 'Min ₹ (e.g. 10000)';
@@ -976,8 +1108,10 @@
                     categorySelect.appendChild(el);
                 });
             }
+            updateTopSiteLink();
             fetchListings();
         }
+
 
         async function fetchListings() {
             const container = document.getElementById('listings-container');
@@ -988,11 +1122,12 @@
             const jsonDrawer = document.getElementById('json-drawer');
 
             const source = document.getElementById('filter-source').value || 'naukri';
-            const platformName = source === 'cardekho' ? 'CarDekho' : (source === 'naukri' ? 'Naukri.com' : 'OLX India');
+            const platformName = source === 'cardekho' ? 'CarDekho' : (source === 'naukri' ? 'Naukri.com' : (source === 'cashify' ? 'Cashify' : 'OLX India'));
             const loadingText = document.getElementById('loading-text');
             if (loadingText) {
                 loadingText.textContent = `Extracting live data from ${platformName}...`;
             }
+
 
             const category = document.getElementById('filter-category').value;
             const experience = document.getElementById('filter-experience')?.value;
@@ -1130,7 +1265,10 @@
 
                         <div class="card-footer">
                             <span><i class="fa-regular fa-clock"></i> ${escapeHtml(posted)}</span>
-                            <div style="display: flex; gap: 8px;">
+                            <div style="display: flex; gap: 6px; align-items: center;">
+                                <button class="btn-push-single" onclick="pushSingleToDatabase(${index})" title="Push job to XYZFinders DB">
+                                    <i class="fa-solid fa-cloud-arrow-up"></i> Push DB
+                                </button>
                                 <button class="btn-view" onclick="openDetail(${index})">
                                     Details <i class="fa-solid fa-angle-right"></i>
                                 </button>
@@ -1142,13 +1280,19 @@
                     `;
                     container.appendChild(card);
                 } else {
-                    // Regular listing (OLX or CarDekho)
+                    // Regular listing (OLX, CarDekho, or Cashify)
                     const card = document.createElement('div');
                     card.className = 'listing-card';
 
-                    const priceDisplay = item.price && item.price.amount 
+                    const isCashify = source === 'cashify' || !!item.electronics;
+                    let priceDisplay = item.price && item.price.amount 
                         ? `₹ ${Number(item.price.amount).toLocaleString('en-IN')}` 
                         : 'Price on Request';
+
+                    if (isCashify && item.electronics?.original_price && item.price?.amount && item.electronics.original_price > item.price.amount) {
+                        const disc = item.electronics.discount ? ` (${item.electronics.discount}% OFF)` : '';
+                        priceDisplay += `<span style="font-size: 0.75rem; text-decoration: line-through; opacity: 0.6; margin-left: 6px;">₹${Number(item.electronics.original_price).toLocaleString('en-IN')}</span><span style="font-size: 0.75rem; color: #10b981; margin-left: 4px;">${disc}</span>`;
+                    }
 
                     let firstImage = null;
                     if (item.images && item.images.length > 0) {
@@ -1158,21 +1302,32 @@
 
                     const locationText = [item.location?.locality, item.location?.city, item.location?.state]
                         .filter(Boolean)
-                        .join(', ') || 'India';
+                        .join(', ') || (isCashify ? 'Cashify Certified Store' : 'India');
 
                     const imageHtml = firstImage 
                         ? `<img src="${firstImage}" alt="${escapeHtml(item.title || 'Listing')}" loading="lazy">`
                         : `<div class="image-placeholder"><i class="fa-regular fa-image" style="font-size: 2rem;"></i><span>No Image</span></div>`;
 
-                    const autoBadge = item.automobile?.fuel_type 
-                        ? `<span class="category-badge">${item.automobile.fuel_type}</span>` 
-                        : (item.subcategory || item.category ? `<span class="category-badge">${item.subcategory || item.category}</span>` : '');
+                    let categoryBadge = '';
+                    if (isCashify) {
+                        const gradeText = item.electronics?.grade || 'Refurbished';
+                        categoryBadge = `<span class="category-badge" style="background: rgba(16, 185, 129, 0.2); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.4);">${escapeHtml(gradeText)}</span>`;
+                    } else if (item.automobile?.fuel_type) {
+                        categoryBadge = `<span class="category-badge">${item.automobile.fuel_type}</span>`;
+                    } else if (item.subcategory || item.category) {
+                        categoryBadge = `<span class="category-badge">${item.subcategory || item.category}</span>`;
+                    }
+
+                    let metaFooter = item.automobile?.year || item.listing_date || 'Recent';
+                    if (isCashify) {
+                        metaFooter = item.electronics?.warranty || 'Cashify Warranty';
+                    }
 
                     card.innerHTML = `
                         <div class="image-container">
                             ${imageHtml}
                             <div class="price-badge">${priceDisplay}</div>
-                            ${autoBadge}
+                            ${categoryBadge}
                         </div>
                         <div class="card-body">
                             <h3 class="listing-title" title="${escapeHtml(item.title || '')}">${escapeHtml(item.title || 'Untitled Listing')}</h3>
@@ -1181,10 +1336,15 @@
                                 <span style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${escapeHtml(locationText)}</span>
                             </div>
                             <div class="card-footer">
-                                <span>${item.automobile?.year || item.listing_date || 'Recent'}</span>
-                                <button class="btn-view" onclick="openDetail(${index})">
-                                    Details <i class="fa-solid fa-angle-right"></i>
-                                </button>
+                                <span style="font-size: 0.8rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 140px;">${escapeHtml(metaFooter)}</span>
+                                <div style="display: flex; gap: 6px; align-items: center;">
+                                    <button class="btn-push-single" onclick="pushSingleToDatabase(${index})" title="Push to XYZFinders Database">
+                                        <i class="fa-solid fa-cloud-arrow-up"></i> Push DB
+                                    </button>
+                                    <button class="btn-view" onclick="openDetail(${index})">
+                                        Details <i class="fa-solid fa-angle-right"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     `;
@@ -1195,6 +1355,7 @@
 
         function openDetail(index) {
             if (!currentData || !currentData.data || !currentData.data[index]) return;
+            currentModalIndex = index;
             const item = currentData.data[index];
 
             document.getElementById('modal-title').textContent = item.title || 'Listing Detail';
@@ -1211,7 +1372,7 @@
             document.getElementById('modal-location').innerHTML = `<i class="fa-solid fa-location-dot"></i> ${[item.location?.locality, item.location?.city, item.location?.state].filter(Boolean).join(', ')}`;
             
             const platform = (item.source || currentData?.source?.platform || document.getElementById('filter-source')?.value || 'source').toLowerCase();
-            const platformLabel = platform === 'cardekho' ? 'CarDekho' : (platform === 'naukri' ? 'Naukri.com' : 'OLX');
+            const platformLabel = platform === 'cardekho' ? 'CarDekho' : (platform === 'naukri' ? 'Naukri.com' : (platform === 'cashify' ? 'Cashify' : 'OLX'));
             const linkTextEl = document.getElementById('modal-link-text');
             if (linkTextEl) {
                 linkTextEl.textContent = platform === 'naukri' ? 'Apply on Naukri.com' : `Open on ${platformLabel}`;
@@ -1265,8 +1426,161 @@
             });
         }
 
+        function showToast(message, isSuccess = true, linkUrl = null, linkText = null) {
+            const existing = document.getElementById('toast-notification');
+            if (existing) existing.remove();
+
+            const toast = document.createElement('div');
+            toast.id = 'toast-notification';
+            toast.className = 'toast-notify';
+            if (!isSuccess) toast.style.background = 'rgba(239, 68, 68, 0.95)';
+
+            let linkHtml = '';
+            if (linkUrl && linkText) {
+                linkHtml = `<a href="${linkUrl}" target="_blank" style="color: #ffffff; text-decoration: underline; font-weight: 800; margin-left: 8px; background: rgba(255,255,255,0.2); padding: 2px 8px; border-radius: 4px;">${linkText} &nearr;</a>`;
+            }
+
+            toast.innerHTML = `
+                <i class="fa-solid ${isSuccess ? 'fa-circle-check' : 'fa-circle-exclamation'}" style="font-size: 1.3rem;"></i>
+                <span>${message}</span>
+                ${linkHtml}
+            `;
+
+            document.body.appendChild(toast);
+            setTimeout(() => {
+                toast.style.transition = 'opacity 0.5s ease';
+                toast.style.opacity = '0';
+                setTimeout(() => toast.remove(), 500);
+            }, 6000);
+        }
+
+        function getDestinationUrl(source, category = null) {
+            if (!category) {
+                const catEl = document.getElementById('filter-category');
+                category = catEl ? catEl.value : null;
+            }
+            if (source === 'cardekho') {
+                return { url: 'http://localhost:3000/automobiles', label: 'View on Automobiles Page', icon: 'fa-car' };
+            }
+            if (source === 'naukri') {
+                return { url: 'http://localhost:3000/jobs', label: 'View on Jobs Page', icon: 'fa-briefcase' };
+            }
+            if (source === 'cashify') {
+                if (category === 'mobile-phones') {
+                    return { url: 'http://localhost:3000/mobiles', label: 'View on Mobiles Page', icon: 'fa-mobile-screen' };
+                }
+                return { url: 'http://localhost:3000/gadgets', label: 'View on Gadgets Page', icon: 'fa-laptop' };
+            }
+            if (source === 'olx') {
+                if (category === 'cars' || category === 'bikes') {
+                    return { url: 'http://localhost:3000/automobiles', label: 'View on Automobiles Page', icon: 'fa-car' };
+                }
+                if (category === 'mobile-phones') {
+                    return { url: 'http://localhost:3000/mobiles', label: 'View on Mobiles Page', icon: 'fa-mobile-screen' };
+                }
+                if (category === 'real-estate') {
+                    return { url: 'http://localhost:3000/real-estate', label: 'View on Real Estate Page', icon: 'fa-house' };
+                }
+                return { url: 'http://localhost:3000/mobiles', label: 'View on Mobiles Page', icon: 'fa-mobile-screen' };
+            }
+            return { url: 'http://localhost:3000/mobiles', label: 'View on Mobiles Page', icon: 'fa-mobile-screen' };
+        }
+
+        function updateTopSiteLink() {
+            const source = document.getElementById('filter-source')?.value || 'cashify';
+            const category = document.getElementById('filter-category')?.value;
+            const dest = getDestinationUrl(source, category);
+            const linkEl = document.getElementById('btn-top-view-site');
+            if (linkEl) {
+                linkEl.href = dest.url;
+                linkEl.title = dest.label;
+                linkEl.innerHTML = `<i class="fa-solid ${dest.icon}"></i> ${dest.label.replace('View on ', 'View ')} <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 11px;"></i>`;
+            }
+        }
+
+        async function pushAllToDatabase() {
+            if (!currentData || !currentData.data || currentData.data.length === 0) {
+                showToast('No extracted listings available to push. Please fetch listings first.', false);
+                return;
+            }
+
+            const source = document.getElementById('filter-source').value || 'cashify';
+            const category = document.getElementById('filter-category')?.value;
+            const btn = document.getElementById('btn-push-all');
+            const originalHtml = btn.innerHTML;
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Pushing...';
+            btn.disabled = true;
+
+            try {
+                const payload = {
+                    provider: source,
+                    items: currentData.data
+                };
+
+                const res = await fetch(XYZFINDERS_API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                const json = await res.json();
+                if (res.ok && json.success) {
+                    const count = json.data?.ingested_count || currentData.data.length;
+                    const dest = getDestinationUrl(source, category);
+                    showToast(`Successfully pushed ${count} listings to XYZFinders Database!`, true, dest.url, dest.label);
+                } else {
+                    showToast(`Failed to push: ${json.error || json.message || 'Unknown error'}`, false);
+                }
+            } catch (err) {
+                showToast(`Error connecting to XYZFinders DB Ingest API (${XYZFINDERS_API_URL}): ${err.message}`, false);
+            } finally {
+                btn.innerHTML = originalHtml;
+                btn.disabled = false;
+            }
+        }
+
+        async function pushSingleToDatabase(index) {
+            if (!currentData || !currentData.data || !currentData.data[index]) return;
+            const item = currentData.data[index];
+            const source = document.getElementById('filter-source').value || 'cashify';
+            const category = document.getElementById('filter-category')?.value;
+
+            try {
+                const payload = {
+                    provider: source,
+                    items: [item]
+                };
+
+                const res = await fetch(XYZFINDERS_API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                const json = await res.json();
+                if (res.ok && json.success) {
+                    const dest = getDestinationUrl(source, category);
+                    showToast(`"${(item.title || 'Listing').substring(0, 30)}..." pushed to XYZFinders DB!`, true, dest.url, dest.label);
+                } else {
+                    showToast(`Failed to push: ${json.error || json.message || 'Unknown error'}`, false);
+                }
+            } catch (err) {
+                showToast(`Error connecting to XYZFinders: ${err.message}`, false);
+            }
+        }
+
         // Fetch on load
-        window.addEventListener('DOMContentLoaded', fetchListings);
+        window.addEventListener('DOMContentLoaded', () => {
+            updateTopSiteLink();
+            fetchListings();
+        });
     </script>
 </body>
 </html>
+

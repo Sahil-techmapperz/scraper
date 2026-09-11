@@ -47,8 +47,22 @@ class Sources extends BaseConfig
     public string $fixtureNaukriSearchPath = 'tests/fixtures/naukri/search.json';
     public string $fixtureNaukriDetailPath = 'tests/fixtures/naukri/detail.json';
 
+    // Cashify Configuration
+    public string $cashifyMode = 'disabled';
+    public string $cashifyAuthorizedBaseUrl = '';
+    public string $cashifySearchEndpoint = '/cashify/listings';
+    public string $cashifyDetailEndpoint = '/cashify/listings/{listing_id}';
+    public string $cashifyBearerToken = '';
+    public int $cashifyRequestTimeout = 30;
+    public int $cashifyRetryAttempts = 2;
+    public bool $cashifyCacheEnabled = true;
+    public int $cashifyCacheTtl = 300;
+    public string $fixtureCashifySearchPath = 'tests/fixtures/cashify/search.json';
+    public string $fixtureCashifyDetailPath = 'tests/fixtures/cashify/detail.json';
+
     // Global
     public bool $persistListings = false;
+
     public bool $exposeRawData = false;
     public string $collectionTimezone = 'Asia/Kolkata';
 
@@ -99,8 +113,22 @@ class Sources extends BaseConfig
         $this->fixtureNaukriSearchPath   = (string) env('NAUKRI_FIXTURE_SEARCH_PATH', $this->fixtureNaukriSearchPath);
         $this->fixtureNaukriDetailPath   = (string) env('NAUKRI_FIXTURE_DETAIL_PATH', $this->fixtureNaukriDetailPath);
 
+        // Cashify
+        $this->cashifyMode               = (string) env('CASHIFY_CONNECTOR_MODE', $defaultMode);
+        $this->cashifyAuthorizedBaseUrl  = rtrim((string) env('CASHIFY_AUTHORIZED_API_BASE_URL', $this->cashifyAuthorizedBaseUrl), '/');
+        $this->cashifySearchEndpoint     = (string) env('CASHIFY_SEARCH_ENDPOINT', $this->cashifySearchEndpoint);
+        $this->cashifyDetailEndpoint     = (string) env('CASHIFY_DETAIL_ENDPOINT', $this->cashifyDetailEndpoint);
+        $this->cashifyBearerToken        = (string) env('CASHIFY_AUTHORIZED_API_TOKEN', $this->cashifyBearerToken);
+        $this->cashifyRequestTimeout     = (int) env('CASHIFY_REQUEST_TIMEOUT', $this->cashifyRequestTimeout);
+        $this->cashifyRetryAttempts      = (int) env('CASHIFY_RETRY_ATTEMPTS', $this->cashifyRetryAttempts);
+        $this->cashifyCacheEnabled       = filter_var(env('CASHIFY_CACHE_ENABLED', $this->cashifyCacheEnabled), FILTER_VALIDATE_BOOLEAN);
+        $this->cashifyCacheTtl           = (int) env('CASHIFY_CACHE_TTL', $this->cashifyCacheTtl);
+        $this->fixtureCashifySearchPath  = (string) env('CASHIFY_FIXTURE_SEARCH_PATH', $this->fixtureCashifySearchPath);
+        $this->fixtureCashifyDetailPath  = (string) env('CASHIFY_FIXTURE_DETAIL_PATH', $this->fixtureCashifyDetailPath);
+
         // Global
         $this->persistListings           = filter_var(env('LISTINGS_PERSIST_ENABLED', $this->persistListings), FILTER_VALIDATE_BOOLEAN);
+
         $this->exposeRawData             = filter_var(env('EXPOSE_SOURCE_RAW_DATA', $this->exposeRawData), FILTER_VALIDATE_BOOLEAN);
         $this->collectionTimezone        = (string) env('SOURCE_COLLECTION_TIMEZONE', $this->collectionTimezone);
     }

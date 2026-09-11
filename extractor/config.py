@@ -28,4 +28,8 @@ class Settings(BaseModel):
     # Naukri Base URLs & Endpoints
     NAUKRI_BASE_URL: str = "https://www.naukri.com"
 
+    # Cashify Base URLs & Endpoints
+    CASHIFY_BASE_URL: str = "https://www.cashify.in"
+
 settings = Settings()
+

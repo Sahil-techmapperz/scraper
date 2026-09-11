@@ -30,8 +30,15 @@ $routes->group('api', ['namespace' => 'App\Controllers\Api'], static function (R
             $routes->get('listing', 'NaukriController::detailByUrl');
         });
 
+        $routes->group('cashify', ['filter' => 'api-auth'], static function (RouteCollection $routes): void {
+            $routes->get('listings', 'CashifyController::listings');
+            $routes->get('listings/(:segment)', 'CashifyController::detail/$1');
+            $routes->get('listing', 'CashifyController::detailByUrl');
+        });
+
         $routes->group('admin', ['namespace' => 'App\Controllers\Api\V1\Admin', 'filter' => 'api-auth:admin'], static function (RouteCollection $routes): void {
             $routes->get('usage', 'UsageController::index');
         });
+
     });
 });

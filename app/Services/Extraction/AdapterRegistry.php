@@ -3,6 +3,7 @@
 namespace App\Services\Extraction;
 
 use App\Services\Extraction\Cardekho\CardekhoAdapter;
+use App\Services\Extraction\Cashify\CashifyAdapter;
 use App\Services\Extraction\Naukri\NaukriAdapter;
 use App\Services\Extraction\Olx\OlxAdapter;
 use App\Services\InvalidRequestException;
@@ -15,7 +16,9 @@ class AdapterRegistry
             'olx'      => new OlxAdapter(),
             'cardekho' => new CardekhoAdapter(),
             'naukri'   => new NaukriAdapter(),
+            'cashify'  => new CashifyAdapter(),
             default    => throw new InvalidRequestException(['source' => 'Unsupported source.']),
         };
     }
 }
+

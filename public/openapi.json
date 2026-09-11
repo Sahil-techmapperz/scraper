@@ -2,9 +2,10 @@
   "openapi": "3.1.0",
   "info": {
     "title": "Marketplace & Job Live Data Extraction API",
-    "version": "1.2.0",
-    "description": "Authenticated multi-platform API for normalized real-time listing search and detail data extraction across OLX India (Classifieds), CarDekho (Automotive), and Naukri.com (Jobs & Careers)."
+    "version": "1.3.0",
+    "description": "Authenticated multi-platform API for normalized real-time listing search and detail data extraction across OLX India (Classifieds), CarDekho (Automotive), Naukri.com (Jobs & Careers), and Cashify.in (Refurbished Gadgets & Electronics)."
   },
+
   "servers": [
     {
       "url": "/"
@@ -375,7 +376,107 @@
         }
       }
     },
+    "/api/v1/cashify/listings": {
+      "get": {
+        "summary": "Search Cashify refurbished phones, laptops & gadgets",
+        "parameters": [
+          {"$ref": "#/components/parameters/keyword"},
+          {"$ref": "#/components/parameters/category"},
+          {"$ref": "#/components/parameters/brand"},
+          {"$ref": "#/components/parameters/min_price"},
+          {"$ref": "#/components/parameters/max_price"},
+          {"$ref": "#/components/parameters/sort"},
+          {"$ref": "#/components/parameters/page"},
+          {"$ref": "#/components/parameters/limit"},
+          {"$ref": "#/components/parameters/fresh"}
+        ],
+        "responses": {
+          "200": {
+            "description": "Normalized Cashify product listings",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SearchResponse"
+                }
+              }
+            }
+          },
+          "400": {"$ref": "#/components/responses/BadRequest"},
+          "401": {"$ref": "#/components/responses/Unauthorized"},
+          "429": {"$ref": "#/components/responses/RateLimited"},
+          "502": {"$ref": "#/components/responses/SourceUnavailable"}
+        }
+      }
+    },
+    "/api/v1/cashify/listings/{listing_id}": {
+      "get": {
+        "summary": "Fetch Cashify product detail by ID",
+        "parameters": [
+          {
+            "name": "listing_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {"$ref": "#/components/parameters/fresh"}
+        ],
+        "responses": {
+          "200": {
+            "description": "Normalized product detail",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DetailResponse"
+                }
+              }
+            }
+          },
+          "400": {"$ref": "#/components/responses/BadRequest"},
+          "401": {"$ref": "#/components/responses/Unauthorized"},
+          "404": {"$ref": "#/components/responses/NotFound"},
+          "429": {"$ref": "#/components/responses/RateLimited"},
+          "502": {"$ref": "#/components/responses/SourceUnavailable"}
+        }
+      }
+    },
+    "/api/v1/cashify/listing": {
+      "get": {
+        "summary": "Fetch Cashify product detail by direct URL",
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          {"$ref": "#/components/parameters/fresh"}
+        ],
+        "responses": {
+          "200": {
+            "description": "Normalized product detail",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DetailResponse"
+                }
+              }
+            }
+          },
+          "400": {"$ref": "#/components/responses/BadRequest"},
+          "401": {"$ref": "#/components/responses/Unauthorized"},
+          "404": {"$ref": "#/components/responses/NotFound"},
+          "429": {"$ref": "#/components/responses/RateLimited"},
+          "502": {"$ref": "#/components/responses/SourceUnavailable"}
+        }
+      }
+    },
     "/api/v1/admin/usage": {
+
       "get": {
         "summary": "Admin API usage report",
         "parameters": [
