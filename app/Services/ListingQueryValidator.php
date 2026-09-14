@@ -66,12 +66,21 @@ class ListingQueryValidator
      */
     private array $allowedValues = [
         'category'      => [
+            'automobile',
+            'automobiles',
             'cars',
             'bikes',
-            'mobile-phones',
+            'properties',
             'real-estate',
-            'jobs',
             'electronics',
+            'electronics-appliances',
+            'mobiles',
+            'mobile-phones',
+            'jobs',
+            'furniture',
+            'fashion',
+            'pets',
+            'services',
             'laptops',
             'tablets',
             'smartwatches',

@@ -275,6 +275,10 @@ class OlxAdapter implements SourceAdapterInterface
 
     private function matchesCategory(array $item, string $category): bool
     {
+        if ($category === 'automobile' || $category === 'automobiles') {
+            return ($item['category'] ?? null) === 'automobile';
+        }
+
         if ($category === 'cars') {
             return ($item['category'] ?? null) === 'automobile' && ($item['subcategory'] ?? null) === 'cars';
         }

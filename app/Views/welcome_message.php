@@ -1014,21 +1014,50 @@
         const XYZFINDERS_API_URL = 'http://localhost:3000/api/external/ingest';
 
         const categoryOptions = {
-            olx: [{
+            olx: [
+                {
+                    value: 'automobile',
+                    label: 'Cars & Automobiles (Cars & Bikes)'
+                },
+                {
                     value: 'cars',
-                    label: 'Cars & Automobiles'
+                    label: 'Cars'
                 },
                 {
                     value: 'bikes',
                     label: 'Motorcycles & Bikes'
                 },
                 {
-                    value: 'mobile-phones',
-                    label: 'Mobile Phones'
+                    value: 'properties',
+                    label: 'Properties & Real Estate'
                 },
                 {
-                    value: 'real-estate',
-                    label: 'Real Estate & Houses'
+                    value: 'electronics',
+                    label: 'Electronics & Appliances'
+                },
+                {
+                    value: 'mobiles',
+                    label: 'Mobiles & Tablets'
+                },
+                {
+                    value: 'jobs',
+                    label: 'Jobs'
+                },
+                {
+                    value: 'furniture',
+                    label: 'Furniture & Decor'
+                },
+                {
+                    value: 'fashion',
+                    label: 'Fashion & Clothing'
+                },
+                {
+                    value: 'pets',
+                    label: 'Pets'
+                },
+                {
+                    value: 'services',
+                    label: 'Services'
                 }
             ],
             naukri: [{
@@ -1565,31 +1594,73 @@
                 };
             }
             if (source === 'olx') {
-                if (category === 'cars' || category === 'bikes') {
+                if (category === 'automobile' || category === 'cars' || category === 'bikes') {
                     return {
                         url: 'http://localhost:3000/automobiles',
                         label: 'View on Automobiles Page',
                         icon: 'fa-car'
                     };
                 }
-                if (category === 'mobile-phones') {
+                if (category === 'mobiles' || category === 'mobile-phones') {
                     return {
                         url: 'http://localhost:3000/mobiles',
                         label: 'View on Mobiles Page',
                         icon: 'fa-mobile-screen'
                     };
                 }
-                if (category === 'real-estate') {
+                if (category === 'properties' || category === 'real-estate') {
                     return {
                         url: 'http://localhost:3000/real-estate',
                         label: 'View on Real Estate Page',
                         icon: 'fa-house'
                     };
                 }
+                if (category === 'electronics') {
+                    return {
+                        url: 'http://localhost:3000/gadgets',
+                        label: 'View on Gadgets Page',
+                        icon: 'fa-laptop'
+                    };
+                }
+                if (category === 'jobs') {
+                    return {
+                        url: 'http://localhost:3000/jobs',
+                        label: 'View on Jobs Page',
+                        icon: 'fa-briefcase'
+                    };
+                }
+                if (category === 'furniture') {
+                    return {
+                        url: 'http://localhost:3000/furniture',
+                        label: 'View on Furniture Page',
+                        icon: 'fa-couch'
+                    };
+                }
+                if (category === 'fashion') {
+                    return {
+                        url: 'http://localhost:3000/fashion',
+                        label: 'View on Fashion Page',
+                        icon: 'fa-shirt'
+                    };
+                }
+                if (category === 'pets') {
+                    return {
+                        url: 'http://localhost:3000/pets',
+                        label: 'View on Pets Page',
+                        icon: 'fa-paw'
+                    };
+                }
+                if (category === 'services') {
+                    return {
+                        url: 'http://localhost:3000/services',
+                        label: 'View on Services Page',
+                        icon: 'fa-wrench'
+                    };
+                }
                 return {
-                    url: 'http://localhost:3000/mobiles',
-                    label: 'View on Mobiles Page',
-                    icon: 'fa-mobile-screen'
+                    url: 'http://localhost:3000/automobiles',
+                    label: 'View on Automobiles Page',
+                    icon: 'fa-car'
                 };
             }
             return {

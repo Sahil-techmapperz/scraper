@@ -15,6 +15,10 @@ class Settings(BaseModel):
     ENABLE_BROWSER_FALLBACK: bool = os.getenv("ENABLE_BROWSER_FALLBACK", "true").lower() == "true"
     HEADLESS_BROWSER: bool = os.getenv("HEADLESS_BROWSER", "true").lower() == "true"
     
+    # High-Performance Caching & Connection Pool
+    ENABLE_HTTP_CACHE: bool = os.getenv("ENABLE_HTTP_CACHE", "true").lower() == "true"
+    CACHE_TTL_SECONDS: int = int(os.getenv("CACHE_TTL_SECONDS", "60"))
+
     # Optional Proxy Configuration (e.g., http://user:pass@proxy.example.com:8080)
     PROXY_URL: str = os.getenv("EXTRACTOR_PROXY_URL", "")
     

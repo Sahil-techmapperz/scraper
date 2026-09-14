@@ -1,14 +1,20 @@
 import asyncio
 import logging
 from typing import Optional
-from playwright.sync_api import sync_playwright
-from playwright_stealth import Stealth
 from extractor.config import settings
 from extractor.utils.user_agents import get_random_user_agent
 
 logger = logging.getLogger(__name__)
 
 def _fetch_page_sync(url: str, wait_selector: Optional[str] = None, wait_ms: int = 3500) -> Optional[str]:
+    """Lazy-loaded browser page fetcher. Playwright is only imported when actually needed."""
+    try:
+        from playwright.sync_api import sync_playwright
+        from playwright_stealth import Stealth
+    except ImportError:
+        logger.warning("Playwright is not installed. Browser fallback disabled.")
+        return None
+
     stealth = Stealth()
     try:
         with sync_playwright() as p:
@@ -55,7 +61,7 @@ def _fetch_page_sync(url: str, wait_selector: Optional[str] = None, wait_ms: int
             page = context.new_page()
             stealth.apply_stealth_sync(page)
 
-            # Block heavy media resources for speed while keeping necessary scripts
+            # Block heavy media resources (images/fonts/videos) for maximum speed and lowest memory
             page.route("**/*", lambda route: (
                 route.abort() if route.request.resource_type in ["image", "media", "font"]
                 else route.continue_()

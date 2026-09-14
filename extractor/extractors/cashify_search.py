@@ -110,19 +110,23 @@ class CashifySearchExtractor:
         if response and response.status_code == 200:
             html_content = response.text
 
-        if not html_content or "productList" not in html_content:
-            if settings.ENABLE_BROWSER_FALLBACK:
-                logger.info(f"Falling back to stealth browser for Cashify: {url}")
-                html_content = await browser_manager.fetch_page_content(url)
+        items = []
+        if html_content:
+            # 1. Primary: Parse productList from Next.js RSC (__next_f)
+            items = self._extract_items_from_rsc(html_content)
+            # 2. Secondary: Fallback to Selectolax DOM parsing if needed
+            if not items:
+                items = self._extract_items_from_dom(html_content)
 
-        if not html_content:
-            return []
+        # 3. Only fall back to heavy stealth browser if HTTP response yielded 0 items
+        if not items and settings.ENABLE_BROWSER_FALLBACK:
+            logger.info(f"Falling back to stealth browser for Cashify: {url}")
+            browser_html = await browser_manager.fetch_page_content(url)
+            if browser_html:
+                items = self._extract_items_from_rsc(browser_html) or self._extract_items_from_dom(browser_html)
 
-        # 1. Primary: Parse productList from Next.js RSC (__next_f)
-        items = self._extract_items_from_rsc(html_content)
-        # 2. Secondary: Fallback to Selectolax DOM parsing if needed
         if not items:
-            items = self._extract_items_from_dom(html_content)
+            return []
 
         await self._enrich_missing_images(items)
 
@@ -181,41 +185,53 @@ class CashifySearchExtractor:
         )
 
     def _extract_items_from_rsc(self, html_content: str) -> List[ListingItem]:
-        matches = re.findall(r'self\.__next_f\.push\(\[1,"(.*?)"\]\)', html_content)
-        if not matches:
+        # 1. Fast early-exit: only search for key marker before doing any heavy regex
+        marker = '"productList":['
+        if marker not in html_content:
             return []
 
-        combined = "".join(matches).replace('\\"', '"').replace('\\\\', '\\')
+        # 2. Single-pass regex: stop at the first chunk that contains productList
+        #    Use a streaming decoder instead of joining all chunks into one huge string
+        decoder = json.JSONDecoder()
         
-        pos = combined.find('"productList":[')
+        # Find raw RSC push chunks, scan for the one containing productList
+        chunk_iter = re.finditer(r'self\.__next_f\.push\(\[1,"(.*?)"\]\)', html_content)
+        combined_parts = []
+        has_list = False
+
+        for m in chunk_iter:
+            chunk = m.group(1).replace('\\"', '"').replace('\\\\', '\\')
+            combined_parts.append(chunk)
+            if marker in chunk:
+                has_list = True
+                break  # ← Early exit! Stop reading once we found the key chunk
+
+        if not has_list:
+            # marker spans multiple chunks; fall back to combining remaining needed chunks
+            for m in chunk_iter:
+                chunk = m.group(1).replace('\\"', '"').replace('\\\\', '\\')
+                combined_parts.append(chunk)
+                combined_check = "".join(combined_parts)
+                if marker in combined_check:
+                    break
+
+        combined = "".join(combined_parts)
+        pos = combined.find(marker)
         if pos == -1:
             return []
 
-        start = pos + len('"productList":')
-        open_brackets = 0
-        end = -1
-        for i in range(start, len(combined)):
-            if combined[i] == '[':
-                open_brackets += 1
-            elif combined[i] == ']':
-                open_brackets -= 1
-                if open_brackets == 0:
-                    end = i + 1
-                    break
-
-        if end == -1:
-            return []
-
-        json_array_str = combined[start:end]
+        # 3. Use json.JSONDecoder.raw_decode for bracket-aware O(n) parsing —
+        #    no manual character-by-character bracket counting needed
+        array_start = pos + len('"productList":')
         try:
-            raw_items = json.loads(json_array_str)
-            items = []
-            for row in raw_items:
-                if isinstance(row, dict):
-                    normalized = self.normalize_raw_item(row)
-                    if normalized:
-                        items.append(normalized)
-            return items
+            raw_items, _ = decoder.raw_decode(combined, array_start)
+            return [
+                normalized
+                for row in raw_items
+                if isinstance(row, dict)
+                for normalized in [self.normalize_raw_item(row)]
+                if normalized
+            ]
         except Exception as e:
             logger.warning(f"Error parsing Cashify RSC JSON array: {e}")
             return []

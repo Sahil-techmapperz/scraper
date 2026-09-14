@@ -105,27 +105,83 @@ class OlxNormalizer
         $subcategory = $this->slug($this->first($row, ['subcategory.slug', 'subcategory.name', 'subcategory', 'subcategory_name']));
         $candidate = $subcategory ?: $category;
 
-        if (in_array($candidate, ['cars', 'car', 'bikes', 'bike', 'motorcycles', 'scooters'], true)) {
+        if (in_array($candidate, ['automobile', 'automobiles', 'vehicles', 'cars', 'car', 'bikes', 'bike', 'motorcycles', 'scooters'], true)) {
+            $isBike = str_contains((string) $candidate, 'bike')
+                || str_contains((string) $candidate, 'scooter')
+                || str_contains((string) $candidate, 'motorcycle')
+                || str_contains(strtolower((string) ($row['title'] ?? '')), 'bike')
+                || str_contains(strtolower((string) ($row['title'] ?? '')), 'pulsar')
+                || str_contains(strtolower((string) ($row['title'] ?? '')), 'bullet')
+                || str_contains(strtolower((string) ($row['title'] ?? '')), 'splendor');
+
             return [
                 'category'    => 'automobile',
-                'subcategory' => str_contains($candidate, 'bike') || str_contains($candidate, 'scooter') || str_contains($candidate, 'motorcycle') ? 'bikes' : 'cars',
+                'subcategory' => $isBike ? 'bikes' : 'cars',
                 'domain'      => 'automobile',
             ];
         }
 
-        if (in_array($candidate, ['mobile-phones', 'phones', 'mobiles'], true)) {
+        if (in_array($candidate, ['mobile-phones', 'phones', 'mobiles', 'mobile'], true)) {
             return [
-                'category'    => 'mobile-phones',
+                'category'    => in_array($candidate, ['mobiles', 'mobile'], true) ? 'mobiles' : 'mobile-phones',
                 'subcategory' => 'mobile-phones',
                 'domain'      => 'mobile_phone',
             ];
         }
 
-        if (in_array($candidate, ['real-estate', 'apartments', 'houses', 'commercial-property', 'land-plots'], true)) {
+        if (in_array($candidate, ['real-estate', 'properties', 'apartments', 'houses', 'commercial-property', 'land-plots'], true)) {
             return [
-                'category'    => 'real-estate',
-                'subcategory' => $candidate === 'real-estate' ? null : $candidate,
+                'category'    => in_array($candidate, ['properties'], true) ? 'properties' : 'real-estate',
+                'subcategory' => in_array($candidate, ['real-estate', 'properties'], true) ? null : $candidate,
                 'domain'      => 'real_estate',
+            ];
+        }
+
+        if (in_array($candidate, ['electronics', 'electronics-appliances', 'appliances', 'laptops', 'computers', 'tv'], true)) {
+            return [
+                'category'    => 'electronics',
+                'subcategory' => $subcategory ?: null,
+                'domain'      => 'electronics',
+            ];
+        }
+
+        if (in_array($candidate, ['furniture', 'sofa', 'beds', 'home-decor'], true)) {
+            return [
+                'category'    => 'furniture',
+                'subcategory' => $subcategory ?: null,
+                'domain'      => 'furniture',
+            ];
+        }
+
+        if (in_array($candidate, ['fashion', 'clothes', 'clothing'], true)) {
+            return [
+                'category'    => 'fashion',
+                'subcategory' => $subcategory ?: null,
+                'domain'      => 'fashion',
+            ];
+        }
+
+        if (in_array($candidate, ['pets', 'pet', 'dogs', 'cats', 'fishes'], true)) {
+            return [
+                'category'    => 'pets',
+                'subcategory' => $subcategory ?: null,
+                'domain'      => 'pets',
+            ];
+        }
+
+        if (in_array($candidate, ['services', 'service', 'packers-movers', 'repairs'], true)) {
+            return [
+                'category'    => 'services',
+                'subcategory' => $subcategory ?: null,
+                'domain'      => 'services',
+            ];
+        }
+
+        if (in_array($candidate, ['jobs', 'job', 'employment', 'hiring'], true)) {
+            return [
+                'category'    => 'jobs',
+                'subcategory' => $subcategory ?: null,
+                'domain'      => 'jobs',
             ];
         }
 

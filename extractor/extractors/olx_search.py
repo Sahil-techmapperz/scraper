@@ -48,20 +48,127 @@ CITY_SLUGS = {
 }
 
 CATEGORY_SLUGS = {
-    "cars": "cars_c84",
-    "automobile": "cars_c84",
-    "bikes": "motorcycles_c81",
-    "motorcycles": "motorcycles_c81",
-    "scooters": "scooters_c1413",
-    "mobile-phones": "mobile-phones_c1453",
-    "mobiles": "mobile-phones_c1453",
-    "phones": "mobile-phones_c1453",
-    "real-estate": "for-sale-houses-apartments_c1725",
-    "properties": "for-sale-houses-apartments_c1725",
-    "apartments": "for-sale-houses-apartments_c1725",
-    "commercial-property": "commercial-office-space_c1737",
-    "land-plots": "land-plots_c1729",
+    # 1. Cars (parent: 5, child: 84)
+    "cars":                  "cars_c84",
+    "automobile":            "cars_c84",
+    "car":                   "cars_c84",
+
+    # 2. Bikes (parent: 2198, children: 81, 1413, 1415)
+    "bikes":                 "motorcycles_c81",
+    "motorcycles":           "motorcycles_c81",
+    "bike":                  "motorcycles_c81",
+    "scooters":              "scooters_c1413",
+    "scooter":               "scooters_c1413",
+    "bicycles":              "bicycles_c1415",
+    "bicycle":               "bicycles_c1415",
+
+    # 3. Properties (parent: 3, children: 1725, 1723, 1729, 301, 1731, 1733, 1449)
+    "properties":            "properties_c3",
+    "property":              "properties_c3",
+    "real-estate":           "properties_c3",
+    "for-sale-houses":       "for-sale-houses-apartments_c1725",
+    "apartments":            "for-sale-houses-apartments_c1725",
+    "for-rent-houses":       "for-rent-houses-apartments_c1723",
+    "rent":                  "for-rent-houses-apartments_c1723",
+    "lands-plots":           "lands-plots_c1729",
+    "land":                  "lands-plots_c1729",
+    "plots":                 "lands-plots_c1729",
+    "pg-guest-houses":       "pg-guest-houses_c1449",
+
+    # 4. Electronics & Appliances (parent: 99, children: 1523, 1417, 1505, 1517, 93, 1617, 1619, 1615)
+    "electronics":           "electronics-appliances_c99",
+    "appliances":            "electronics-appliances_c99",
+    "electronics-appliances":"electronics-appliances_c99",
+    "tv":                    "tvs-video-audio_c1523",
+    "tvs":                   "tvs-video-audio_c1523",
+    "audio":                 "tvs-video-audio_c1523",
+    "kitchen-appliances":    "kitchen-other-appliances_c1417",
+    "computers":             "computers-laptops_c1505",
+    "laptops":               "computers-laptops_c1505",
+    "cameras":               "cameras-lenses_c1517",
+    "gaming":                "games-entertainment_c93",
+    "fridges":               "fridges_c1617",
+    "refrigerators":         "fridges_c1617",
+    "ac":                    "acs_c1619",
+    "acs":                   "acs_c1619",
+    "washing-machines":      "washing-machines_c1615",
+
+    # 5. Mobiles (parent: 1411, children: 1453, 1457, 1455)
+    "mobiles":               "mobiles_c1411",
+    "mobile":                "mobiles_c1411",
+    "mobile-phones":         "mobile-phones_c1453",
+    "phones":                "mobile-phones_c1453",
+    "phone":                 "mobile-phones_c1453",
+    "mobile-accessories":    "accessories_c1457",
+    "tablets":               "tablets_c1455",
+    "tablet":                "tablets_c1455",
+
+    # 6. Jobs (parent: 4, children: 1737, 62, 164, 2206, 2201, 2205, 53, 2202, 2204, 731, 56, 1439, 1441, 401, 2203, 411, 65)
+    "jobs":                  "jobs_c4",
+    "job":                   "jobs_c4",
+    "employment":            "jobs_c4",
+    "hiring":                "jobs_c4",
+    "data-entry":            "data-entry-back-office_c1737",
+    "sales":                 "sales-marketing_c62",
+    "bpo":                   "bpo-telecaller_c164",
+    "driver":                "driver_c2206",
+    "delivery":              "delivery-collection_c2205",
+    "teacher":               "teacher_c53",
+    "developer":             "it-engineer-developer_c56",
+    "accountant":            "accountant_c1441",
+
+    # 7. Furniture (parent: 628, children: 1593, 1591, 575, 231, 293)
+    "furniture":             "furniture_c628",
+    "sofa":                  "sofa-dining_c1593",
+    "dining":                "sofa-dining_c1593",
+    "beds":                  "beds-wardrobes_c1591",
+    "wardrobes":             "beds-wardrobes_c1591",
+    "home-decor":            "home-decor-garden_c575",
+    "decor":                 "home-decor-garden_c575",
+
+    # 8. Fashion (parent: 87, children: 1793, 1795, 235)
+    "fashion":               "fashion_c87",
+    "clothes":               "fashion_c87",
+    "clothing":              "fashion_c87",
+    "men-fashion":           "men_c1793",
+    "women-fashion":         "women_c1795",
+    "kids-fashion":          "kids_c235",
+
+    # 9. Pets (parent: 103, children: 1293, 175, 139, 140)
+    "pets":                  "pets_c103",
+    "pet":                   "pets_c103",
+    "dogs":                  "dogs_c139",
+    "dog":                   "dogs_c139",
+    "fishes":                "fishes-aquarium_c1293",
+    "aquarium":              "fishes-aquarium_c1293",
+    "pet-food":              "pet-food-accessories_c175",
+
+    # 10. Services (parent: 619, children: 1429, 356, 523, 741, 1301, 1302, 1303, 1304, 625)
+    "services":              "services_c619",
+    "service":               "services_c619",
+    "packers-movers":        "packers-movers_c1304",
+    "repairs":               "electronics-repair-services_c523",
+    "renovation":            "home-renovation-repair_c1301",
+    "cleaning":              "cleaning-pest-control_c1302",
+    "legal":                 "legal-documentation-services_c1303",
+    "education":             "education-classes_c1429",
 }
+
+# Categories whose IDs are confirmed to work with the OLX JSON API
+API_SUPPORTED_CATEGORIES = {
+    # Parents
+    "5", "2198", "3", "99", "1411", "4", "628", "87", "103", "619",
+    # Children
+    "84", "81", "1413", "1415", "1725", "1723", "1729", "301", "1731", "1733", "1449",
+    "1523", "1417", "1505", "1517", "93", "1617", "1515", "1509", "1619", "1615",
+    "1453", "1457", "1455",
+    "1737", "62", "164", "2206", "2201", "2205", "53", "2202", "2204", "731", "56", "1439", "1441", "401", "2203", "411", "65",
+    "1593", "1591", "575", "231", "293",
+    "1793", "1795", "235",
+    "1293", "175", "139", "140",
+    "1429", "356", "523", "741", "1301", "1302", "1303", "1304", "625",
+}
+
 
 class OlxSearchExtractor:
     def build_url(self, params: SearchQueryParams, page_override: Optional[int] = None) -> str:
@@ -111,7 +218,7 @@ class OlxSearchExtractor:
             return f"{url_path}?{urlencode(query_dict)}"
         return url_path
 
-    def build_api_url(self, params: SearchQueryParams, page_override: Optional[int] = None) -> str:
+    def build_api_url(self, params: SearchQueryParams, page_override: Optional[int] = None, category_id_override: Optional[str] = None) -> str:
         api_base = f"{settings.OLX_IN_BASE_URL.rstrip('/')}/api/relevance/v4/search"
         query_dict: Dict[str, Any] = {
             "facet_limit": 100,
@@ -128,12 +235,15 @@ class OlxSearchExtractor:
             if m:
                 query_dict["location"] = m.group(1)
 
-        cat_key = (params.subcategory or params.category or "").strip().lower()
-        if cat_key:
-            c_slug = CATEGORY_SLUGS.get(cat_key, "")
-            m = re.search(r"_c(\d+)", c_slug)
-            if m:
-                query_dict["category"] = m.group(1)
+        if category_id_override:
+            query_dict["category"] = category_id_override
+        else:
+            cat_key = (params.subcategory or params.category or "").strip().lower()
+            if cat_key:
+                c_slug = CATEGORY_SLUGS.get(cat_key, "")
+                m = re.search(r"_c(\d+)", c_slug)
+                if m:
+                    query_dict["category"] = m.group(1)
 
         if params.keyword:
             query_dict["query"] = params.keyword
@@ -211,25 +321,67 @@ class OlxSearchExtractor:
         pages_needed = math.ceil(limit / 40)
         start_page = max(1, params.page)
 
-        # 1. Try OLX direct JSON API first (fastest and most reliable)
-        api_urls = [self.build_api_url(params, page_override=p) for p in range(start_page, start_page + pages_needed)]
-        logger.info(f"Extracting OLX API {len(api_urls)} page(s) for limit={limit}: {api_urls[0]}")
-        api_results = await asyncio.gather(*[self.fetch_api_page(u) for u in api_urls], return_exceptions=True)
-
         all_items: List[ListingItem] = []
         seen_ids = set()
 
-        for res in api_results:
-            if isinstance(res, list):
-                for item in res:
-                    if item.id and item.id not in seen_ids:
-                        seen_ids.add(item.id)
-                        all_items.append(item)
+        # Resolve whether this category is supported by the OLX JSON API
+        cat_key = (params.subcategory or params.category or "").strip().lower()
+        c_slug = CATEGORY_SLUGS.get(cat_key, "")
+        m = re.search(r"_c(\d+)", c_slug)
+        cat_id_str = m.group(1) if m else ""
+        use_api = not cat_key or cat_id_str in API_SUPPORTED_CATEGORIES
 
-        # 2. Fallback to HTML web scraping + stealth browser if API returned no items
+        # Check if this is the combined 2-in-1 "automobile" category (both Cars and Bikes)
+        is_combined_automobile = cat_key in ("automobile", "automobiles", "vehicles") and not params.subcategory
+
+        if is_combined_automobile:
+            # 2 in 1 Automobile: fetch Cars (id: 84) and Bikes (id: 81) concurrently in parallel!
+            half_pages = max(1, math.ceil((limit / 2) / 40))
+            car_urls = [self.build_api_url(params, page_override=p, category_id_override="84") for p in range(start_page, start_page + half_pages)]
+            bike_urls = [self.build_api_url(params, page_override=p, category_id_override="81") for p in range(start_page, start_page + half_pages)]
+
+            logger.info(f"Extracting combined Automobile (Cars + Bikes) {len(car_urls) + len(bike_urls)} page(s) for limit={limit}")
+            all_api_urls = car_urls + bike_urls
+            results = await asyncio.gather(*[self.fetch_api_page(u) for u in all_api_urls], return_exceptions=True)
+
+            car_items: List[ListingItem] = []
+            bike_items: List[ListingItem] = []
+            for idx, res in enumerate(results):
+                if isinstance(res, list):
+                    target = car_items if idx < len(car_urls) else bike_items
+                    for item in res:
+                        if item.id and item.id not in seen_ids:
+                            seen_ids.add(item.id)
+                            target.append(item)
+
+            # Interleave car and bike listings (Car 1, Bike 1, Car 2, Bike 2...)
+            interleaved: List[ListingItem] = []
+            max_len = max(len(car_items), len(bike_items))
+            for i in range(max_len):
+                if i < len(car_items):
+                    interleaved.append(car_items[i])
+                if i < len(bike_items):
+                    interleaved.append(bike_items[i])
+            all_items = interleaved
+
+        elif use_api:
+            # 1. Fast path: OLX JSON API (works for single category: Mobiles, Properties, Jobs, etc.)
+            api_urls = [self.build_api_url(params, page_override=p) for p in range(start_page, start_page + pages_needed)]
+            logger.info(f"Extracting OLX API {len(api_urls)} page(s) for limit={limit}: {api_urls[0]}")
+            api_results = await asyncio.gather(*[self.fetch_api_page(u) for u in api_urls], return_exceptions=True)
+
+            for res in api_results:
+                if isinstance(res, list):
+                    for item in res:
+                        if item.id and item.id not in seen_ids:
+                            seen_ids.add(item.id)
+                            all_items.append(item)
+
+        # 2. URL scraping: for categories not supported by API (Electronics, Furniture, Fashion, Pets, Services)
+        #    Also used as fallback if API returned nothing
         if not all_items:
             urls = [self.build_url(params, page_override=p) for p in range(start_page, start_page + pages_needed)]
-            logger.info(f"Falling back to OLX web extraction: {urls[0]}")
+            logger.info(f"{'Falling back to' if use_api else 'Using'} OLX web extraction: {urls[0]}")
 
             results = await asyncio.gather(*[self.fetch_single_page(u) for u in urls], return_exceptions=True)
             for page_result in results:
@@ -252,6 +404,7 @@ class OlxSearchExtractor:
                 total_records=len(filtered),
             ),
         )
+
 
     def _extract_items_from_window_app(self, html_content: str) -> List[ListingItem]:
         items: List[ListingItem] = []

@@ -114,18 +114,17 @@ class CardekhoSearchExtractor:
         except Exception as e:
             logger.warning(f"HTTP fetch failed for {url}: {str(e)}")
 
-        if not html_content or "__INITIAL_STATE__" not in html_content:
-            if settings.ENABLE_BROWSER_FALLBACK:
-                logger.info(f"Triggering browser fallback for CarDekho URL: {url}")
-                html_content = await browser_manager.fetch_page_content(url)
+        items = []
+        if html_content:
+            items = self._extract_items_from_initial_state(html_content)
+            if not items:
+                items = self._extract_items_from_json_ld(html_content)
 
-        if not html_content:
-            return []
-
-        items = self._extract_items_from_initial_state(html_content)
-
-        if not items:
-            items = self._extract_items_from_json_ld(html_content)
+        if not items and settings.ENABLE_BROWSER_FALLBACK:
+            logger.info(f"Triggering browser fallback for CarDekho URL: {url}")
+            browser_html = await browser_manager.fetch_page_content(url)
+            if browser_html:
+                items = self._extract_items_from_initial_state(browser_html) or self._extract_items_from_json_ld(browser_html)
 
         return items
 

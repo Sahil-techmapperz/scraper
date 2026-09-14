@@ -55,6 +55,21 @@ final class OlxApiTest extends CIUnitTestCase
         $this->assertArrayHasKey('collected_at', $json['data'][0]);
     }
 
+    public function testSearchAcceptsAutomobileCategory(): void
+    {
+        $response = $this->withHeaders($this->headers())
+            ->get('/api/v1/olx/listings?category=automobile&city=Kolkata');
+
+        $response->assertOK();
+        $json = $this->json($response);
+
+        $this->assertTrue($json['success']);
+        $this->assertSame('automobile', $json['request']['category']);
+        foreach ($json['data'] as $item) {
+            $this->assertSame('automobile', $item['category']);
+        }
+    }
+
     public function testDetailReturnsCurrentFixtureRecord(): void
     {
         $response = $this->withHeaders($this->headers())
