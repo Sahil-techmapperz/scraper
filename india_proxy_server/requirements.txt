@@ -1,0 +1,4 @@
+fastapi>=0.100.0
+uvicorn[standard]>=0.23.0
+curl_cffi>=0.6.0b9
+pydantic>=2.0.0
